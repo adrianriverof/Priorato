@@ -1,0 +1,145 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene.gd" type="Script" id=2]
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=3]
+[ext_resource path="res://claustro_1_png.png" type="Texture" id=4]
+[ext_resource path="res://shaders/color_reductor.tres" type="Shader" id=5]
+[ext_resource path="res://color_palettes/2x_monas2.png" type="Texture" id=6]
+[ext_resource path="res://color_palettes/moonlight4.png" type="Texture" id=7]
+[ext_resource path="res://shaders/noise_and_color.shader" type="Shader" id=8]
+[ext_resource path="res://dither_resources/bayer4tile8.png" type="Texture" id=9]
+[ext_resource path="res://shaders/ditherpsx.shader" type="Shader" id=10]
+[ext_resource path="res://shaders/dither.shader" type="Shader" id=11]
+[ext_resource path="res://dither_resources/bayer16tile2.png" type="Texture" id=12]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 5 )
+shader_param/palette_size = 3
+shader_param/palette = ExtResource( 6 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 5 )
+shader_param/palette_size = 5
+shader_param/palette = ExtResource( 7 )
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+// Uniforms
+uniform float grain_amount : hint_range(0.0, 1.0) = 0.05; // Adjust the amount of grain
+uniform float grain_size : hint_range(0.1, 10.0) = 1.0; // Adjust the size of the grain
+
+void fragment() {
+    // Sample the original screen texture
+    vec4 original_color = texture(SCREEN_TEXTURE, SCREEN_UV);
+
+    // Generate random noise
+    float noise = (fract(sin(dot(UV, vec2(12.9898, 78.233))) * 43758.5453) - 0.5) * 2.0;
+
+    // Add noise to the original color
+    original_color.rgb += noise * grain_amount * grain_size;
+
+    // Clamp the final color to make sure it stays in the valid range
+    COLOR = clamp(original_color, 0.0, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+shader_param/grain_amount = 0.05
+shader_param/grain_size = 1.0
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 8 )
+shader_param/grain_amount = 0.05
+shader_param/grain_size = 1.0
+shader_param/palette_size = 5
+shader_param/palette = ExtResource( 7 )
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 10 )
+shader_param/col_depth = 15.0
+shader_param/dither_banding = true
+shader_param/dither_tex = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 11 )
+shader_param/col_size = 5
+shader_param/noise_size = 32
+shader_param/u_bit_depth = 32
+shader_param/u_contrast = 1.0
+shader_param/u_offset = -0.153
+shader_param/u_dither_size = 2
+shader_param/u_dither_tex = ExtResource( 12 )
+shader_param/u_color_tex = ExtResource( 7 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.814176, 0, 0.580618, 0, 1, 0, -0.580618, 0, -0.814176, 0, -1.2036, -0.958059 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.65977 )
+current = true
+fov = 44.7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 1, 0, -0.151548, -47.6527 )
+texture = ExtResource( 4 )
+
+[node name="Dialog" parent="." instance=ExtResource( 3 )]
+timeline = "timeline-1728748043.json"
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 20, 0, 0, 0, 0.994697, 2.05689, 0, -0.102845, 19.8939, 0, -2.57764, -1.01181 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+mesh = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.269444 )
+light_color = Color( 0.768627, 0.756863, 0.54902, 1 )
+
+[node name="ColorReductor" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 3 )
+margin_right = 1027.0
+margin_bottom = 605.0
+
+[node name="ColorReductor 2" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 4 )
+margin_right = 1044.0
+margin_bottom = 616.0
+
+[node name="noise" type="ColorRect" parent="."]
+material = SubResource( 6 )
+margin_right = 1035.0
+margin_bottom = 620.0
+
+[node name="color and noise" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 7 )
+margin_right = 1041.0
+margin_bottom = 611.0
+
+[node name="dither banding psx" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 8 )
+margin_right = 1029.0
+margin_bottom = 609.0
+
+[node name="dither" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 9 )
+margin_right = 1037.0
+margin_bottom = 599.0
