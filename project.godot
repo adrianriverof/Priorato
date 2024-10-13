@@ -84,6 +84,10 @@ config/name="CHJ3"
 run/main_scene="res://scene.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+settings/fps/force_fps=30
+
 [display]
 
 window/size/always_on_top=true
@@ -91,6 +95,10 @@ window/size/always_on_top=true
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
+
+[global]
+
+fps=false
 
 [gui]
 
