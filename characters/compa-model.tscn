@@ -8,6 +8,7 @@ flags_unshaded = true
 params_cull_mode = 1
 params_grow = true
 params_grow_amount = -0.02
+albedo_color = Color( 0.803922, 0.796078, 0.72549, 1 )
 
 [node name="compa" instance=ExtResource( 1 )]
 

@@ -3,15 +3,16 @@ extends KinematicBody
 
 var speed = 100.0
 
+export var target_to_follow : String = "player"
 var moving = false
 
-onready var player = get_parent().get_node("player")
+onready var player = get_parent().get_node(target_to_follow)
 var destination = Vector3.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if player == null:
-		player = get_parent().get_node("player")
+		player = get_parent().get_node(target_to_follow)
 	
 	speed = player.speed
 	#print(speed)
@@ -32,8 +33,8 @@ func _physics_process(delta):
 
 		if distance_to_target > 1:
 			var motion = direction * speed * delta
-			
 			self.look_at(Vector3(destination.x, self.translation.y, destination.z), Vector3.UP)
+			
 			$compa/AnimationPlayer.play("walkin")
 			
 			motion = move_and_slide(motion)

@@ -127,6 +127,7 @@ texture = ExtResource( 16 )
 
 [node name="bliss" type="Sprite3D" parent="."]
 transform = Transform( 27, 0, 0, 0, 27, 0, 0, 0, 1, 0, -0.151548, -48.1181 )
+visible = false
 texture = ExtResource( 18 )
 
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
@@ -148,11 +149,13 @@ visible = false
 light_color = Color( 0.768627, 0.756863, 0.54902, 1 )
 
 [node name="ColorReductor" type="ColorRect" parent="."]
+visible = false
 material = SubResource( 3 )
 margin_right = 1027.0
 margin_bottom = 605.0
 
 [node name="ColorReductor 2" type="ColorRect" parent="."]
+visible = false
 material = SubResource( 4 )
 margin_right = 1044.0
 margin_bottom = 616.0
@@ -199,4 +202,4 @@ margin_right = 1031.0
 margin_bottom = 609.0
 
 [node name="compa" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70005, -0.621007, -2.43382 )
+transform = Transform( -0.495959, 0, 0.868346, 0, 1, 0, -0.868346, 0, -0.495959, 1.20864, -1.204, -1.25122 )
