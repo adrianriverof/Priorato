@@ -6,3 +6,6 @@
 
 [node name="Compa" parent="." index="0"]
 transform = Transform( 0.30481, 0, 0, 0, 0.30481, 0, 0, 0, 0.30481, 0, 0, 0 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Iddle"
