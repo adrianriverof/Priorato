@@ -2,13 +2,7 @@
 
 [ext_resource path="res://models/player.glb" type="PackedScene" id=1]
 [ext_resource path="res://assets/claustro_1_png.png" type="Texture" id=2]
-
-[sub_resource type="SpatialMaterial" id=1]
-flags_unshaded = true
-params_cull_mode = 1
-params_grow = true
-params_grow_amount = 0.02
-albedo_color = Color( 0.803922, 0.796078, 0.72549, 1 )
+[ext_resource path="res://characters/outline_material.tres" type="Material" id=3]
 
 [node name="player" instance=ExtResource( 1 )]
 
@@ -16,7 +10,7 @@ albedo_color = Color( 0.803922, 0.796078, 0.72549, 1 )
 transform = Transform( 0.30481, 0, 0, 0, 0.30481, 0, 0, 0, 0.30481, 0, 0, 0 )
 
 [node name="Cube007" parent="Player/Skeleton" index="0"]
-material_overlay = SubResource( 1 )
+material_overlay = ExtResource( 3 )
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "Iddle"
