@@ -16,4 +16,5 @@ albedo_color = Color( 0.803922, 0.796078, 0.72549, 1 )
 transform = Transform( 0.30481, 0, 0, 0, 0.30481, 0, 0, 0, 0.30481, 0, 0, 0 )
 
 [node name="Cube004" parent="Compa/Skeleton" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material_overlay = SubResource( 1 )

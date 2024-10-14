@@ -8,19 +8,20 @@ shader_type canvas_item;
 
 uniform sampler2D u_dither_tex;
 uniform sampler2D u_color_tex;
-uniform int col_size;
-uniform int noise_size;
+uniform int col_size = 5;
 
-uniform int u_bit_depth;
-uniform float u_contrast;
-uniform float u_offset;
-uniform int u_dither_size;
+
+uniform int u_bit_depth = 32;
+uniform float u_contrast = 1;
+uniform float u_offset = 0;
+uniform int u_dither_size = 1; //tamaño de la textura?
+uniform int u_dither_texture_size = 32;
 
 void fragment() 
 {
 	// sample the screen texture at the desired output resolution (according to u_dither_size)
 	// this will effectively pixelate the resulting output
-	vec2 screen_size = vec2(1024,600) / float(u_dither_size);
+	vec2 screen_size = vec2(1020,600) / float(u_dither_size);
 	vec2 screen_sample_uv = floor(UV * screen_size) / screen_size;
 	
 	vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV);
@@ -58,7 +59,7 @@ void fragment()
 	// map the dither texture onto the screen. there are better ways of doing this that makes the dither pattern 'stick'
 	// with objects in the 3D world, instead of being mapped onto the screen. see lucas pope's details posts on how he 
 	// achieved this in Obra Dinn: https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742
-	vec2 inv_noise_size = vec2(1.0 / float(noise_size), 1.0);
+	vec2 inv_noise_size = vec2(1.0 / float(u_dither_texture_size), 1.0/ float(u_dither_texture_size));
 	vec2 noise_uv = UV * inv_noise_size * vec2(float(screen_size.x), float(screen_size.y));
 	float threshold = texture(u_dither_tex, noise_uv).r;
 	
