@@ -26,7 +26,7 @@ func _physics_process(delta):
 	#print(destination)
 	
 	if moving:
-		print("compa moving")
+		
 		var direction = (destination - global_transform.origin).normalized()
 		var distance_to_target = global_transform.origin.distance_to(destination)
 
@@ -37,10 +37,8 @@ func _physics_process(delta):
 			$compa/AnimationPlayer.play("walkin")
 			
 			motion = move_and_slide(motion)
-		else:
-			moving = false
-			$compa/AnimationPlayer.play("Iddle")
+#		else:
+#			$compa/AnimationPlayer.play("Iddle")
 	else:
-		if !$compa/AnimationPlayer.is_playing():
-			$compa/AnimationPlayer.play("Iddle")
+		$compa/AnimationPlayer.play("Iddle")
 
