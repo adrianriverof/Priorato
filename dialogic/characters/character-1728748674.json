@@ -8,14 +8,14 @@
 	"name": "Compa",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": -100,
-	"offset_y": -100,
+	"offset_x": 600,
+	"offset_y": -300,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://assets/compa_retrato.png"
 		}
 	],
-	"scale": 100,
+	"scale": 70,
 	"theme": ""
 }

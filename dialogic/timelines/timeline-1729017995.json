@@ -21,6 +21,12 @@
 			"z_index": 0
 		},
 		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿No te parece raro que guardemos las dagas aquí?\n¿No sería mejor tenerlas en la Capilla?"
+		},
+		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
@@ -39,12 +45,6 @@
 			},
 			"type": 0,
 			"z_index": 0
-		},
-		{
-			"character": "character-1729014985.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "¿No te parece raro que guardemos las dagas aquí?\n¿No sería mejor tenerlas en la Capilla?"
 		},
 		{
 			"character": "character-1728748674.json",

@@ -430,5 +430,4 @@ margin_bottom = 631.0
 [node name="GLES2 anim noise color" parent="shaders" instance=ExtResource( 23 )]
 
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
-visible = false
 timeline = "timeline-1729017995.json"
