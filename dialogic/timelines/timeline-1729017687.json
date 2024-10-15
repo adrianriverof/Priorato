@@ -1,0 +1,139 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿Alguna vez has pensado cómo será la vida fuera de aquí ?\n¿Qué habrá al otro lado de la puerta?"
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sabemos perfectamente lo que hay, Padre nos lo ha dicho muchas veces."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“Monstruos de acero y gigantes de humo.”"
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "”Una civilización a la deriva, sin faro que buscar”"
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "“ni capitán al que seguir.”"
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Entonces, ¿cuál es la duda?"
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hace un par de noches escuché voces que no pude reconocer.\nCreo que venían del otro lado. No hablaban como nosotros, no pude entenderles.\nPero parecían felices."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿Estás diciendo que padre nos ha mentido?"
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Estoy diciendo que no se en qué creer."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hoy no es el mejor día para pensar en esas cosas."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¿y cuándo si no? qué va a pasar después?"
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "La salvación.\nNuestra salvación. La de todos."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Todos repiten siempre lo mismo, pero nunca nadie nos ha explicado bien qué significa eso."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Porque nadie lo ha visto todavía, si no no estarían aquí. Estarían ya salvados.\nHemos pasado toda nuestra vida preparándonos para esto. No es momento para dudar.\nHay que hacerlo"
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...\nNo sé.\nSupongo que tienes razón.\nSobre todo porque no se me ocurre que hacer si no."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1729017687.json",
+		"name": "1a Conv Fuera"
+	}
+}

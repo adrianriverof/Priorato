@@ -1,0 +1,21 @@
+{
+	"color": "#ff424242",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1729017401.json",
+	"mirror_portraits": false,
+	"name": "Padre",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
