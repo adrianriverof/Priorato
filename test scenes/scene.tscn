@@ -185,11 +185,11 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=16]
 shader = SubResource( 15 )
-shader_param/num_channels = 20.0
-shader_param/dithering = false
+shader_param/num_channels = 8.0
+shader_param/dithering = true
 shader_param/dithering_amount = 0.5
-shader_param/screen_size_x = 1024.0
-shader_param/screen_size_y = 600.0
+shader_param/screen_size_x = 1.0
+shader_param/screen_size_y = 300.0
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 8 )
