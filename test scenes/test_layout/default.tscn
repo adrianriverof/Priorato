@@ -8,7 +8,7 @@
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 14.107, 0.338, 12.98 )
 
-[node name="Spatial" type="Spatial"]
+[node name="default" type="Spatial"]
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
 

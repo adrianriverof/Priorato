@@ -48,3 +48,4 @@ func _physics_process(delta):
 	else:
 		if !$player/AnimationPlayer.is_playing():
 			$player/AnimationPlayer.play("Iddle")
+
