@@ -11,6 +11,8 @@ var destination = Vector3()
 var moving = false
 
 onready var camera = get_parent().get_node("Camera")
+onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
+
 
 func _ready():
 	#var camera = get_parent().get_node("Camera")
@@ -32,6 +34,10 @@ func _input(event):
 				moving = true
 			elif  collision.get("collider").name == "compa":
 				print("has tocado a compa") #!!! hay que hacer la hitbox de compa mas grande entonces
+				
+				talk_to_compa()
+				
+				#print(Dialogic.load())
 
 func _physics_process(delta):
 	if moving:
@@ -52,3 +58,7 @@ func _physics_process(delta):
 		if !$player/AnimationPlayer.is_playing():
 			$player/AnimationPlayer.play("Iddle")
 
+func talk_to_compa():
+	var dialogue = dialoguescene.instance()
+	dialogue.timeline = "compa hablar"
+	get_tree().get_root().add_child(dialogue)
