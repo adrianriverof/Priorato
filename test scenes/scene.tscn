@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://shaders/color_reductor.tres" type="Shader" id=1]
 [ext_resource path="res://shaders/animated_noise_then_color.shader" type="Shader" id=2]
@@ -20,10 +20,16 @@
 [ext_resource path="res://assets/Bliss_(Windows_XP).png" type="Texture" id=18]
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=19]
 [ext_resource path="res://shaders/dither_resources/bayer8tile4.png" type="Texture" id=20]
+[ext_resource path="res://shaders/optimized_color_reductor.tres" type="Shader" id=21]
 
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="ShaderMaterial" id=14]
+shader = ExtResource( 21 )
+shader_param/palette_size = 2
+shader_param/palette = ExtResource( 12 )
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
@@ -135,14 +141,15 @@ texture = ExtResource( 11 )
 
 [node name="claustro sin grano" type="Sprite3D" parent="."]
 transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 1, 0, -0.151548, -47.6527 )
+visible = false
 texture = ExtResource( 16 )
 
 [node name="bliss" type="Sprite3D" parent="."]
 transform = Transform( 27, 0, 0, 0, 27, 0, 0, 0, 1, 0, -0.151548, -48.1181 )
-visible = false
 texture = ExtResource( 18 )
 
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
+visible = false
 timeline = "timeline-1728748043.json"
 
 [node name="floor" type="StaticBody" parent="."]
@@ -165,6 +172,11 @@ transform = Transform( -0.495959, 0, 0.868346, 0, 1, 0, -0.868346, 0, -0.495959,
 [node name="shaders" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="OptiColorRect" type="ColorRect" parent="shaders"]
+material = SubResource( 14 )
+margin_right = 1037.0
+margin_bottom = 616.0
 
 [node name="ColorReductor" type="ColorRect" parent="shaders"]
 visible = false
@@ -215,6 +227,7 @@ margin_right = 1034.0
 margin_bottom = 614.0
 
 [node name="anim noise then color" type="ColorRect" parent="shaders"]
+visible = false
 material = SubResource( 12 )
 margin_right = 1031.0
 margin_bottom = 609.0
@@ -222,5 +235,5 @@ margin_bottom = 609.0
 [node name="dither 2" type="ColorRect" parent="shaders"]
 visible = false
 material = SubResource( 13 )
-margin_right = 1026.0
-margin_bottom = 605.0
+margin_right = 1024.0
+margin_bottom = 607.0
