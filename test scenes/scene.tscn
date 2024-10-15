@@ -145,19 +145,18 @@ texture = ExtResource( 18 )
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
 timeline = "timeline-1728748043.json"
 
-[node name="StaticBody" type="StaticBody" parent="."]
+[node name="floor" type="StaticBody" parent="."]
 transform = Transform( 20, 0, 0, 0, 0.994697, 2.05689, 0, -0.102845, 19.8939, 0, -2.57764, -1.01181 )
 visible = false
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="floor"]
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+[node name="MeshInstance" type="MeshInstance" parent="floor"]
 mesh = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.269444 )
-visible = false
 light_color = Color( 0.768627, 0.756863, 0.54902, 1 )
 
 [node name="compa" parent="." instance=ExtResource( 19 )]
