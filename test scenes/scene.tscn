@@ -325,10 +325,6 @@ texture = ExtResource( 16 )
 transform = Transform( 27, 0, 0, 0, 27, 0, 0, 0, 1, 0, -0.151548, -48.1181 )
 texture = ExtResource( 18 )
 
-[node name="Dialog" parent="." instance=ExtResource( 17 )]
-visible = false
-timeline = "timeline-1729014840.json"
-
 [node name="floor" type="StaticBody" parent="."]
 transform = Transform( 20, 0, 0, 0, 0.994697, 2.05689, 0, -0.102845, 19.8939, 0, -2.57764, -1.01181 )
 visible = false
@@ -432,3 +428,6 @@ margin_right = 1064.0
 margin_bottom = 631.0
 
 [node name="GLES2 anim noise color" parent="shaders" instance=ExtResource( 23 )]
+
+[node name="Dialog" parent="." instance=ExtResource( 17 )]
+timeline = "timeline-1729017995.json"
