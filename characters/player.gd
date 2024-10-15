@@ -18,6 +18,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+		
 		var ray_origin = camera.project_ray_origin(get_viewport().get_mouse_position())
 		var ray_direction = camera.project_ray_normal(get_viewport().get_mouse_position())
 		

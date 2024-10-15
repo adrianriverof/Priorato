@@ -7,3 +7,4 @@ func _on_Area_body_entered(body):
 	if body.name == "player":
 		current = true
 		print("cambio de cámara")
+		body.camera = self

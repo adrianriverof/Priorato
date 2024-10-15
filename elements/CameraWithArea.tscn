@@ -3,7 +3,7 @@
 [ext_resource path="res://elements/CameraWithArea.gd" type="Script" id=1]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 1.74003, 0.494564, 1.87677 )
+extents = Vector3( 2.88977, 0.287013, 2.34506 )
 
 [node name="Camera" type="Camera"]
 script = ExtResource( 1 )
@@ -13,7 +13,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.80836 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 1 )
-
-[node name="Spatial" type="Spatial" parent="Area"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

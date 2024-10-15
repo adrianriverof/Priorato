@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://shaders/color_reductor.tres" type="Shader" id=1]
 [ext_resource path="res://shaders/animated_noise_then_color.shader" type="Shader" id=2]
@@ -20,7 +20,6 @@
 [ext_resource path="res://assets/Bliss_(Windows_XP).png" type="Texture" id=18]
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=19]
 [ext_resource path="res://shaders/dither_resources/bayer8tile4.png" type="Texture" id=20]
-[ext_resource path="res://elements/CameraWithArea.tscn" type="PackedScene" id=21]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -148,6 +147,7 @@ timeline = "timeline-1728748043.json"
 
 [node name="floor" type="StaticBody" parent="."]
 transform = Transform( 20, 0, 0, 0, 0.994697, 2.05689, 0, -0.102845, 19.8939, 0, -2.57764, -1.01181 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="floor"]
 shape = SubResource( 1 )
@@ -161,15 +161,6 @@ light_color = Color( 0.768627, 0.756863, 0.54902, 1 )
 
 [node name="compa" parent="." instance=ExtResource( 19 )]
 transform = Transform( -0.495959, 0, 0.868346, 0, 1, 0, -0.868346, 0, -0.495959, 1.20864, -1.204, -1.25122 )
-
-[node name="Camera2" parent="." instance=ExtResource( 21 )]
-transform = Transform( 0.109162, 0, 0.994024, 0, 1, 0, -0.994024, 0, 0.109162, -0.418821, -0.801535, -3.02183 )
-
-[node name="Area" parent="Camera2" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.11824 )
-
-[node name="CollisionShape" parent="Camera2/Area" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81415, 0, 1.81413 )
 
 [node name="shaders" type="Control" parent="."]
 margin_right = 40.0
@@ -233,5 +224,3 @@ visible = false
 material = SubResource( 13 )
 margin_right = 1026.0
 margin_bottom = 605.0
-
-[editable path="Camera2"]
