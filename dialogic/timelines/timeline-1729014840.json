@@ -1,0 +1,85 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...\nHoy es el día."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hoy es el día, si."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Se me hace raro\nNunca pensé que llegaría.\nTenía asumido que estaríamos esperando para siempre.\nNo he podido dormir nada, no sé si eso afectará en algo.\n"
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yo tampoco.\nMe he pasado toda la noche dándole vueltas."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Lo hemos ensayado mil millones de veces.\nTengo todos los cantos grabados a fuego.\nLo del cuchillo, lo del círculo, todo.\nPero me da miedo que esta vez algo salga mal."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Llevamos meses sin tener ningún fallo.\nMalo será que nos pase justo hoy.\nVa a salir solo, no te preocupes.\nY Ayúdame con la puerta, sería un desastre llegar tarde justo hoy."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1729014840.json",
+		"name": "1a conversacion"
+	}
+}

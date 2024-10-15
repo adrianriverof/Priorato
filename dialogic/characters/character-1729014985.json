@@ -1,15 +1,15 @@
 {
-	"color": "#ffff0000",
-	"description": "\n",
+	"color": "#ff0093ff",
+	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1728748674.json",
+	"id": "character-1729014985.json",
 	"mirror_portraits": false,
-	"name": "player",
+	"name": "compa",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": -100,
-	"offset_y": -100,
+	"offset_x": 0,
+	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",

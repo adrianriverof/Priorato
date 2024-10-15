@@ -26,9 +26,12 @@ func _input(event):
 		var space_state = get_world().direct_space_state
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
 		print(collision)
-		if collision and collision.get("collider").name == "floor":
-			destination = collision.position
-			moving = true
+		if collision:
+			if collision.get("collider").name == "floor":
+				destination = collision.position
+				moving = true
+			elif  collision.get("collider").name == "compa":
+				print("has tocado a compa") #!!! hay que hacer la hitbox de compa mas grande entonces
 
 func _physics_process(delta):
 	if moving:

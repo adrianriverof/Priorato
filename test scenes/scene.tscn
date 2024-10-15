@@ -327,7 +327,7 @@ texture = ExtResource( 18 )
 
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
 visible = false
-timeline = "timeline-1728748043.json"
+timeline = "timeline-1729014840.json"
 
 [node name="floor" type="StaticBody" parent="."]
 transform = Transform( 20, 0, 0, 0, 0.994697, 2.05689, 0, -0.102845, 19.8939, 0, -2.57764, -1.01181 )
