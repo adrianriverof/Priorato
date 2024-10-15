@@ -30,8 +30,8 @@ func change_room_from_to(from,to):
 
 	roomtoinstance.from = from
 	#print(get_children())
-	get_child(0).queue_free()
-	get_tree().get_root().get_node("general").add_child(roomtoinstance, true)
+	get_node("RoomManager").get_child(0).queue_free()
+	get_tree().get_root().get_node("general").get_node("RoomManager").add_child(roomtoinstance, true)
 	
 	
 	

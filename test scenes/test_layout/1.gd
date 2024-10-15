@@ -5,8 +5,13 @@ var from = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	match from:
+		0:
+			pass
+		2:
+			$player.transform = $playerspawn2.transform
+			$compa.transform = $compaspawn2.transform
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

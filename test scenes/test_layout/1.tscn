@@ -16,6 +16,7 @@ size = Vector3( 14.107, 0.338, 12.98 )
 script = ExtResource( 6 )
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05749, -10.0725 )
@@ -47,13 +48,12 @@ shape = ExtResource( 3 )
 mesh = SubResource( 1 )
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32146, 2.03975, -11.8527 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25714, 1.60071, -11.6704 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.61547 )
 texture = ExtResource( 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -62,5 +62,22 @@ margin_top = 101.0
 margin_right = 569.0
 margin_bottom = 141.0
 text = "ROOM 1"
+
+[node name="playerspawn2" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8277, 0.685384, -13.035 )
+
+[node name="compaspawn2" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8277, 0.685384, -11.8625 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05544, -6.60822, 0.96157, -15.997 )
+depth = 16.917
+
+[node name="CSGBox" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.43767 )
+operation = 2
+calculate_tangents = false
+width = 5.39859
+height = 3.18273
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
