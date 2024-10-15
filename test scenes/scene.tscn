@@ -22,6 +22,7 @@
 [ext_resource path="res://shaders/dither_resources/bayer8tile4.png" type="Texture" id=20]
 [ext_resource path="res://shaders/optimized_color_reductor.tres" type="Shader" id=21]
 [ext_resource path="res://shaders/color_reductor.shader" type="Shader" id=22]
+[ext_resource path="res://shaders/GLES2_animated_noise_then_color.shader" type="Shader" id=23]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -264,7 +265,7 @@ shader_param/pallete = ExtResource( 12 )
 code = "shader_type canvas_item;
 
 
-uniform float num_channels = 20.0f;
+//uniform float num_channels = 20.0f;
 uniform float pixel = 1.0;
 uniform sampler2D pallete;
 
@@ -294,14 +295,17 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=20]
 shader = SubResource( 19 )
-shader_param/num_channels = 32.0
 shader_param/pixel = 4.0
 shader_param/pallete = ExtResource( 12 )
 
-[sub_resource type="Shader" id=21]
-
 [sub_resource type="ShaderMaterial" id=22]
-shader = SubResource( 21 )
+shader = ExtResource( 23 )
+shader_param/flip = false
+shader_param/bit_depth = 3.066
+shader_param/grain_amount = 0.053
+shader_param/grain_size = 0.827
+shader_param/speed = 1.0
+shader_param/gradient = ExtResource( 12 )
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 8 )
@@ -321,7 +325,6 @@ texture = ExtResource( 11 )
 
 [node name="claustro sin grano" type="Sprite3D" parent="."]
 transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 1, 0, -0.151548, -47.6527 )
-visible = false
 texture = ExtResource( 16 )
 
 [node name="bliss" type="Sprite3D" parent="."]
@@ -437,7 +440,7 @@ material = SubResource( 20 )
 margin_right = 1064.0
 margin_bottom = 631.0
 
-[node name="anutrantoe" type="ColorRect" parent="shaders"]
+[node name="GLES2 anim noise color" type="ColorRect" parent="shaders"]
 material = SubResource( 22 )
 margin_right = 1028.0
 margin_bottom = 614.0
