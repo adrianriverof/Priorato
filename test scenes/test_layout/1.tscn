@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://characters/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/compa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://elements/floor_cube.tres" type="Shape" id=3]
+[ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 14.107, 0.338, 12.98 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05749, -10.0725 )
+
+[node name="compa" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9622, 0.304155, -9.1425 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.09878, -3.02244 )
+
+[node name="floor" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.344 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0937703, 0, 0 )
+shape = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="floor"]
+mesh = SubResource( 1 )
+
+[node name="floor2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9386, 0, -13.344 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floor2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0937703, 0, 0 )
+shape = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="floor2"]
+mesh = SubResource( 1 )
