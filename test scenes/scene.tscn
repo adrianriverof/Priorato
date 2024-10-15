@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://shaders/color_reductor.tres" type="Shader" id=1]
 [ext_resource path="res://shaders/animated_noise_then_color.shader" type="Shader" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=19]
 [ext_resource path="res://shaders/dither_resources/bayer8tile4.png" type="Texture" id=20]
 [ext_resource path="res://shaders/optimized_color_reductor.tres" type="Shader" id=21]
+[ext_resource path="res://shaders/color_reductor.shader" type="Shader" id=22]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -32,7 +33,7 @@ shader_param/palette_size = 2
 shader_param/palette = ExtResource( 12 )
 
 [sub_resource type="ShaderMaterial" id=3]
-shader = ExtResource( 1 )
+shader = ExtResource( 22 )
 shader_param/palette_size = 3
 shader_param/palette = ExtResource( 12 )
 
@@ -123,6 +124,73 @@ shader_param/u_dither_texture_size = 32
 shader_param/u_dither_tex = ExtResource( 20 )
 shader_param/u_color_tex = ExtResource( 12 )
 
+[sub_resource type="Shader" id=15]
+code = "
+shader_type canvas_item;
+
+uniform float num_channels = 20.0f;
+uniform bool dithering = false;
+uniform float dithering_amount = 0.5f;
+
+uniform float screen_size_x = 1024;
+uniform float screen_size_y = 600;
+
+bool xor(bool a, bool b) {
+	return (a || b) && !(a && b);
+}
+
+
+float dither(float col, bool x_true, bool y_true) {
+	float channel = round(col);
+	if(abs((floor(col) + 0.5f) - col) < dithering_amount || abs((ceil(col) - 0.5f) - col) < dithering_amount) {
+		if(x_true && y_true) {
+			return channel - 1.0f;
+		}
+		else {
+			return channel;
+		}
+	}
+	return channel;
+}
+
+
+// quantises the colour of each pixel, and optionally adds a dither effect to the quantisation
+void fragment() {
+	vec3 col = texture(SCREEN_TEXTURE, SCREEN_UV).xyz;
+	
+	if(dithering) {
+		bool x_true = mod(SCREEN_UV.x * float(screen_size_x), 3.0f) < 0.99f;
+		bool y_true = mod(SCREEN_UV.y * float(screen_size_y), 3.0f) < 0.99f;
+		
+		col *= num_channels;
+		
+		col.x = dither(col.x, x_true, y_true);
+		col.x = col.x / num_channels;
+		
+		col.y = dither(col.y, x_true, y_true);
+		col.y = col.y / num_channels;
+		
+		col.z = dither(col.z, x_true, y_true);
+		col.z = col.z / num_channels;
+	}
+	else {
+		col *= num_channels;
+		col.x = round(col.x) / num_channels;
+		col.y = round(col.y) / num_channels;
+		col.z = round(col.z) / num_channels;
+	}
+	
+	COLOR.xyz = col;
+}"
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = SubResource( 15 )
+shader_param/num_channels = 20.0
+shader_param/dithering = false
+shader_param/dithering_amount = 0.5
+shader_param/screen_size_x = 1024.0
+shader_param/screen_size_y = 600.0
+
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 8 )
 
@@ -174,6 +242,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="OptiColorRect" type="ColorRect" parent="shaders"]
+visible = false
 material = SubResource( 14 )
 margin_right = 1037.0
 margin_bottom = 616.0
@@ -237,3 +306,8 @@ visible = false
 material = SubResource( 13 )
 margin_right = 1024.0
 margin_bottom = 607.0
+
+[node name="NewDith" type="ColorRect" parent="shaders"]
+material = SubResource( 16 )
+margin_right = 1047.0
+margin_bottom = 632.0
