@@ -82,7 +82,7 @@ _global_script_class_icons={
 
 config/name="CHJ3"
 run/main_scene="res://test scenes/scene.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/compa_retrato.png"
 
 [debug]
 
