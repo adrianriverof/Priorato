@@ -431,3 +431,6 @@ margin_bottom = 631.0
 
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
 timeline = "timeline-1729017995.json"
+
+[connection signal="timeline_end" from="Dialog" to="player" method="_on_dialogic_ended"]
+[connection signal="timeline_start" from="Dialog" to="player" method="_on_dialogic_started"]

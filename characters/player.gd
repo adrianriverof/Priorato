@@ -9,6 +9,7 @@ var destination = Vector3()
 
 # Para detectar cuando hay un clic
 var moving = false
+var is_dialog_active = false
 
 onready var camera = get_parent().get_node("Camera")
 onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
@@ -27,8 +28,8 @@ func _input(event):
 		# Usamos una intersección para determinar donde está el suelo
 		var space_state = get_world().direct_space_state
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
-		print(collision)
-		if collision:
+		print(is_dialog_active)
+		if collision and !is_dialog_active:
 			if collision.get("collider").name == "floor":
 				destination = collision.position
 				moving = true
@@ -36,7 +37,7 @@ func _input(event):
 				print("has tocado a compa") #!!! hay que hacer la hitbox de compa mas grande entonces
 				
 				talk_to_compa()
-				
+				print(is_dialog_active)
 				#print(Dialogic.load())
 
 func _physics_process(delta):
@@ -61,4 +62,22 @@ func _physics_process(delta):
 func talk_to_compa():
 	var dialogue = dialoguescene.instance()
 	dialogue.timeline = "compa hablar"
-	get_tree().get_root().add_child(dialogue)
+	dialogue.connect("timeline_start", self, "_on_dialogic_started")
+	dialogue.connect("timeline_end", self, "_on_dialogic_ended")
+	
+	add_child(dialogue)
+	
+	# Conectamos las señales del diálogo dinámicamente
+	
+# Función llamada cuando el diálogo comienza
+func _on_dialogic_started(timeline = null):
+	print("dialogo empieza")
+	is_dialog_active = true
+	
+
+# Función llamada cuando el diálogo termina
+func _on_dialogic_ended(timeline = null):
+	print("dialogo acaba")
+	is_dialog_active = false
+	
+
