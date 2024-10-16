@@ -305,7 +305,7 @@ script = ExtResource( 8 )
 transform = Transform( -0.814176, 0, 0.580618, 0, 1, 0, -0.580618, 0, -0.814176, 0, -1.2036, -0.958059 )
 
 [node name="compa" parent="." instance=ExtResource( 19 )]
-transform = Transform( -0.495959, 0, 0.868346, 0, 1, 0, -0.868346, 0, -0.495959, 1.20864, -1.204, -1.25122 )
+transform = Transform( -0.495959, 0, 0.868346, 0, 1, 0, -0.868346, 0, -0.495959, 1.16433, -1.204, -1.25122 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.65977 )
