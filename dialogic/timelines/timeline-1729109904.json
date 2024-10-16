@@ -1,0 +1,123 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1729017401.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1729017401.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You are late."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You asked us to arrive before the second bell."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The first one has just sounded"
+		},
+		{
+			"character": "character-1729017401.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And that's why you should have come earlier. We've talked about it many times.\nBut it doesn't matter anymore, not today.\nYou've been good, and so you'll be saved.\nLike all of us here."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...\nYes, Father."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, Father."
+		},
+		{
+			"character": "character-1729017401.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We don't have much time.\nTake the keys to the cellar and the cabin.\nYou know what you have to do.\nPlease hurry up. You know how important it is that everything goes well."
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, Father."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, Father."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1729109904.json",
+		"name": "Padre 1 ENG"
+	}
+}

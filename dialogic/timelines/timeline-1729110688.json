@@ -5,7 +5,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1728748674.json",
+			"character": "character-1729014985.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -25,7 +25,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1729014985.json",
+			"character": "character-1728748674.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -41,99 +41,117 @@
 			"z_index": 0
 		},
 		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "WHAT THE FUCK?"
+		},
+		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "¿Alguna vez has pensado cómo será la vida fuera de aquí ?\n¿Qué habrá al otro lado de la puerta?"
+			"text": "..."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sabemos perfectamente lo que hay, Padre nos lo ha dicho muchas veces."
+			"text": "DO YOU REALIZE WHAT YOU'VE DONE?\nWHAT'S GOING TO HAPPEN NOW?"
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "“Monstruos de acero y gigantes de humo.”"
+			"text": "..."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "”Una civilización a la deriva, sin faro que buscar”"
+			"text": "SO MANY YEARS WAITING FOR THIS MOMENT.\nALL THE REHEARSALS."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "“ni capitán al que seguir.”"
+			"text": "..."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Entonces, ¿cuál es la duda?"
+			"text": "FOR YOU TO BE AFRAID OF THE ONLY TIME IT REALLY MATTERS?"
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hace un par de noches escuché voces que no pude reconocer.\nCreo que venían del otro lado. No hablaban como nosotros, no pude entenderles.\nPero parecían felices."
+			"text": "... I'm sorry."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "¿Estás diciendo que Padre nos ha mentido?"
+			"text": "..."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Estoy diciendo que no se en qué creer."
+			"text": "I couldn't. I don't know what happened to me.\nFor a moment, you all disappeared.\nIt was just me and the dagger\nand I felt ridiculous.\nI didn't understand what I was doing standing there.\nI didn't understand why it had to be me."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hoy no es el mejor día para pensar en esas cosas."
+			"text": "..."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "¿y cuándo si no? qué va a pasar después?"
+			"text": "...\nand now...\nwhat's going to happen?"
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "La salvación.\nNuestra salvación. La de todos."
+			"text": "...\nI don't know.\nI think we should go back in.\nSee if we can fix it."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Todos repiten siempre lo mismo, pero nunca nadie nos ha explicado bien qué significa eso."
+			"text": "I don't want to. They're going to kill me for this.\nI've ruined everything."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Porque nadie lo ha visto todavía, si no no estarían aquí. Estarían ya salvados.\nHemos pasado toda nuestra vida preparándonos para esto. No es momento para dudar.\nHay que hacerlo"
+			"text": "You've ruined everything\nBut you can't escape. You have no choice.\nSooner or later they'll catch you, and it'll be much worse.\nMaybe we can still fix it."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "...\nNo sé.\nSupongo que tienes razón.\nSobre todo porque no se me ocurre que hacer si no."
+			"text": "...\nFix it?\nHow?"
+		},
+		{
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...\nI don't know. We'll figure something out.\nTrust me. I'm with you.\nFollow me."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1729017687.json",
-		"name": "1a Conv Fuera"
+		"file": "timeline-1729110688.json",
+		"name": "Cobertizo 2 ENG"
 	}
 }

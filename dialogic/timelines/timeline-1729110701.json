@@ -5,7 +5,7 @@
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1728748674.json",
+			"character": "character-1729014985.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -19,19 +19,13 @@
 			},
 			"type": 0,
 			"z_index": 0
-		},
-		{
-			"character": "character-1728748674.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "...\nToday is the day."
 		},
 		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1729014985.json",
+			"character": "character-1728748674.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -47,39 +41,33 @@
 			"z_index": 0
 		},
 		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This...\nIs this salvation?"
+		},
+		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Today is the day,  yes."
+			"text": "Don't know."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "It seems strange to me\nI never thought it would come.\nI had assumed we would be waiting forever.\nI haven't been able to sleep at all, I don't know if that will affect anything."
+			"text": "I think we can only keep moving forward."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Me neither.\nI've been thinking about it all night."
-		},
-		{
-			"character": "character-1728748674.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "We've rehearsed it a billion times.\nI've got all the chants burned into my memory.\nThe knife thing, the circle thing, everything.\nBut I'm scared that this time something will go wrong."
-		},
-		{
-			"character": "character-1729014985.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "We've been months without any failure.\nIt would be bad if it happens to us just today.\nIt will come out by itself, don't worry.\nAnd help me with the door, it would be a disaster to be late just today."
+			"text": "I think you're right."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1729019452.json",
-		"name": "1 conversacion ENG"
+		"file": "timeline-1729110701.json",
+		"name": "Final ENG"
 	}
 }

@@ -1,0 +1,73 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "en esta escena hay que enlazar eventos del minijuego"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1729014985.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Give me your hand."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "1,2, ..."
+		},
+		{
+			"character": "character-1728748674.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "3"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1729110710.json",
+		"name": "Minijuego final ENG"
+	}
+}

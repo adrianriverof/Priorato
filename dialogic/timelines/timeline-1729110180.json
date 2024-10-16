@@ -44,96 +44,96 @@
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "¿Alguna vez has pensado cómo será la vida fuera de aquí ?\n¿Qué habrá al otro lado de la puerta?"
+			"text": "Have you ever thought about what life will be like outside?\nWhat will be on the other side of the door?"
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sabemos perfectamente lo que hay, Padre nos lo ha dicho muchas veces."
+			"text": "We know perfectly well what there is, Father has told us many times."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "“Monstruos de acero y gigantes de humo.”"
+			"text": "“Steel monsters and smoke giants.”"
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "”Una civilización a la deriva, sin faro que buscar”"
+			"text": "“A civilization adrift, without a beacon to look for”"
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "“ni capitán al que seguir.”"
+			"text": "“nor captain to follow.”"
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Entonces, ¿cuál es la duda?"
+			"text": "So what is the doubt?"
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hace un par de noches escuché voces que no pude reconocer.\nCreo que venían del otro lado. No hablaban como nosotros, no pude entenderles.\nPero parecían felices."
+			"text": "A couple of nights ago I heard voices that I couldn't recognize.\nI think they were coming from the other side. They didn't talk like us, I couldn't understand them.\nBut they seemed happy."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "¿Estás diciendo que Padre nos ha mentido?"
+			"text": "Are you saying that Father lied to us?"
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Estoy diciendo que no se en qué creer."
+			"text": "I'm saying I don't know what to believe."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hoy no es el mejor día para pensar en esas cosas."
+			"text": "Today is not the best day to think about those things."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "¿y cuándo si no? qué va a pasar después?"
+			"text": "And when if not, what will happen next?"
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "La salvación.\nNuestra salvación. La de todos."
+			"text": "Salvation.\nOur salvation. Everyone's salvation."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Todos repiten siempre lo mismo, pero nunca nadie nos ha explicado bien qué significa eso."
+			"text": "Everyone always repeats the same thing, but no one has ever explained to us what that means."
 		},
 		{
 			"character": "character-1729014985.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Porque nadie lo ha visto todavía, si no no estarían aquí. Estarían ya salvados.\nHemos pasado toda nuestra vida preparándonos para esto. No es momento para dudar.\nHay que hacerlo"
+			"text": "Because no one has seen it yet, otherwise they wouldn't be here. They would already be saved.\nWe have spent our whole lives preparing for this. This is not the time to hesitate.\nWe must do it."
 		},
 		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "...\nNo sé.\nSupongo que tienes razón.\nSobre todo porque no se me ocurre que hacer si no."
+			"text": "...\nI don't know.\nI guess you're right.\nEspecially since I can't think of what to do otherwise."
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1729017687.json",
-		"name": "1a Conv Fuera"
+		"file": "timeline-1729110180.json",
+		"name": "1a Conv Fuera ENG"
 	}
 }
