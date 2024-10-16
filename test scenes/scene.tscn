@@ -337,6 +337,7 @@ mesh = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.269444 )
+visible = false
 light_color = Color( 0.768627, 0.756863, 0.54902, 1 )
 
 [node name="shaders" type="Control" parent="."]
