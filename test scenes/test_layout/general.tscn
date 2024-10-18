@@ -10,5 +10,6 @@ script = ExtResource( 2 )
 [node name="RoomManager" type="Spatial" parent="."]
 
 [node name="room" parent="RoomManager" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00785327, 0.0727563, -0.041954 )
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 3 )]

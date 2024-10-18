@@ -1,7 +1,7 @@
 extends KinematicBody
 
 
-var speed = 100.0
+var speed = 120.0
 
 export var target_to_follow : String = "player"
 var moving = false

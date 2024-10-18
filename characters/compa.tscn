@@ -5,7 +5,7 @@
 
 [sub_resource type="CylinderShape" id=1]
 height = 1.0
-radius = 0.1
+radius = 0.25
 
 [node name="compa" type="KinematicBody"]
 script = ExtResource( 2 )

@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://models/player.glb" type="PackedScene" id=1]
-[ext_resource path="res://assets/claustro_1_png.png" type="Texture" id=2]
 [ext_resource path="res://characters/outline_material.tres" type="Material" id=3]
 
 [node name="player" instance=ExtResource( 1 )]
@@ -14,7 +13,3 @@ material_overlay = ExtResource( 3 )
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "Iddle"
-
-[node name="Sprite3D" type="Sprite3D" parent="." index="2"]
-visible = false
-texture = ExtResource( 2 )

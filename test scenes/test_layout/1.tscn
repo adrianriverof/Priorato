@@ -19,10 +19,10 @@ script = ExtResource( 6 )
 visible = false
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05749, -10.0725 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.537034, -10.0725 )
 
 [node name="compa" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9622, 0.304155, -9.1425 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9622, 0.64144, -9.1425 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.09878, -3.02244 )
