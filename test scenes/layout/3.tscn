@@ -166,6 +166,16 @@ mesh = SubResource( 7 )
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 18 )
 
+[node name="Puerta4" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16892, 1.70188, -16.1784 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Puerta4"]
+visible = false
+mesh = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Puerta4"]
+shape = SubResource( 18 )
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 467.0
 margin_top = 101.0
@@ -179,4 +189,11 @@ transform = Transform( -0.99157, 0.00120084, -0.129569, 0, 0.999957, 0.00926757,
 [node name="compaspawn2" type="Position3D" parent="."]
 transform = Transform( -0.997578, 0, -0.069565, 0, 1, 0, 0.069565, 0, -0.997578, 1.86991, 0.688907, -15.3969 )
 
+[node name="playerspawn4" type="Position3D" parent="."]
+transform = Transform( -0.99157, 0.00120084, -0.129569, 0, 0.999957, 0.00926757, 0.129574, 0.00918944, -0.991527, -4.74334, 0.688907, -14.6993 )
+
+[node name="compaspawn4" type="Position3D" parent="."]
+transform = Transform( -0.997578, 0, -0.069565, 0, 1, 0, 0.069565, 0, -0.997578, -4.73802, 0.688907, -15.3969 )
+
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Puerta4" to="." method="_on_Puerta4_body_entered"]

@@ -2,7 +2,7 @@ extends KinematicBody
 
 
 # Velocidad del personaje
-export var speed = 120.0
+export var speed = 120.0 * 10
 
 # Donde el personaje tiene que ir
 var destination = Vector3()
@@ -36,7 +36,7 @@ func _input(event):
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
 		#print(is_dialog_active)
 		if collision and !is_dialog_active:
-			print(collision.get("collider").name)
+			print("colisión con: ", collision.get("collider").name)
 			if collision.get("collider").name == "floor":
 				destination = collision.position
 				moving = true

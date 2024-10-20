@@ -2,6 +2,7 @@ extends Spatial
 
 
 var from = 0
+var current_room = 3
 
 
 
@@ -14,7 +15,9 @@ func _ready():
 		2:
 			$player.transform = $playerspawn2.transform
 			$compa.transform = $compaspawn2.transform
-		
+		4:
+			$player.transform = $playerspawn4.transform
+			$compa.transform = $compaspawn4.transform
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -28,4 +31,8 @@ func _on_Area_body_entered(body):
 		
 		#print(get_parent())
 		#print(get_parent().get_parent())
-		get_parent().get_parent().change_room_from_to(3,2)
+		get_parent().get_parent().change_room_from_to(current_room,2)
+
+
+func _on_Puerta4_body_entered(body):
+	if body.name == $player.name: get_parent().get_parent().change_room_from_to(current_room,4)
