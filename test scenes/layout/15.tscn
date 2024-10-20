@@ -1,11 +1,11 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=4]
 [ext_resource path="res://assets/Renders guarros/3b.png" type="Texture" id=5]
-[ext_resource path="res://test scenes/layout/14.gd" type="Script" id=6]
+[ext_resource path="res://test scenes/layout/15.gd" type="Script" id=6]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=8]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=9]
@@ -158,20 +158,6 @@ surfaces/0 = {
 "vertex_count": 24
 }
 
-[sub_resource type="ArrayMesh" id=94]
-resource_name = "complete_scenes_Cube113"
-surfaces/0 = {
-"aabb": AABB( -1, -1, -1, 2, 2, 2.00001 ),
-"array_data": PoolByteArray( 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 127, 0, 54, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 129, 127, 63, 0, 48, 0, 52, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 129, 0, 0, 127, 0, 54, 0, 60, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 127, 0, 57, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 127, 129, 63, 0, 59, 0, 52, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 129, 0, 0, 127, 0, 57, 0, 60, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 127, 127, 0, 127, 0, 54, 0, 58, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 129, 127, 63, 0, 48, 0, 56, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 129, 0, 0, 127, 0, 54, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 127, 127, 0, 127, 0, 57, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 127, 129, 63, 0, 59, 0, 56, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 129, 0, 0, 127, 0, 57, 0, 58, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 127, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 129, 127, 63, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 127, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 127, 129, 63, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 127, 127, 0, 127, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 129, 127, 63, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 127, 127, 0, 127, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 127, 129, 63, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 127, 0, 0, 127, 0, 57, 0, 56 ),
-"array_index_data": PoolByteArray( 2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 6, 0, 21, 0, 9, 0, 6, 0, 18, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 12, 0, 3, 0, 15, 0, 12, 0, 0, 0, 3, 0, 7, 0, 13, 0, 19, 0, 7, 0, 1, 0, 13, 0, 22, 0, 4, 0, 10, 0, 22, 0, 16, 0, 4, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 36,
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 24
-}
-
 [sub_resource type="ArrayMesh" id=97]
 resource_name = "complete_scenes_Cube085"
 surfaces/0 = {
@@ -206,13 +192,13 @@ script = ExtResource( 6 )
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 2 )]
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, 23.0022, 0.537034, 12.3103 )
+transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -18.3008, 0.537034, 12.3103 )
 
 [node name="compa" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, 21.4202, 0.64144, 12.0302 )
+transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -19.8828, 0.64144, 12.0302 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.70339, 0.230236, -0.672484, 0.000132093, 0.946046, 0.324033, 0.710805, -0.22801, 0.665408, -5.48371, 18.206, 34.9606 )
+transform = Transform( 0.893873, -0.167572, 0.415826, 0.000129519, 0.927615, 0.373538, -0.448321, -0.333842, 0.829191, 3.52514, 19.608, 40.1571 )
 fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
@@ -251,7 +237,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2615, -0.798934, -5.732 )
 shape = SubResource( 96 )
 
 [node name="floor3" type="CollisionShape" parent="escenario/casa"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.366, -0.798932, -18.2476 )
+transform = Transform( 0.999759, 0, 0.021937, 0, 1, 0, -0.021937, 0, 0.999759, -39.4717, -0.798932, -19.2995 )
 shape = SubResource( 96 )
 
 [node name="Cylinder010" type="MeshInstance" parent="escenario/casa"]
@@ -287,10 +273,6 @@ mesh = SubResource( 92 )
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4.51863, 18.1173, -46.8795 )
 mesh = SubResource( 93 )
 
-[node name="Cube113" type="MeshInstance" parent="escenario/casa"]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 4.63738, 18.1173, -41.5995 )
-mesh = SubResource( 94 )
-
 [node name="Cube076" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 2.03915, 0, 1.80218, 0, 1.74117, 0, -1.80218, 0, 2.03915, 5.32505, 0.195586, -14.1333 )
 mesh = SubResource( 97 )
@@ -308,24 +290,24 @@ material/0 = SubResource( 8 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.541, 6.564, 0, 22.489 )
 shape = SubResource( 83 )
 
-[node name="Puerta15" type="Area" parent="."]
-transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 4.85522, 0.97169, 7.5559 )
+[node name="Puerta16" type="Area" parent="."]
+transform = Transform( -0.765517, 0, -0.643416, 0, 1, 0, 0.643416, 0, -0.765517, -4.42547, 0.97169, 9.10081 )
 visible = false
 
-[node name="MeshInstance" type="MeshInstance" parent="Puerta15"]
+[node name="MeshInstance" type="MeshInstance" parent="Puerta16"]
 mesh = SubResource( 7 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Puerta15"]
+[node name="CollisionShape" type="CollisionShape" parent="Puerta16"]
 shape = SubResource( 18 )
 
-[node name="Puerta12" type="Area" parent="."]
-transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 43.0964, 0.97169, 5.08628 )
+[node name="Puerta14" type="Area" parent="."]
+transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 6.23284, 0.97169, 7.59896 )
 visible = false
 
-[node name="MeshInstance" type="MeshInstance" parent="Puerta12"]
+[node name="MeshInstance" type="MeshInstance" parent="Puerta14"]
 mesh = SubResource( 7 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Puerta12"]
+[node name="CollisionShape" type="CollisionShape" parent="Puerta14"]
 shape = SubResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -334,20 +316,20 @@ margin_top = 101.0
 margin_right = 569.0
 margin_bottom = 141.0
 
-[node name="playerspawn15" type="Position3D" parent="."]
-transform = Transform( 0.013194, 0.00926677, -0.999869, 0, 0.999957, 0.00926757, 0.999913, -0.00012228, 0.0131939, 7.16516, 0.590081, 6.755 )
+[node name="playerspawn16" type="Position3D" parent="."]
+transform = Transform( -0.668092, 0.0068958, -0.744046, 0, 0.999957, 0.00926757, 0.744078, 0.0061916, -0.668063, -3.03536, 0.590081, 10.0665 )
 
-[node name="compaspawn15" type="Position3D" parent="."]
-transform = Transform( -0.0471063, 0, -0.99889, 0, 1, 0, 0.99889, 0, -0.0471063, 5.67616, 0.547394, 6.72385 )
+[node name="compaspawn16" type="Position3D" parent="."]
+transform = Transform( -0.711732, 0, -0.702451, 0, 1, 0, 0.702451, 0, -0.711732, -4.10896, 0.547394, 9.03432 )
 
-[node name="playerspawn12" type="Position3D" parent="."]
-transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 40.9009, 0.584818, 5.72558 )
+[node name="playerspawn14" type="Position3D" parent="."]
+transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 4.06489, 0.584818, 7.91249 )
 
-[node name="compaspawn12" type="Position3D" parent="."]
-transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 42.373, 0.542131, 5.95171 )
+[node name="compaspawn14" type="Position3D" parent="."]
+transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 5.53699, 0.542131, 8.13862 )
 
 [node name="ball" parent="." instance=ExtResource( 9 )]
 visible = false
 
-[connection signal="body_entered" from="Puerta15" to="." method="_on_Puerta13_body_entered"]
-[connection signal="body_entered" from="Puerta12" to="." method="_on_Puerta11_body_entered"]
+[connection signal="body_entered" from="Puerta16" to="." method="_on_Puerta16_body_entered"]
+[connection signal="body_entered" from="Puerta14" to="." method="_on_Puerta14_body_entered"]
