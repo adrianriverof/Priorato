@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=2]
@@ -490,6 +490,9 @@ size = Vector3( 80.758, 0.338, 31.356 )
 [sub_resource type="ConcavePolygonShape" id=83]
 data = PoolVector3Array( -40.379, 0.169, 15.678, 40.379, 0.169, 15.678, -40.379, -0.169, 15.678, 40.379, 0.169, 15.678, 40.379, -0.169, 15.678, -40.379, -0.169, 15.678, 40.379, 0.169, -15.678, -40.379, 0.169, -15.678, 40.379, -0.169, -15.678, -40.379, 0.169, -15.678, -40.379, -0.169, -15.678, 40.379, -0.169, -15.678, 40.379, 0.169, 15.678, 40.379, 0.169, -15.678, 40.379, -0.169, 15.678, 40.379, 0.169, -15.678, 40.379, -0.169, -15.678, 40.379, -0.169, 15.678, -40.379, 0.169, -15.678, -40.379, 0.169, 15.678, -40.379, -0.169, -15.678, -40.379, 0.169, 15.678, -40.379, -0.169, 15.678, -40.379, -0.169, -15.678, 40.379, 0.169, 15.678, -40.379, 0.169, 15.678, 40.379, 0.169, -15.678, -40.379, 0.169, 15.678, -40.379, 0.169, -15.678, 40.379, 0.169, -15.678, -40.379, -0.169, 15.678, 40.379, -0.169, 15.678, -40.379, -0.169, -15.678, 40.379, -0.169, 15.678, 40.379, -0.169, -15.678, -40.379, -0.169, -15.678 )
 
+[sub_resource type="BoxShape" id=84]
+extents = Vector3( 1, 9.31885, 6.98611 )
+
 [sub_resource type="CubeMesh" id=7]
 size = Vector3( 3.678, 2, 2 )
 
@@ -689,6 +692,10 @@ material/0 = SubResource( 8 )
 [node name="CollisionShape" type="CollisionShape" parent="escenario/floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.37832, 0, 0 )
 shape = SubResource( 83 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="escenario/floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1828, 0, 3.01415 )
+shape = SubResource( 84 )
 
 [node name="CSGBox" type="CSGBox" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3443, -0.1525, 0.246367 )
