@@ -495,11 +495,11 @@ size = Vector3( 3.678, 2, 2 )
 [sub_resource type="SpatialMaterial" id=51]
 albedo_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=52]
-albedo_color = Color( 0, 0, 0, 1 )
-
 [sub_resource type="BoxShape" id=18]
 extents = Vector3( 1.621, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=52]
+albedo_color = Color( 0, 0, 0, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 6 )
@@ -693,23 +693,25 @@ material/0 = SubResource( 8 )
 [node name="CollisionShape" type="CollisionShape" parent="escenario/floor"]
 shape = SubResource( 17 )
 
-[node name="Puerta9" type="Area" parent="."]
-transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -4.50738, 1.702, -16.6198 )
-visible = false
+[node name="Puerta9a" type="Area" parent="."]
+transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -5.61844, 1.702, -16.6198 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Puerta9"]
+[node name="MeshInstance" type="MeshInstance" parent="Puerta9a"]
 mesh = SubResource( 7 )
 material/0 = SubResource( 51 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="Puerta9"]
+[node name="CollisionShape" type="CollisionShape" parent="Puerta9a"]
+shape = SubResource( 18 )
+
+[node name="Puerta9b" type="Area" parent="."]
+transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -5.59557, 1.702, -16.6198 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Puerta9b"]
 transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.158144, 0, 12.87 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 52 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Puerta9"]
-shape = SubResource( 18 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="Puerta9"]
+[node name="CollisionShape2" type="CollisionShape" parent="Puerta9b"]
 transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, -0.159799, 0, 13.0046 )
 shape = SubResource( 18 )
 
@@ -735,11 +737,18 @@ transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757
 [node name="compaspawn11" type="Position3D" parent="."]
 transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 2.19481, 0.688907, -11.6314 )
 
-[node name="playerspawn9" type="Position3D" parent="."]
-transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -3.3366, 0.740236, -8.72209 )
+[node name="playerspawn91" type="Position3D" parent="."]
+transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -2.43069, 0.740236, -3.19226 )
 
-[node name="compaspawn9" type="Position3D" parent="."]
-transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -4.79706, 0.740236, -8.56974 )
+[node name="compaspawn91" type="Position3D" parent="."]
+transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -3.29372, 0.740236, -3.03991 )
 
-[connection signal="body_entered" from="Puerta9" to="." method="_on_Puerta9_body_entered"]
+[node name="playerspawn92" type="Position3D" parent="."]
+transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -2.91096, 0.740236, -16.2991 )
+
+[node name="compaspawn92" type="Position3D" parent="."]
+transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -4.18729, 0.740236, -16.5934 )
+
+[connection signal="body_entered" from="Puerta9a" to="." method="_on_Puerta9a_body_entered"]
+[connection signal="body_entered" from="Puerta9b" to="." method="_on_Puerta9b_body_entered"]
 [connection signal="body_entered" from="Puerta11" to="." method="_on_Puerta11_body_entered"]

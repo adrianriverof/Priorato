@@ -579,17 +579,25 @@ shape = SubResource( 17 )
 transform = Transform( 0.0667267, 0, 0.997771, 0, 1, 0, -0.997771, 0, 0.0667267, -18.1489, 1.65303, 5.56174 )
 shape = SubResource( 24 )
 
-[node name="Puerta10" type="Area" parent="."]
+[node name="Puerta10a" type="Area" parent="."]
 transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -6.94585, 1.702, -16.9486 )
 visible = false
 
-[node name="MeshInstance" type="MeshInstance" parent="Puerta10"]
+[node name="MeshInstance" type="MeshInstance" parent="Puerta10a"]
 mesh = SubResource( 7 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Puerta10"]
+[node name="CollisionShape" type="CollisionShape" parent="Puerta10a"]
 shape = SubResource( 18 )
 
-[node name="CollisionShape2" type="CollisionShape" parent="Puerta10"]
+[node name="Puerta10b" type="Area" parent="."]
+transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -6.94585, 1.702, -16.9486 )
+visible = false
+
+[node name="MeshInstance" type="MeshInstance" parent="Puerta10b"]
+transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.159174, 0, 12.9539 )
+mesh = SubResource( 7 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Puerta10b"]
 transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.163314, 0, 13.2908 )
 shape = SubResource( 18 )
 
@@ -609,11 +617,17 @@ margin_top = 101.0
 margin_right = 569.0
 margin_bottom = 141.0
 
-[node name="playerspawn10" type="Position3D" parent="."]
-transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 0.705708, 0.731594, -11.6562 )
+[node name="playerspawn101" type="Position3D" parent="."]
+transform = Transform( 0.0220413, 0.00926532, -0.999713, 0, 0.999957, 0.00926757, 0.999757, -0.000204274, 0.0220409, -4.38755, 0.731594, -16.7564 )
 
-[node name="compaspawn10" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 2.19481, 0.688907, -11.6314 )
+[node name="compaspawn101" type="Position3D" parent="."]
+transform = Transform( -0.0382657, 0, -0.999268, 0, 1, 0, 0.999268, 0, -0.0382657, -5.87675, 0.688907, -16.7744 )
+
+[node name="playerspawn102" type="Position3D" parent="."]
+transform = Transform( 0.0174257, -0.045591, -0.998807, -0.00483638, 0.998944, -0.0456816, 0.999837, 0.00562664, 0.0171874, -3.54984, 0.958217, -3.92871 )
+
+[node name="compaspawn102" type="Position3D" parent="."]
+transform = Transform( -0.0427876, -0.0548456, -0.997578, -0.0081393, 0.998478, -0.054546, 0.999052, 0.00578568, -0.0431689, -5.03436, 0.834069, -3.95423 )
 
 [node name="playerspawn8" type="Position3D" parent="."]
 transform = Transform( 0.999967, 7.5051e-05, -0.00809726, 0, 0.999957, 0.00926757, 0.00809856, -0.00926727, 0.999923, -1.34186, 0.740236, -3.15703 )
@@ -621,5 +635,6 @@ transform = Transform( 0.999967, 7.5051e-05, -0.00809726, 0, 0.999957, 0.0092675
 [node name="compaspawn8" type="Position3D" parent="."]
 transform = Transform( 0.997661, 0, -0.0683633, 0, 1, 0, 0.0683633, 0, 0.997661, -1.45729, 0.740236, -1.69318 )
 
-[connection signal="body_entered" from="Puerta10" to="." method="_on_Puerta10_body_entered"]
+[connection signal="body_entered" from="Puerta10a" to="." method="_on_Puerta10a_body_entered"]
+[connection signal="body_entered" from="Puerta10b" to="." method="_on_Puerta10b_body_entered"]
 [connection signal="body_entered" from="Puerta8" to="." method="_on_Puerta8_body_entered"]
