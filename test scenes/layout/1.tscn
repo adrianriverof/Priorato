@@ -126,7 +126,6 @@ modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
 texture = ExtResource( 8 )
 
 [node name="escenario" type="Spatial" parent="."]
-visible = false
 
 [node name="casa" type="StaticBody" parent="escenario"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.42339, 0.243784, -8.90271 )
@@ -220,7 +219,7 @@ height = 0.261605
 depth = 1.04159
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.09174, 1.60071, -9.49622 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.09174, 1.60071, -9.92736 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 2 )

@@ -8,6 +8,7 @@ var current_room = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$RichTextLabel.text = "ROOM "+str(current_room)
 	$escenario.visible = false
 	match from:
 		0:
@@ -18,6 +19,9 @@ func _ready():
 		4:
 			$player.transform = $playerspawn4.transform
 			$compa.transform = $compaspawn4.transform
+		6:
+			$player.transform = $playerspawn6.transform
+			$compa.transform = $compaspawn6.transform
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

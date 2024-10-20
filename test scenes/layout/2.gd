@@ -7,6 +7,7 @@ var current_room = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$RichTextLabel.text = "ROOM "+str(current_room)
 	$escenario.visible = false
 	match from:
 		0:

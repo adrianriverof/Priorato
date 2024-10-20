@@ -205,6 +205,12 @@ transform = Transform( -0.99157, 0.00120084, -0.129569, 0, 0.999957, 0.00926757,
 [node name="compaspawn4" type="Position3D" parent="."]
 transform = Transform( -0.997578, 0, -0.069565, 0, 1, 0, 0.069565, 0, -0.997578, -4.73802, 0.688907, -15.3969 )
 
+[node name="playerspawn6" type="Position3D" parent="."]
+transform = Transform( -0.118144, 0.00920266, -0.992954, 0, 0.999957, 0.00926757, 0.992997, 0.00109491, -0.118139, -7.35989, 0.688907, -11.0423 )
+
+[node name="compaspawn6" type="Position3D" parent="."]
+transform = Transform( -0.177789, 0, -0.984069, 0, 1, 0, 0.984069, 0, -0.177789, -8.03478, 0.688907, -11.2189 )
+
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Puerta4" to="." method="_on_Puerta4_body_entered"]
 [connection signal="body_entered" from="Puerta6" to="." method="_on_Puerta6_body_entered"]

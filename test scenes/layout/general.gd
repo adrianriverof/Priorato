@@ -8,14 +8,16 @@ var room_scenes = [
 	preload("res://test scenes/layout/3.tscn"),
 	preload("res://test scenes/layout/4.tscn"),
 	preload("res://test scenes/layout/5.tscn"),
-	preload("res://test scenes/layout/6.tscn")
+	preload("res://test scenes/layout/6.tscn"),
+	null,
+	preload("res://test scenes/layout/8.tscn")
 ]
 
 
 func change_room_from_to(from, to):
 	print("venimos de la sala " + str(from) + " y vamos a la sala " + str(to))
-
-	# Verificar que el valor de 'to' esté dentro del rango de las salas disponibles
+	
+	
 	if to < 1 or to > room_scenes.size():
 		print("Error: Sala destino fuera de rango")
 		return

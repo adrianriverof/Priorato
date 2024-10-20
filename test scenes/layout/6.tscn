@@ -194,10 +194,10 @@ transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757
 transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 12.8382, 0.688907, -6.94007 )
 
 [node name="playerspawn8" type="Position3D" parent="."]
-transform = Transform( -0.15621, -0.0091538, 0.98768, 0, 0.999957, 0.00926757, -0.987724, 0.00144769, -0.156204, -17.4813, 0.688907, -7.11197 )
+transform = Transform( -0.0785116, 0.00923896, -0.99687, 0, 0.999957, 0.00926757, 0.996913, 0.000727607, -0.0785076, -16.0013, 0.688907, -7.06715 )
 
 [node name="compaspawn8" type="Position3D" parent="."]
-transform = Transform( -0.0963846, 0, 0.995345, 0, 1, 0, -0.995345, 0, -0.0963846, -15.996, 0.688907, -7.2422 )
+transform = Transform( -0.138464, 0, -0.990368, 0, 1, 0, 0.990368, 0, -0.138464, -17.476, 0.688907, -7.28701 )
 
 [connection signal="body_entered" from="Puerta8" to="." method="_on_Puerta8_body_entered"]
 [connection signal="body_entered" from="Puerta3" to="." method="_on_Puerta3_body_entered"]

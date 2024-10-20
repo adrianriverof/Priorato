@@ -29,8 +29,6 @@ func _input(event):
 		var ray_direction = camera.project_ray_normal(get_viewport().get_mouse_position())
 		
 		
-		print(ray_direction)
-		
 		# Usamos una intersección para determinar donde está el suelo
 		var space_state = get_world().direct_space_state
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])

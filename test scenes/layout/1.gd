@@ -1,10 +1,11 @@
 extends Spatial
 
 var from = 0
-
+var current_room = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$RichTextLabel.text = "ROOM "+str(current_room)
 	match from:
 		0:
 			pass

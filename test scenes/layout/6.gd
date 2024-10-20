@@ -7,6 +7,8 @@ var current_room = 6
 
 
 func _ready():
+	
+	$RichTextLabel.text = "ROOM "+str(current_room)
 	#$escenario.visible = false
 	match from:
 		
@@ -20,7 +22,6 @@ func _ready():
 
 
 
-
 func _on_Puerta8_body_entered(body):
 	if body.name == $player.name:
 		get_parent().get_parent().change_room_from_to(current_room,8)
@@ -28,3 +29,4 @@ func _on_Puerta8_body_entered(body):
 func _on_Puerta3_body_entered(body):
 	if body.name == $player.name:
 		get_parent().get_parent().change_room_from_to(current_room,3)
+
