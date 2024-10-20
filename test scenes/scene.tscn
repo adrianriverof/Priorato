@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://shaders/color_reductor.tres" type="Shader" id=1]
 [ext_resource path="res://shaders/animated_noise_then_color.shader" type="Shader" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://shaders/optimized_color_reductor.tres" type="Shader" id=21]
 [ext_resource path="res://shaders/color_reductor.shader" type="Shader" id=22]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=23]
+[ext_resource path="res://elements/ball.tscn" type="PackedScene" id=24]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -432,6 +433,12 @@ margin_bottom = 631.0
 
 [node name="Dialog" parent="." instance=ExtResource( 17 )]
 timeline = "timeline-1729017995.json"
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( -0.00837722, 0.603556, -0.797277, 0.00634139, 0.797321, 0.603523, 0.999945, 0, -0.0105067, -9.40727, 7.384, 0.914695 )
+
+[node name="ball" parent="." instance=ExtResource( 24 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 151.981, 0, 0 )
 
 [connection signal="timeline_end" from="Dialog" to="player" method="_on_dialogic_ended"]
 [connection signal="timeline_start" from="Dialog" to="player" method="_on_dialogic_started"]

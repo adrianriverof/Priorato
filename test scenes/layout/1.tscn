@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://assets/Renders guarros/1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/1 b .png" type="Texture" id=8]
+[ext_resource path="res://elements/ball.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ArrayMesh" id=3]
 resource_name = "complete_scenes_Cube001"
@@ -102,6 +103,7 @@ size = Vector3( 14.107, 0.338, 12.98 )
 script = ExtResource( 5 )
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 transform = Transform( -0.999439, 0, 0.0334867, 0, 1, 0, -0.0334867, 0, -0.999439, 0, 0.537034, -10.0725 )
@@ -174,7 +176,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.068661, -13.209 )
 shape = ExtResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="escenario/floor"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 1 )
 
 [node name="CSGBox" type="CSGBox" parent="escenario"]
@@ -219,7 +220,7 @@ height = 0.261605
 depth = 1.04159
 
 [node name="Area" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25714, 1.60071, -11.6704 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.09174, 1.60071, -9.49622 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 2 )
@@ -235,9 +236,12 @@ margin_bottom = 141.0
 text = "ROOM 1"
 
 [node name="playerspawn2" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8277, 0.685384, -13.035 )
+transform = Transform( -0.18793, 0, -0.982182, 0, 1, 0, 0.982182, 0, -0.18793, -3.9173, 0.685384, -9.71912 )
 
 [node name="compaspawn2" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8277, 0.685384, -11.8625 )
+transform = Transform( -0.00151832, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00151832, -4.48377, 0.685384, -9.695 )
+
+[node name="ball" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 39.6946, 0, 0 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
