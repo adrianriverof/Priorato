@@ -7,7 +7,7 @@
 [node name="general" type="Spatial"]
 transform = Transform( 0.999664, -0.0259152, 0, 0.0259152, 0.999664, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 2 )
-starting_room = 6
+starting_room = 9
 
 [node name="RoomManager" type="Spatial" parent="."]
 
