@@ -8,6 +8,7 @@ var current_room = 8
 
 func _ready():
 	$RichTextLabel.text = "ROOM "+str(current_room)
+	print($RichTextLabel.text)
 	#$escenario.visible = false
 	match from:
 		

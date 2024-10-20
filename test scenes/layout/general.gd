@@ -10,7 +10,15 @@ var room_scenes = [
 	preload("res://test scenes/layout/5.tscn"),
 	preload("res://test scenes/layout/6.tscn"),
 	null,
-	preload("res://test scenes/layout/8.tscn")
+	preload("res://test scenes/layout/8.tscn"), 
+	preload("res://test scenes/layout/9.tscn"),
+	null, # 10
+	null,
+	null,
+	null,
+	null,
+	null,
+	null, # 16
 ]
 
 
