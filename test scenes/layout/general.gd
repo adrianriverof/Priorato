@@ -19,7 +19,7 @@ var room_scenes = [
 	preload("res://test scenes/layout/default.tscn"),
 	preload("res://test scenes/layout/14.tscn"),
 	preload("res://test scenes/layout/15.tscn"),
-	preload("res://test scenes/layout/default.tscn"), # 16
+	preload("res://test scenes/layout/16.tscn"), # 16
 ]
 
 func _ready():
