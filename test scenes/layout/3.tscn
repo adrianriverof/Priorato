@@ -176,6 +176,16 @@ mesh = SubResource( 7 )
 [node name="CollisionShape" type="CollisionShape" parent="Puerta4"]
 shape = SubResource( 18 )
 
+[node name="Puerta6" type="Area" parent="."]
+transform = Transform( 0.0234202, 0, 0.999726, 0, 1, 0, -0.999726, 0, 0.0234202, -8.81017, 1.50672, -11.543 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Puerta6"]
+visible = false
+mesh = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Puerta6"]
+shape = SubResource( 18 )
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 467.0
 margin_top = 101.0
@@ -197,3 +207,4 @@ transform = Transform( -0.997578, 0, -0.069565, 0, 1, 0, 0.069565, 0, -0.997578,
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Puerta4" to="." method="_on_Puerta4_body_entered"]
+[connection signal="body_entered" from="Puerta6" to="." method="_on_Puerta6_body_entered"]

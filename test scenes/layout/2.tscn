@@ -78,6 +78,7 @@ size = Vector3( 17.582, 0.338, 13.669 )
 albedo_color = Color( 1, 0.713726, 0.713726, 1 )
 
 [sub_resource type="BoxShape" id=2]
+extents = Vector3( 1.679, 1, 1 )
 
 [sub_resource type="CubeMesh" id=7]
 
@@ -171,7 +172,7 @@ width = 5.39859
 height = 3.18273
 
 [node name="Puerta1" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13967, 2.096, -7.27206 )
+transform = Transform( -0.10465, 0, -0.994509, 0, 1, 0, 0.994509, 0, -0.10465, 3.13967, 2.096, -7.27206 )
 visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta1"]
@@ -185,7 +186,7 @@ texture = ExtResource( 6 )
 mesh = SubResource( 7 )
 
 [node name="Puerta3" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297383, 1.62447, -15.4391 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203397, 1.62447, -16.474 )
 visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta3"]

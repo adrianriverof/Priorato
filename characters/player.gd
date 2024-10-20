@@ -59,6 +59,7 @@ func _physics_process(delta):
 		if ball: ball.translation = destination
 		
 		if distance_to_target > 0.5:
+			direction.y *= 0
 			var motion = direction * speed * delta
 			
 			self.look_at(Vector3(destination.x, self.translation.y, destination.z), Vector3.UP)

@@ -36,3 +36,7 @@ func _on_Area_body_entered(body):
 
 func _on_Puerta4_body_entered(body):
 	if body.name == $player.name: get_parent().get_parent().change_room_from_to(current_room,4)
+
+
+func _on_Puerta6_body_entered(body):
+	if body.name == $player.name: get_parent().get_parent().change_room_from_to(current_room,6)
