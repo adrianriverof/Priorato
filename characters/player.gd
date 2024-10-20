@@ -34,7 +34,7 @@ func _input(event):
 		# Usamos una intersección para determinar donde está el suelo
 		var space_state = get_world().direct_space_state
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
-		#print(is_dialog_active)
+		print(is_dialog_active)
 		if collision and !is_dialog_active:
 			print("colisión con: ", collision.get("collider").name)
 			if collision.get("collider").name == "floor":

@@ -1,13 +1,14 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=4]
 [ext_resource path="res://assets/Renders guarros/3b.png" type="Texture" id=5]
-[ext_resource path="res://test scenes/layout/10.gd" type="Script" id=6]
+[ext_resource path="res://test scenes/layout/11.gd" type="Script" id=6]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=8]
+[ext_resource path="res://elements/ball.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ArrayMesh" id=53]
 resource_name = "complete_scenes_Cube052"
@@ -482,38 +483,33 @@ surfaces/0 = {
 }
 
 [sub_resource type="CubeMesh" id=1]
-size = Vector3( 39.078, 0.338, 31.356 )
+size = Vector3( 80.758, 0.338, 31.356 )
 
 [sub_resource type="SpatialMaterial" id=8]
 
-[sub_resource type="ConcavePolygonShape" id=17]
-data = PoolVector3Array( -19.539, 0.169, 15.678, 19.539, 0.169, 15.678, -19.539, -0.169, 15.678, 19.539, 0.169, 15.678, 19.539, -0.169, 15.678, -19.539, -0.169, 15.678, 19.539, 0.169, -15.678, -19.539, 0.169, -15.678, 19.539, -0.169, -15.678, -19.539, 0.169, -15.678, -19.539, -0.169, -15.678, 19.539, -0.169, -15.678, 19.539, 0.169, 15.678, 19.539, 0.169, -15.678, 19.539, -0.169, 15.678, 19.539, 0.169, -15.678, 19.539, -0.169, -15.678, 19.539, -0.169, 15.678, -19.539, 0.169, -15.678, -19.539, 0.169, 15.678, -19.539, -0.169, -15.678, -19.539, 0.169, 15.678, -19.539, -0.169, 15.678, -19.539, -0.169, -15.678, 19.539, 0.169, 15.678, -19.539, 0.169, 15.678, 19.539, 0.169, -15.678, -19.539, 0.169, 15.678, -19.539, 0.169, -15.678, 19.539, 0.169, -15.678, -19.539, -0.169, 15.678, 19.539, -0.169, 15.678, -19.539, -0.169, -15.678, 19.539, -0.169, 15.678, 19.539, -0.169, -15.678, -19.539, -0.169, -15.678 )
+[sub_resource type="ConcavePolygonShape" id=83]
+data = PoolVector3Array( -40.379, 0.169, 15.678, 40.379, 0.169, 15.678, -40.379, -0.169, 15.678, 40.379, 0.169, 15.678, 40.379, -0.169, 15.678, -40.379, -0.169, 15.678, 40.379, 0.169, -15.678, -40.379, 0.169, -15.678, 40.379, -0.169, -15.678, -40.379, 0.169, -15.678, -40.379, -0.169, -15.678, 40.379, -0.169, -15.678, 40.379, 0.169, 15.678, 40.379, 0.169, -15.678, 40.379, -0.169, 15.678, 40.379, 0.169, -15.678, 40.379, -0.169, -15.678, 40.379, -0.169, 15.678, -40.379, 0.169, -15.678, -40.379, 0.169, 15.678, -40.379, -0.169, -15.678, -40.379, 0.169, 15.678, -40.379, -0.169, 15.678, -40.379, -0.169, -15.678, 40.379, 0.169, 15.678, -40.379, 0.169, 15.678, 40.379, 0.169, -15.678, -40.379, 0.169, 15.678, -40.379, 0.169, -15.678, 40.379, 0.169, -15.678, -40.379, -0.169, 15.678, 40.379, -0.169, 15.678, -40.379, -0.169, -15.678, 40.379, -0.169, 15.678, 40.379, -0.169, -15.678, -40.379, -0.169, -15.678 )
 
 [sub_resource type="CubeMesh" id=7]
 size = Vector3( 3.678, 2, 2 )
 
-[sub_resource type="SpatialMaterial" id=51]
-albedo_color = Color( 0, 0, 0, 1 )
-
 [sub_resource type="BoxShape" id=18]
-extents = Vector3( 1.621, 1, 1 )
-
-[sub_resource type="SpatialMaterial" id=52]
-albedo_color = Color( 0, 0, 0, 1 )
+extents = Vector3( 3.91409, 1, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 6 )
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 2 )]
+visible = false
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -1.36881, 0.537034, -8.97394 )
+transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, 6.47602, 0.537034, -8.97394 )
 
 [node name="compa" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
+transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, 4.89393, 0.64144, -9.25404 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.0116567, -0.137696, 0.990406, 0.000138296, 0.990473, 0.137704, -0.999932, -0.0014682, 0.0115647, 14.3681, 7.6724, -9.70195 )
+transform = Transform( 0.0115405, -0.96971, 0.243988, 3.40694e-05, 0.244004, 0.969774, -0.999933, -0.0111834, 0.00284897, 17.188, 26.742, -9.691 )
 fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
@@ -691,38 +687,38 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="escenario/floor"]
-shape = SubResource( 17 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.37832, 0, 0 )
+shape = SubResource( 83 )
 
-[node name="Puerta9a" type="Area" parent="."]
-transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -5.61844, 1.702, -16.6198 )
+[node name="CSGBox" type="CSGBox" parent="escenario"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3443, -0.1525, 0.246367 )
+use_collision = true
+width = 43.6815
+depth = 14.7884
 
-[node name="MeshInstance" type="MeshInstance" parent="Puerta9a"]
-mesh = SubResource( 7 )
-material/0 = SubResource( 51 )
+[node name="CSGBox2" type="CSGBox" parent="escenario"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3443, -0.1525, -20.187 )
+use_collision = true
+width = 43.6815
+depth = 14.7884
 
-[node name="CollisionShape" type="CollisionShape" parent="Puerta9a"]
-shape = SubResource( 18 )
-
-[node name="Puerta9b" type="Area" parent="."]
-transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -5.59557, 1.702, -16.6198 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="Puerta9b"]
-transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.158144, 0, 12.87 )
-mesh = SubResource( 7 )
-material/0 = SubResource( 52 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="Puerta9b"]
-transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, -0.159799, 0, 13.0046 )
-shape = SubResource( 18 )
-
-[node name="Puerta11" type="Area" parent="."]
-transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, -0.0323033, 0.97169, -9.38853 )
+[node name="Puerta10" type="Area" parent="."]
+transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 1.92723, 0.97169, -9.38853 )
 visible = false
 
-[node name="MeshInstance" type="MeshInstance" parent="Puerta11"]
+[node name="MeshInstance" type="MeshInstance" parent="Puerta10"]
 mesh = SubResource( 7 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Puerta11"]
+[node name="CollisionShape" type="CollisionShape" parent="Puerta10"]
+shape = SubResource( 18 )
+
+[node name="Puerta12" type="Area" parent="."]
+transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 19.3433, 0.97169, -9.38853 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Puerta12"]
+mesh = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Puerta12"]
 shape = SubResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -731,24 +727,19 @@ margin_top = 101.0
 margin_right = 569.0
 margin_bottom = 141.0
 
-[node name="playerspawn11" type="Position3D" parent="."]
-transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, -1.44232, 0.731594, -9.8036 )
+[node name="playerspawn10" type="Position3D" parent="."]
+transform = Transform( 0.013194, 0.00926677, -0.999869, 0, 0.999957, 0.00926757, 0.999913, -0.00012228, 0.0131939, 3.66573, 0.584818, -9.50128 )
 
-[node name="compaspawn11" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 0.0467772, 0.688907, -9.7788 )
+[node name="compaspawn10" type="Position3D" parent="."]
+transform = Transform( -0.0471063, 0, -0.99889, 0, 1, 0, 0.99889, 0, -0.0471063, 2.17675, 0.542131, -9.53243 )
 
-[node name="playerspawn91" type="Position3D" parent="."]
-transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -2.43069, 0.740236, -3.19226 )
+[node name="playerspawn12" type="Position3D" parent="."]
+transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 17.1724, 0.584818, -9.62992 )
 
-[node name="compaspawn91" type="Position3D" parent="."]
-transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -3.29372, 0.740236, -3.03991 )
+[node name="compaspawn12" type="Position3D" parent="."]
+transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 18.6445, 0.542131, -9.40379 )
 
-[node name="playerspawn92" type="Position3D" parent="."]
-transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -2.91096, 0.740236, -16.2991 )
+[node name="ball" parent="." instance=ExtResource( 9 )]
 
-[node name="compaspawn92" type="Position3D" parent="."]
-transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -4.18729, 0.740236, -16.5934 )
-
-[connection signal="body_entered" from="Puerta9a" to="." method="_on_Puerta9a_body_entered"]
-[connection signal="body_entered" from="Puerta9b" to="." method="_on_Puerta9b_body_entered"]
-[connection signal="body_entered" from="Puerta11" to="." method="_on_Puerta11_body_entered"]
+[connection signal="body_entered" from="Puerta10" to="." method="_on_Puerta10_body_entered"]
+[connection signal="body_entered" from="Puerta12" to="." method="_on_Puerta12_body_entered"]
