@@ -15,7 +15,7 @@ var room_scenes = [
 	preload("res://test scenes/layout/9.tscn"),
 	preload("res://test scenes/layout/10.tscn"), # 10
 	preload("res://test scenes/layout/11.tscn"),
-	preload("res://test scenes/layout/default.tscn"),
+	preload("res://test scenes/layout/12.tscn"),
 	preload("res://test scenes/layout/default.tscn"),
 	preload("res://test scenes/layout/default.tscn"),
 	preload("res://test scenes/layout/default.tscn"),
