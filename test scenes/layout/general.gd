@@ -1,6 +1,6 @@
 extends Spatial
 
-
+export var starting_room = 1
 
 var room_scenes = [
 	preload("res://test scenes/layout/1.tscn"),
@@ -20,6 +20,9 @@ var room_scenes = [
 	null,
 	null, # 16
 ]
+
+func _ready():
+	change_room_from_to(0,starting_room)
 
 
 func change_room_from_to(from, to):

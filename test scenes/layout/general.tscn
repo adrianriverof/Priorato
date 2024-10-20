@@ -6,6 +6,7 @@
 
 [node name="general" type="Spatial"]
 script = ExtResource( 2 )
+starting_room = 9
 
 [node name="RoomManager" type="Spatial" parent="."]
 
