@@ -7,12 +7,16 @@ var current_room = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$escenario.visible = false
 	match from:
 		0:
 			pass
 		1:
 			$player.transform = $playerspawn1.transform
 			$compa.transform = $compaspawn1.transform
+		3: 
+			$player.transform = $playerspawn3.transform
+			$compa.transform = $compaspawn3.transform
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

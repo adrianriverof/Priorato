@@ -172,6 +172,7 @@ height = 3.18273
 
 [node name="Puerta1" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13967, 2.096, -7.27206 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta1"]
 shape = SubResource( 2 )
@@ -185,6 +186,7 @@ mesh = SubResource( 7 )
 
 [node name="Puerta3" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297383, 1.62447, -15.4391 )
+visible = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta3"]
 shape = SubResource( 2 )
@@ -208,6 +210,12 @@ transform = Transform( 0.0101402, -0.00926709, 0.999906, 0, 0.999957, 0.00926757
 
 [node name="compaspawn1" type="Position3D" parent="."]
 transform = Transform( 0.0704006, 0, 0.997519, 0, 1, 0, -0.997519, 0, 0.0704006, 2.2123, 0.688907, -7.82392 )
+
+[node name="playerspawn3" type="Position3D" parent="."]
+transform = Transform( -0.997577, 0.000644698, -0.069562, 0, 0.999957, 0.00926757, 0.0695649, 0.00924511, -0.997535, -0.282573, 0.688907, -14.0103 )
+
+[node name="compaspawn3" type="Position3D" parent="."]
+transform = Transform( -0.999957, 0, -0.00930253, 0, 1, 0, 0.00930253, 0, -0.999957, -0.244829, 0.830771, -14.7094 )
 
 [connection signal="body_entered" from="Puerta1" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Puerta3" to="." method="_on_Puerta3_body_entered"]

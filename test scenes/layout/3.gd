@@ -7,6 +7,7 @@ var from = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$escenario.visible = false
 	match from:
 		0:
 			pass
@@ -21,8 +22,9 @@ func _ready():
 
 
 func _on_Area_body_entered(body):
+	print("algo detectado Puerta 2")
 	if body.name == $player.name:
-		print("player entra")
+		print("player entra Puerta 2")
 		
 		#print(get_parent())
 		#print(get_parent().get_parent())

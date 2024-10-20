@@ -84,8 +84,8 @@ data = PoolVector3Array( -19.539, 0.169, 15.678, 19.539, 0.169, 15.678, -19.539,
 [sub_resource type="CubeMesh" id=7]
 size = Vector3( 3.678, 2, 2 )
 
-[sub_resource type="ConcavePolygonShape" id=18]
-data = PoolVector3Array( -1.839, 1, 1, 1.839, 1, 1, -1.839, -1, 1, 1.839, 1, 1, 1.839, -1, 1, -1.839, -1, 1, 1.839, 1, -1, -1.839, 1, -1, 1.839, -1, -1, -1.839, 1, -1, -1.839, -1, -1, 1.839, -1, -1, 1.839, 1, 1, 1.839, 1, -1, 1.839, -1, 1, 1.839, 1, -1, 1.839, -1, -1, 1.839, -1, 1, -1.839, 1, -1, -1.839, 1, 1, -1.839, -1, -1, -1.839, 1, 1, -1.839, -1, 1, -1.839, -1, -1, 1.839, 1, 1, -1.839, 1, 1, 1.839, 1, -1, -1.839, 1, 1, -1.839, 1, -1, 1.839, 1, -1, -1.839, -1, 1, 1.839, -1, 1, -1.839, -1, -1, 1.839, -1, 1, 1.839, -1, -1, -1.839, -1, -1 )
+[sub_resource type="BoxShape" id=18]
+extents = Vector3( 1.621, 1, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 3 )
@@ -156,19 +156,6 @@ material/0 = SubResource( 8 )
 [node name="CollisionShape" type="CollisionShape" parent="escenario/floor"]
 shape = SubResource( 17 )
 
-[node name="CSGBox" type="CSGBox" parent="escenario"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.05544, 16.343, 0.96157, -13.5871 )
-visible = false
-use_collision = true
-depth = 16.917
-
-[node name="CSGBox" type="CSGBox" parent="escenario/CSGBox"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.43767 )
-operation = 2
-calculate_tangents = false
-width = 5.39859
-height = 3.18273
-
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32639, 1.70188, -16.6491 )
 
@@ -187,9 +174,9 @@ margin_bottom = 141.0
 text = "ROOM 2"
 
 [node name="playerspawn2" type="Position3D" parent="."]
-transform = Transform( 0.0101402, -0.00926709, 0.999906, 0, 0.999957, 0.00926757, -0.999949, -9.39751e-05, 0.0101397, 1.5222, 0.688907, -14.8205 )
+transform = Transform( -0.99157, 0.00120084, -0.129569, 0, 0.999957, 0.00926757, 0.129574, 0.00918944, -0.991527, 1.8646, 0.688907, -14.6993 )
 
 [node name="compaspawn2" type="Position3D" parent="."]
-transform = Transform( 0.0704006, 0, 0.997519, 0, 1, 0, -0.997519, 0, 0.0704006, 2.2123, 0.688907, -14.7178 )
+transform = Transform( -0.997578, 0, -0.069565, 0, 1, 0, 0.069565, 0, -0.997578, 1.86991, 0.688907, -15.3969 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
