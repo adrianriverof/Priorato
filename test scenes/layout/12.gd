@@ -14,9 +14,9 @@ func _ready():
 		10:
 			$player.transform = $playerspawn11.transform
 			$compa.transform = $compaspawn11.transform
-		12:
-			$player.transform = $playerspawn13.transform
-			$compa.transform = $compaspawn13.transform
+		14: # nos saltamos el 13
+			$player.transform = $playerspawn14.transform
+			$compa.transform = $compaspawn14.transform
 		
 
 func _on_Puerta11_body_entered(body):
@@ -26,6 +26,6 @@ func _on_Puerta11_body_entered(body):
 
 func _on_Puerta13_body_entered(body):
 	if body.name == $player.name:
-		get_parent().get_parent().change_room_from_to(current_room,13)
+		get_parent().get_parent().change_room_from_to(current_room,14)#!!! no hay 13
 
 

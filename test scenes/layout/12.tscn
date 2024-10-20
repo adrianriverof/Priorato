@@ -734,11 +734,11 @@ transform = Transform( 0.013194, 0.00926677, -0.999869, 0, 0.999957, 0.00926757,
 [node name="compaspawn10" type="Position3D" parent="."]
 transform = Transform( -0.0471063, 0, -0.99889, 0, 1, 0, 0.99889, 0, -0.0471063, 20.0273, 0.542131, -9.53243 )
 
-[node name="playerspawn12" type="Position3D" parent="."]
-transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 40.9009, 0.584818, -9.62992 )
+[node name="playerspawn14" type="Position3D" parent="."]
+transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 39.8518, 0.584818, -9.62992 )
 
-[node name="compaspawn12" type="Position3D" parent="."]
-transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 42.373, 0.542131, -9.40379 )
+[node name="compaspawn14" type="Position3D" parent="."]
+transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 41.1526, 0.542131, -9.40379 )
 
 [node name="ball" parent="." instance=ExtResource( 9 )]
 visible = false
