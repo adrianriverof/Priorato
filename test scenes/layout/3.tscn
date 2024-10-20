@@ -173,6 +173,7 @@ height = 3.18273
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32639, 1.70188, -16.6491 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Area"]
+visible = false
 mesh = SubResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]

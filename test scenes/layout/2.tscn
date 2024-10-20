@@ -108,7 +108,6 @@ modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
 texture = ExtResource( 7 )
 
 [node name="escenario" type="Spatial" parent="."]
-visible = false
 
 [node name="casa" type="StaticBody" parent="escenario"]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.976977, 0.277332, -6.70632 )
@@ -171,18 +170,30 @@ calculate_tangents = false
 width = 5.39859
 height = 3.18273
 
-[node name="Area" type="Area" parent="."]
+[node name="Puerta1" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13967, 2.096, -7.27206 )
-visible = false
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
+[node name="CollisionShape" type="CollisionShape" parent="Puerta1"]
 shape = SubResource( 2 )
 
-[node name="Sprite3D" type="Sprite3D" parent="Area"]
+[node name="Sprite3D" type="Sprite3D" parent="Puerta1"]
 billboard = 1
 texture = ExtResource( 6 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Area"]
+[node name="MeshInstance" type="MeshInstance" parent="Puerta1"]
+mesh = SubResource( 7 )
+
+[node name="Puerta3" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297383, 1.62447, -15.4391 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Puerta3"]
+shape = SubResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Puerta3"]
+billboard = 1
+texture = ExtResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Puerta3"]
 mesh = SubResource( 7 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -198,4 +209,5 @@ transform = Transform( 0.0101402, -0.00926709, 0.999906, 0, 0.999957, 0.00926757
 [node name="compaspawn1" type="Position3D" parent="."]
 transform = Transform( 0.0704006, 0, 0.997519, 0, 1, 0, -0.997519, 0, 0.0704006, 2.2123, 0.688907, -7.82392 )
 
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Puerta1" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Puerta3" to="." method="_on_Puerta3_body_entered"]
