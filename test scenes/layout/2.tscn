@@ -89,7 +89,7 @@ script = ExtResource( 5 )
 visible = false
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -1.36881, 0.537034, -8.97394 )
+transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -1.36881, 0.512897, -8.97394 )
 
 [node name="compa" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )

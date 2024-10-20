@@ -6,6 +6,7 @@ export var speed = 120.0 * 10
 
 # Donde el personaje tiene que ir
 var destination = Vector3()
+var altitude = self.translation.y
 
 # Para detectar cuando hay un clic
 var moving = false
@@ -18,6 +19,7 @@ onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 
 
 func _ready():
+	altitude = self.translation.y
 	#var camera = get_parent().get_node("Camera")
 	$player/AnimationPlayer.play("Iddle")
 
@@ -37,6 +39,7 @@ func _input(event):
 			print("colisión con: ", collision.get("collider").name)
 			if collision.get("collider").name == "floor":
 				destination = collision.position
+				destination.y = global_transform.origin.y #!!!
 				moving = true
 
 			elif  collision.get("collider").name == "compa":
@@ -61,12 +64,15 @@ func _physics_process(delta):
 			var motion = direction * speed * delta
 			
 			self.look_at(Vector3(destination.x, self.translation.y, destination.z), Vector3.UP)
+			self.rotation.x= 0
 			$player/AnimationPlayer.play("walkin")
 			
 			motion = move_and_slide(motion)
 		else:
 			moving = false
+			
 			$player/AnimationPlayer.play("Iddle")
+		self.translation.y = altitude # !!! recenter
 	else:
 		if !$player/AnimationPlayer.is_playing():
 			$player/AnimationPlayer.play("Iddle")

@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="SphereMesh" id=21]
+
+[sub_resource type="CylinderMesh" id=22]
+top_radius = 0.6
+bottom_radius = 0.7
+height = 75.873
 
 [node name="ball" type="MeshInstance"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 mesh = SubResource( 21 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 22 )

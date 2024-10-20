@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=2]
 [ext_resource path="res://test scenes/layout/6.gd" type="Script" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
+[ext_resource path="res://elements/ball.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/3b.png" type="Texture" id=8]
 
@@ -98,6 +99,8 @@ extents = Vector3( 1.621, 1, 1 )
 [node name="room" type="Spatial"]
 script = ExtResource( 3 )
 
+[node name="ball" parent="." instance=ExtResource( 5 )]
+
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
 visible = false
 
@@ -188,10 +191,10 @@ margin_bottom = 141.0
 text = "ROOM 2"
 
 [node name="playerspawn3" type="Position3D" parent="."]
-transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 11.3491, 0.688907, -7.0175 )
+transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 11.3491, 0.197529, -7.0175 )
 
 [node name="compaspawn3" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 12.8382, 0.688907, -6.94007 )
+transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 12.8382, 0.197529, -6.94007 )
 
 [node name="playerspawn8" type="Position3D" parent="."]
 transform = Transform( -0.0785116, 0.00923896, -0.99687, 0, 0.999957, 0.00926757, 0.996913, 0.000727607, -0.0785076, -16.0013, 0.688907, -7.06715 )
