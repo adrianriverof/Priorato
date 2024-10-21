@@ -74,6 +74,7 @@ func talk_to_padre():
 	
 func entrar_en_cobertizo():
 	if progress_manager.ritual_happened():
+		progress_manager.talked_with_compa()
 		start_dialogue("cobertizo 2")
 	elif progress_manager.tienen_llave():
 		start_dialogue("cobertizo 1")

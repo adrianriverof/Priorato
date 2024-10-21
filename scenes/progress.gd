@@ -54,3 +54,6 @@ func ending_momento():
 	
 func ritual_happened():
 	return story_events_happened["ritual happened"]
+
+func talked_with_compa():
+	story_events_happened["talked with compa"] = true
