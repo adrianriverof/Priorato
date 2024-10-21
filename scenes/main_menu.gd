@@ -8,3 +8,4 @@ func _on_StartButton_pressed():
 func _on_CloseButton_pressed():
 	get_tree().quit()
 	#OS.kill(0)
+	
