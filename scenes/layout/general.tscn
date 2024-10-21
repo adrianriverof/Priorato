@@ -7,8 +7,10 @@
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=5]
 
 [node name="general" type="Spatial"]
+process_priority = 1
 transform = Transform( 0.999664, -0.0259152, 0, 0.0259152, 0.999664, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
+starting_test_room = 4
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 2 )]
 
@@ -19,4 +21,3 @@ script = ExtResource( 1 )
 [node name="room" parent="RoomManager" instance=ExtResource( 3 )]
 
 [node name="Dialog" parent="." instance=ExtResource( 5 )]
-timeline = "timeline-1729019452.json"

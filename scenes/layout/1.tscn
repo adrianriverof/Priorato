@@ -4,47 +4,11 @@
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=2]
 [ext_resource path="res://elements/floor_cube.tres" type="Shape" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/layout/1.gd" type="Script" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://assets/Renders guarros/1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/1 b .png" type="Texture" id=8]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=9]
-
-[sub_resource type="GDScript" id=9]
-script/source = "extends Spatial
-
-# esto era una clase seguramente, vaya
-
-
-onready var general = get_parent().get_parent()
-
-var from = 0
-var current_room = 1
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
-	
-	
-	$RichTextLabel.text = \"ROOM \"+str(current_room)
-	match from:
-		0:
-			pass
-		2:
-			$player.transform = $playerspawn2.transform
-			$compa.transform = $compaspawn2.transform
-		
-
-
-
-func _on_Area_body_entered(body):
-	if body.name == $player.name:
-		print(\"player entra\")
-		
-		print(get_tree().get_root())
-		#print(get_parent().get_parent())
-		general.change_room_from_to(1,2)
-
-"
 
 [sub_resource type="ArrayMesh" id=3]
 resource_name = "complete_scenes_Cube001"
@@ -136,7 +100,7 @@ size = Vector3( 14.107, 0.338, 12.98 )
 [sub_resource type="BoxShape" id=2]
 
 [node name="room" type="Spatial"]
-script = SubResource( 9 )
+script = ExtResource( 5 )
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
 visible = false

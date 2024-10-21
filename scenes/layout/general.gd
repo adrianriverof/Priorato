@@ -1,6 +1,12 @@
 extends Spatial
 
-export var starting_room = 1
+
+var language = "English"
+
+export var test_room_mode = false
+export var starting_test_room = 1
+
+var start_room = 1
 
 
 var room_scenes = [
@@ -19,11 +25,19 @@ var room_scenes = [
 	preload("res://scenes/layout/default.tscn"),
 	preload("res://scenes/layout/14.tscn"),
 	preload("res://scenes/layout/15.tscn"),
-	preload("res://scenes/layout/16.tscn"), # 16
+	preload("res://scenes/layout/16.tscn")#  16
 ]
 
+
+onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
+
+
 func _ready():
-	change_room_from_to(0,starting_room)
+	print("aa")
+	print(dialoguescene)
+	if test_room_mode: change_room_from_to(0,starting_test_room)
+	else: 
+		change_room_from_to(0,start_room)
 
 
 func change_room_from_to(from, to):
@@ -48,9 +62,41 @@ func change_room_from_to(from, to):
 func toggle_shader():
 	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
-func start_dialogue(event):
+func start_dialogue(event=null):
 	# aquí meteré tremendo switch
-	$Dialog.timeline = "/English/1 conversacion ENG"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+	var timeline_string : String =_select_timeline_string_for(event, language)
+	print(timeline_string)
+	_add_dialogue_scene(timeline_string)
+
+
+func _select_timeline_string_for(event, language):
+	var string = ""
+	match language:
+		"English":
+			string += "/English/"
+	match event:
+		"first conversation": 
+			string += "1 conversacion"
+		"final":
+			string += "Final"
+	match language:
+		"English":
+			string += " ENG"
+	
+	return string
+
+
+func _add_dialogue_scene(timeline = ""):
+	
+	dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
+	var dialogue = dialoguescene.instance()
+	dialogue.timeline = timeline
+	dialogue.connect("timeline_start", self, "_on_dialogic_started")
+	dialogue.connect("timeline_end", self, "_on_dialogic_ended")
+	
+	add_child(dialogue)
+	
+
 
 
 
