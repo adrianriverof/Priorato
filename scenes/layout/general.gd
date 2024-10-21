@@ -1,6 +1,9 @@
 extends Spatial
 
 
+var progress_manager = ProgressManager.new()
+
+
 var language = "English"
 
 
@@ -66,6 +69,10 @@ func toggle_shader():
 	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
 func start_dialogue(event=null):
+	if progress_manager.is_dialogue_exhausted(event): 
+		return
+	else:
+		progress_manager.exhaust_dialogue(event)
 	if skip_dialogue: return
 	# aquí meteré tremendo switch
 	var timeline_string : String =_select_timeline_string_for(event, language)
@@ -89,6 +96,7 @@ func _select_timeline_string_for(event, custom_language):
 
 
 func _add_dialogue_scene(timeline = ""):
+	
 	
 	dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 	var dialogue = dialoguescene.instance()

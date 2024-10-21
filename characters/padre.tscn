@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/padre-model.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+height = 1.77962
+radius = 0.633762
+
+[node name="padre" type="KinematicBody"]
+
+[node name="Padre" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45466, -0.493218, 0.345872 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47258, 0 )
+shape = SubResource( 1 )
