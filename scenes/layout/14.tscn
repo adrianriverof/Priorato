@@ -204,6 +204,7 @@ extents = Vector3( 4.50483, 1, 1 )
 script = ExtResource( 2 )
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, 23.0022, 0.537034, 12.3103 )
