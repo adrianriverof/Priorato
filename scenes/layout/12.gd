@@ -4,7 +4,7 @@ extends Spatial
 var from = 0
 var current_room = 12
 
-
+onready var general = get_parent().get_parent()
 
 func _ready():
 	$RichTextLabel.text = "ROOM "+str(current_room)
@@ -17,7 +17,8 @@ func _ready():
 		14: # nos saltamos el 13
 			$player.transform = $playerspawn14.transform
 			$compa.transform = $compaspawn14.transform
-		
+	
+	general.trigger_ending_si_toca()
 
 func _on_Puerta11_body_entered(body):
 	if body.name == $player.name:

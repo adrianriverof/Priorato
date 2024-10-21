@@ -16,8 +16,9 @@ func _ready():
 			$player.transform = $playerspawn15.transform
 			$compa.transform = $compaspawn15.transform
 	
-	general.start_dialogue("cobertizo") # !!! aquí hay dos diálogos, hay que mirar como hacer
-
+	general.entrar_en_cobertizo() 
+	
+	
 
 func _on_Puerta15_body_entered(body):
 	if body.name == $player.name:

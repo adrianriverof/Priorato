@@ -42,3 +42,5 @@ func corresponding_padre_conversation():
 func we_can_start_ritual():
 	return story_events_happened["obtain daggers"] and story_events_happened["obtain bottle"]
 
+func tienen_llave():
+	return story_events_happened["talked with padre"]

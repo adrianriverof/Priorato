@@ -72,6 +72,17 @@ func toggle_shader():
 func talk_to_padre():
 	start_dialogue(progress_manager.corresponding_padre_conversation())
 	
+func entrar_en_cobertizo():
+	if progress_manager.tienen_llave():
+		start_dialogue("cobertizo 1")
+	
+
+func entrar_en_bodega():
+	if progress_manager.tienen_llave():
+		start_dialogue("bodega")
+
+func trigger_ending_si_toca():
+	pass
 
 func start_dialogue(event=null):
 	if progress_manager.is_dialogue_exhausted(event): 
