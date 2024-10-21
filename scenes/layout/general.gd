@@ -68,6 +68,11 @@ func change_room_from_to(from, to):
 func toggle_shader():
 	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
+
+func talk_to_padre():
+	start_dialogue(progress_manager.corresponding_padre_conversation())
+	
+
 func start_dialogue(event=null):
 	if progress_manager.is_dialogue_exhausted(event): 
 		return
@@ -75,12 +80,12 @@ func start_dialogue(event=null):
 		progress_manager.exhaust_dialogue(event)
 	if skip_dialogue: return
 	# aquí meteré tremendo switch
-	var timeline_string : String =_select_timeline_string_for(event, language)
+	var timeline_string : String =_select_timeline_string_for(event)
 	#print(timeline_string)
 	_add_dialogue_scene(timeline_string)
 
 
-func _select_timeline_string_for(event, custom_language):
+func _select_timeline_string_for(event, custom_language = language):
 	var string = ""
 	if custom_language == "English": string += "/English/"
 	
@@ -89,6 +94,12 @@ func _select_timeline_string_for(event, custom_language):
 			string += "1a conversacion"
 		"final":
 			string += "Final"
+		"first father conversation":
+			string += "Padre 1"
+		"father cant start":
+			string += "hablar Padre incompleto"
+		"father conversation to start ritual":
+			string += "Padre 2"
 	
 	if custom_language == "English": string += " ENG"
 	

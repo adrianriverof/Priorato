@@ -5,9 +5,18 @@ class_name ProgressManager
 var exhausted_dialogues = {
 	"example timeline" : false, 
 	"exhausted timeline" : true, 
-	"first conversation" : false
+	"first conversation" : false, 
+	"first father conversation" : false,
+	"father conversation to start ritual": false
 }
 
+var story_events_happened = {
+	"talked with padre" : false,
+	"obtain daggers" : false,
+	"obtain bottle" : false,
+	"ritual happened" : false,
+	"talked with compa" : false,
+}
 
 
 func is_dialogue_exhausted(event):
@@ -16,3 +25,20 @@ func is_dialogue_exhausted(event):
 
 func exhaust_dialogue(event):
 	exhausted_dialogues[event] = true
+
+
+func corresponding_padre_conversation():
+	if !story_events_happened["talked with padre"]:
+		
+		story_events_happened["talked with padre"] = true
+		return "first father conversation"
+	elif we_can_start_ritual():
+		story_events_happened["ritual happened"] = true
+		return "father conversation to start ritual"
+	else:
+		exhausted_dialogues["father cant start"] = false
+		return "father cant start"
+
+func we_can_start_ritual():
+	return story_events_happened["obtain daggers"] and story_events_happened["obtain bottle"]
+

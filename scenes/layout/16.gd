@@ -4,6 +4,7 @@ extends Spatial
 var from = 0
 var current_room = 16
 
+onready var general = get_parent().get_parent()
 
 
 func _ready():
@@ -14,7 +15,8 @@ func _ready():
 		15:
 			$player.transform = $playerspawn15.transform
 			$compa.transform = $compaspawn15.transform
-		
+	
+	general.start_dialogue("cobertizo") # !!! aquí hay dos diálogos, hay que mirar como hacer
 
 
 func _on_Puerta15_body_entered(body):

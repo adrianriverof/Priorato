@@ -16,6 +16,7 @@ onready var camera = get_parent().get_node("Camera")
 onready var ball = get_parent().get_node("ball")
 onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 
+onready var general = get_tree().get_root().get_node("general")
 
 func _ready():
 	
@@ -23,7 +24,6 @@ func _ready():
 	
 	altitude = self.translation.y
 	
-	var general = get_tree().get_root().get_node("general")
 	general.player = self # esto es una virguería horrible porque mi arquitectura es una mierda
 	
 	$player/AnimationPlayer.play("Iddle")
@@ -97,8 +97,8 @@ func talk_to_compa():
 	# Conectamos las señales del diálogo dinámicamente
 
 func talk_to_padre():
-	talk_to_compa()
-	#general.talk_to_padre()
+	#talk_to_compa()
+	general.talk_to_padre()
 
 
 
