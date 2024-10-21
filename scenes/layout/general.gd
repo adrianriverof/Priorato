@@ -73,8 +73,11 @@ func talk_to_padre():
 	start_dialogue(progress_manager.corresponding_padre_conversation())
 	
 func entrar_en_cobertizo():
-	if progress_manager.tienen_llave():
+	if progress_manager.ritual_happened():
+		start_dialogue("cobertizo 2")
+	elif progress_manager.tienen_llave():
 		start_dialogue("cobertizo 1")
+	
 	
 
 func entrar_en_bodega():

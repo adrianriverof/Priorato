@@ -51,3 +51,6 @@ func tienen_llave():
 
 func ending_momento():
 	return story_events_happened["talked with compa"]
+	
+func ritual_happened():
+	return story_events_happened["ritual happened"]
