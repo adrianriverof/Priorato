@@ -23,8 +23,8 @@ func _ready():
 	
 	altitude = self.translation.y
 	
-	
-	get_tree().get_root().get_node("general").player = self # esto es una virguería horrible porque mi arquitectura es una mierda
+	var general = get_tree().get_root().get_node("general")
+	general.player = self # esto es una virguería horrible porque mi arquitectura es una mierda
 	
 	$player/AnimationPlayer.play("Iddle")
 
@@ -41,7 +41,7 @@ func _input(event):
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
 		#print("¿Considera el jugador que hay diálogo?", is_dialog_active)
 		if collision and !is_dialog_active:
-			#print("colisión con: ", collision.get("collider").name)
+			print("colisión con: ", collision.get("collider").name)
 			if collision.get("collider").name == "floor":
 				destination = collision.position
 				destination.y = global_transform.origin.y #!!!
@@ -53,6 +53,8 @@ func _input(event):
 				talk_to_compa()
 				#print(is_dialog_active)
 				#print(Dialogic.load())
+			elif collision.get("collider").name == "padre":
+				talk_to_padre()
 
 
 
@@ -93,7 +95,14 @@ func talk_to_compa():
 	add_child(dialogue)
 	
 	# Conectamos las señales del diálogo dinámicamente
-	
+
+func talk_to_padre():
+	talk_to_compa()
+	#general.talk_to_padre()
+
+
+
+
 # Función llamada cuando el diálogo comienza
 func _on_dialogic_started(_timeline = null):
 	print("dialogo empieza")
