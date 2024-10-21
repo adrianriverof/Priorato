@@ -7,7 +7,11 @@ var exhausted_dialogues = {
 	"exhausted timeline" : true, 
 	"first conversation" : false, 
 	"first father conversation" : false,
-	"father conversation to start ritual": false
+	"father conversation to start ritual": false,
+	"bodega": false,
+	"cobertizo 1": false, 
+	"cobertizo 2": false,
+	"ending" : false
 }
 
 var story_events_happened = {
@@ -44,3 +48,6 @@ func we_can_start_ritual():
 
 func tienen_llave():
 	return story_events_happened["talked with padre"]
+
+func ending_momento():
+	return story_events_happened["talked with compa"]

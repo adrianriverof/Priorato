@@ -82,7 +82,8 @@ func entrar_en_bodega():
 		start_dialogue("bodega")
 
 func trigger_ending_si_toca():
-	pass
+	if progress_manager.ending_momento():
+		start_dialogue("ending")
 
 func start_dialogue(event=null):
 	if progress_manager.is_dialogue_exhausted(event): 
@@ -111,6 +112,14 @@ func _select_timeline_string_for(event, custom_language = language):
 			string += "hablar Padre incompleto"
 		"father conversation to start ritual":
 			string += "Padre 2"
+		"cobertizo 1":
+			string += "Cobertizo"
+		"bodega":
+			string += "Bodega"
+		"cobertizo 2":
+			string += "Cobertizo 2"
+		"ending":
+			string += "Final"
 	
 	if custom_language == "English": string += " ENG"
 	
