@@ -73,9 +73,9 @@ func start_dialogue(event=null):
 	_add_dialogue_scene(timeline_string)
 
 
-func _select_timeline_string_for(event, language):
+func _select_timeline_string_for(event, custom_language):
 	var string = ""
-	if language == "English": string += "/English/"
+	if custom_language == "English": string += "/English/"
 	
 	match event:
 		"first conversation": 
@@ -83,7 +83,7 @@ func _select_timeline_string_for(event, language):
 		"final":
 			string += "Final"
 	
-	if language == "English": string += " ENG"
+	if custom_language == "English": string += " ENG"
 	
 	return string
 
@@ -98,14 +98,14 @@ func _add_dialogue_scene(timeline = ""):
 	
 	add_child(dialogue)
 	
-func _on_dialogic_started(timeline = null):
+func _on_dialogic_started(_timeline = null):
 	print("SEÑAL RECIBIDA STARTED")
 	
 	player.aware_of_dialogue_started()
 
 	
 
-func _on_dialogic_ended(timeline = null):
+func _on_dialogic_ended(_timeline = null):
 	
 	player.aware_of_dialogue_ended()
 

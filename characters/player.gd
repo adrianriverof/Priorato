@@ -58,10 +58,6 @@ func _input(event):
 
 
 func _physics_process(delta):
-	if is_dialog_active:
-		$Sprite3D.visible = true
-	else: 
-		$Sprite3D.visible = false
 	
 	
 	if moving:
@@ -99,13 +95,13 @@ func talk_to_compa():
 	# Conectamos las señales del diálogo dinámicamente
 	
 # Función llamada cuando el diálogo comienza
-func _on_dialogic_started(timeline = null):
+func _on_dialogic_started(_timeline = null):
 	print("dialogo empieza")
 	aware_of_dialogue_started()
 	
 
 # Función llamada cuando el diálogo termina
-func _on_dialogic_ended(timeline = null):
+func _on_dialogic_ended(_timeline = null):
 	print("dialogo acaba")
 	aware_of_dialogue_ended()
 	

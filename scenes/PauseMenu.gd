@@ -13,7 +13,7 @@ func enable_pause_menu():
 func _ready():
 	visible = false
 
-func _input(event):
+func _input(_event):
 	if can_pause and Input.is_action_just_pressed("ui_cancel"):
 		get_tree().paused = !get_tree().paused
 		visible = !visible
