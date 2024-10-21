@@ -16,7 +16,6 @@ margin_bottom = 215.0
 text = "Continue"
 
 [node name="OptionsButton" type="Button" parent="."]
-visible = false
 margin_left = 408.0
 margin_top = 237.0
 margin_right = 525.0
@@ -38,6 +37,19 @@ margin_right = 647.0
 margin_bottom = 343.0
 text = "Confirm"
 
+[node name="OptionsMenu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ShadersToggle" type="Button" parent="OptionsMenu"]
+margin_left = 567.0
+margin_top = 241.0
+margin_right = 719.0
+margin_bottom = 276.0
+text = "Noise Effect"
+
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="ConfirmExit" to="." method="_on_ConfirmExit_pressed"]
+[connection signal="pressed" from="OptionsMenu/ShadersToggle" to="." method="_on_ShadersToggle_pressed"]

@@ -45,7 +45,8 @@ func change_room_from_to(from, to):
 	# Añadir la nueva sala
 	get_tree().get_root().get_node("general").get_node("RoomManager").add_child(roomtoinstance, true)
 
-
+func toggle_shader():
+	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
 
 

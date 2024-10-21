@@ -17,9 +17,18 @@ func _on_ContinueButton_pressed():
 
 
 func _on_ExitButton_pressed():
-	$ConfirmExit.visible = true
+	$ConfirmExit.visible = !$ConfirmExit.visible
 	
 
 func _on_ConfirmExit_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://scenes/main_menu.tscn")
+
+
+func _on_OptionsButton_pressed():
+	$OptionsMenu.visible = !$OptionsMenu.visible
+
+
+
+func _on_ShadersToggle_pressed():
+	get_parent().toggle_shader()
