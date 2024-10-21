@@ -10,23 +10,28 @@ var altitude = self.translation.y
 
 # Para detectar cuando hay un clic
 var moving = false
-var is_dialog_active = false
+export var is_dialog_active = false
 
 onready var camera = get_parent().get_node("Camera")
 onready var ball = get_parent().get_node("ball")
 onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 
 
-
 func _ready():
+	
+	print("player aparece")
+	
 	altitude = self.translation.y
-	#var camera = get_parent().get_node("Camera")
+	
+	
+	get_tree().get_root().get_node("general").player = self # esto es una virguería horrible porque mi arquitectura es una mierda
+	
 	$player/AnimationPlayer.play("Iddle")
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		
-		print("pulso")
+		
 		var ray_origin = camera.project_ray_origin(get_viewport().get_mouse_position())
 		var ray_direction = camera.project_ray_normal(get_viewport().get_mouse_position())
 		
@@ -34,16 +39,16 @@ func _input(event):
 		# Usamos una intersección para determinar donde está el suelo
 		var space_state = get_world().direct_space_state
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
-		print(is_dialog_active)
+		#print("¿Considera el jugador que hay diálogo?", is_dialog_active)
 		if collision and !is_dialog_active:
-			print("colisión con: ", collision.get("collider").name)
+			#print("colisión con: ", collision.get("collider").name)
 			if collision.get("collider").name == "floor":
 				destination = collision.position
 				destination.y = global_transform.origin.y #!!!
 				moving = true
 
 			elif  collision.get("collider").name == "compa":
-				print("has tocado a compa") #!!! hay que hacer la hitbox de compa mas grande entonces
+				#print("has tocado a compa") #!!! hay que hacer la hitbox de compa mas grande entonces
 				
 				talk_to_compa()
 				#print(is_dialog_active)
@@ -53,6 +58,12 @@ func _input(event):
 
 
 func _physics_process(delta):
+	if is_dialog_active:
+		$Sprite3D.visible = true
+	else: 
+		$Sprite3D.visible = false
+	
+	
 	if moving:
 		var direction = (destination - global_transform.origin).normalized()
 		var distance_to_target = global_transform.origin.distance_to(destination)
@@ -100,7 +111,13 @@ func _on_dialogic_ended(timeline = null):
 	
 
 func aware_of_dialogue_started():
+	print("----- se avisa de que ha EMPEZADO un diálogo")
 	is_dialog_active = true
 
 func aware_of_dialogue_ended():
+	print("----- se avisa de que ha terminado un diálogo")
 	is_dialog_active = false
+
+
+
+
