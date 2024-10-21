@@ -84,6 +84,10 @@ config/name="CHJ3"
 run/main_scene="res://scenes/main_menu.tscn"
 config/icon="res://assets/compa_retrato.png"
 
+[autoload]
+
+Language="*res://scenes/language.gd"
+
 [debug]
 
 settings/fps/force_fps=30

@@ -28,5 +28,13 @@ margin_right = 325.0
 margin_bottom = 267.0
 text = "Close"
 
+[node name="LanguageButton" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 542.0
+margin_right = 116.0
+margin_bottom = 578.0
+text = "English"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="LanguageButton" to="." method="_on_Button_pressed"]

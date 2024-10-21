@@ -1,10 +1,12 @@
 extends Spatial
 
 
-var language = "Spanish"
+var language = "English"
+
 
 export var test_room_mode = false
 export var starting_test_room = 1
+export var skip_dialogue = false
 
 var start_room = 1
 
@@ -35,6 +37,12 @@ onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 func _ready():
 	print("general aparece")
 	
+	
+	language = Language.language
+	
+	print(language)
+	
+	
 	if test_room_mode: change_room_from_to(0,starting_test_room)
 	else: 
 		change_room_from_to(0,start_room)
@@ -58,6 +66,7 @@ func toggle_shader():
 	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
 func start_dialogue(event=null):
+	if skip_dialogue: return
 	# aquí meteré tremendo switch
 	var timeline_string : String =_select_timeline_string_for(event, language)
 	#print(timeline_string)
@@ -66,17 +75,15 @@ func start_dialogue(event=null):
 
 func _select_timeline_string_for(event, language):
 	var string = ""
-	match language:
-		"English":
-			string += "/English/"
+	if language == "English": string += "/English/"
+	
 	match event:
 		"first conversation": 
 			string += "1a conversacion"
 		"final":
 			string += "Final"
-	match language:
-		"English":
-			string += " ENG"
+	
+	if language == "English": string += " ENG"
 	
 	return string
 
