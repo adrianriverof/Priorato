@@ -90,12 +90,17 @@ func talk_to_compa():
 # Función llamada cuando el diálogo comienza
 func _on_dialogic_started(timeline = null):
 	print("dialogo empieza")
-	is_dialog_active = true
+	aware_of_dialogue_started()
 	
 
 # Función llamada cuando el diálogo termina
 func _on_dialogic_ended(timeline = null):
 	print("dialogo acaba")
-	is_dialog_active = false
+	aware_of_dialogue_ended()
 	
 
+func aware_of_dialogue_started():
+	is_dialog_active = true
+
+func aware_of_dialogue_ended():
+	is_dialog_active = false

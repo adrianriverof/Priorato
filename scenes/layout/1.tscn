@@ -12,6 +12,7 @@
 [sub_resource type="GDScript" id=9]
 script/source = "extends Spatial
 
+
 var from = 0
 var current_room = 1
 
@@ -26,9 +27,6 @@ func _ready():
 			$compa.transform = $compaspawn2.transform
 		
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Area_body_entered(body):
@@ -38,6 +36,7 @@ func _on_Area_body_entered(body):
 		print(get_tree().get_root())
 		#print(get_parent().get_parent())
 		get_tree().get_root().get_node(\"general\").change_room_from_to(1,2)
+
 "
 
 [sub_resource type="ArrayMesh" id=3]

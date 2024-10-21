@@ -1,10 +1,20 @@
 extends Control
 
+var can_pause = true
+
+
+func disable_pause_menu():
+	can_pause = false
+
+func enable_pause_menu():
+	can_pause = true
+
+
 func _ready():
 	visible = false
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_cancel"):
+	if can_pause and Input.is_action_just_pressed("ui_cancel"):
 		get_tree().paused = !get_tree().paused
 		visible = !visible
 		
