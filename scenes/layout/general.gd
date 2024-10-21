@@ -48,7 +48,9 @@ func change_room_from_to(from, to):
 func toggle_shader():
 	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
-
+func start_dialogue(event):
+	# aquí meteré tremendo switch
+	$Dialog.timeline = "/English/1 conversacion ENG"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
 
 
