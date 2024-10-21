@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/video/miau.ogv" type="VideoStream" id=1]
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = 215.0
+margin_top = 53.0
+margin_right = 740.0
+margin_bottom = 543.0
+stream = ExtResource( 1 )
+autoplay = true

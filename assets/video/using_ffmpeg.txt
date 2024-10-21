@@ -1,0 +1,1 @@
+ffmpeg -i input.mp4 -q:v 6 -q:a 6 output.ogv
