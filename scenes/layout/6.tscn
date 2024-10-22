@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -77,6 +77,9 @@ surfaces/0 = {
 "vertex_count": 24
 }
 
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 26.4323, 6.18854, 1 )
+
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 39.078, 0.338, 31.356 )
 
@@ -110,7 +113,7 @@ transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999
 transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.517415, 0.0137997, 0.855623, 0, 0.99987, -0.0161261, -0.855735, 0.00834391, 0.517348, 15.9536, 1.28637, -2.03496 )
+transform = Transform( 0.663939, 0.0120589, 0.747689, 0, 0.99987, -0.0161261, -0.747786, 0.0107068, 0.663853, 17.8761, 3.58282, 2.74398 )
 fov = 32.6
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
@@ -119,7 +122,7 @@ visible = false
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]
-transform = Transform( 3.838, 5.46965e-09, 1.82417e-07, -5.46965e-09, 3.838, 5.55112e-17, -7.00115e-07, -1.21081e-15, 1, -0.135, -0.682, -66.606 )
+transform = Transform( 3.838, 1.86265e-09, 1.49012e-07, -1.30385e-08, 3.838, 3.72529e-09, -7.15256e-07, 0, 1, 1.4964, -0.652369, -64.7688 )
 texture = ExtResource( 5 )
 
 [node name="escenario" type="Spatial" parent="."]
@@ -147,6 +150,10 @@ mesh = SubResource( 22 )
 [node name="Cube103" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( -0.0601773, -0.0796939, 0.00525055, 2.79874e-05, -0.00659519, -0.0997823, 0.0798667, -0.0600448, 0.0039911, -16.9971, 1.03011, -4.71771 )
 mesh = SubResource( 23 )
+
+[node name="CollisionShape" type="CollisionShape" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53674e-07, 0, 6.29768 )
+shape = SubResource( 25 )
 
 [node name="floor" type="StaticBody" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.0489674, -13.209 )
