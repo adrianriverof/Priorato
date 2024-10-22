@@ -96,7 +96,7 @@ extents = Vector3( 1.638, 1.925, 1 )
 size = Vector3( 3.678, 2, 2 )
 
 [sub_resource type="BoxShape" id=18]
-extents = Vector3( 1.621, 1, 1 )
+extents = Vector3( 7.36605, 1, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 3 )
@@ -180,7 +180,7 @@ mesh = SubResource( 7 )
 shape = SubResource( 18 )
 
 [node name="Puerta3" type="Area" parent="."]
-transform = Transform( 0.0667267, 0, 0.997771, 0, 1, 0, -0.997771, 0, 0.0667267, 13.2837, 1.24253, -5.23895 )
+transform = Transform( 0.0667267, 0, 0.997771, 0, 1, 0, -0.997771, 0, 0.0667267, 10.9201, 1.24253, -6.3666 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta3"]
@@ -197,10 +197,10 @@ margin_bottom = 141.0
 text = "ROOM 2"
 
 [node name="playerspawn3" type="Position3D" parent="."]
-transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 11.3491, 0.197529, -7.0175 )
+transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 9.32381, 0.197529, -8.24271 )
 
 [node name="compaspawn3" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 12.8382, 0.197529, -6.94007 )
+transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 10.8129, 0.197529, -8.16528 )
 
 [node name="playerspawn8" type="Position3D" parent="."]
 transform = Transform( -0.0785116, 0.00923896, -0.99687, 0, 0.999957, 0.00926757, 0.996913, 0.000727607, -0.0785076, -16.0013, 0.688907, -7.06715 )
