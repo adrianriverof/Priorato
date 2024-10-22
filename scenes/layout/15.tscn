@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/layout/15.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Renders Buenos/15.png" type="Texture" id=5]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=8]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=9]
 
@@ -183,8 +182,14 @@ data = PoolVector3Array( -40.379, 0.169, 15.678, 40.379, 0.169, 15.678, -40.379,
 [sub_resource type="CubeMesh" id=7]
 size = Vector3( 3.678, 2, 2 )
 
+[sub_resource type="SpatialMaterial" id=99]
+albedo_color = Color( 0, 0.172549, 1, 1 )
+
 [sub_resource type="BoxShape" id=18]
 extents = Vector3( 4.50483, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=100]
+albedo_color = Color( 0.00784314, 1, 0, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 2 )
@@ -193,10 +198,10 @@ script = ExtResource( 2 )
 visible = false
 
 [node name="player" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -18.3008, 0.537034, 12.3103 )
+transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, 2.50468, 0.537034, 10.3451 )
 
 [node name="compa" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -19.8828, 0.64144, 12.0302 )
+transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, 0.922677, 0.64144, 10.065 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.893873, -0.167572, 0.415826, 0.000129519, 0.927615, 0.373538, -0.448321, -0.333842, 0.829191, 3.52514, 19.608, 40.1571 )
@@ -206,16 +211,11 @@ fov = 41.1
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0.003, -70.98 )
 texture = ExtResource( 5 )
 
-[node name="Sprite3D2" type="Sprite3D" parent="Camera"]
-transform = Transform( 2.618, 2.56923e-09, -3.14039e-08, -2.56923e-09, 2.618, -1.96275e-09, 8.22155e-08, 5.13847e-09, 1, 2.86102e-06, 0.00299966, -24.144 )
-visible = false
-modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
-texture = ExtResource( 7 )
-
 [node name="escenario" type="Spatial" parent="."]
 visible = false
 
 [node name="floor" type="StaticBody" parent="escenario"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07228, 0, 2.70504 )
 
 [node name="floormesh" type="MeshInstance" parent="escenario/floor"]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 41.2845, -0.221213, 5.43837 )
@@ -234,11 +234,11 @@ shape = SubResource( 98 )
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.976977, 1.49298, -6.70632 )
 
 [node name="floor2" type="CollisionShape" parent="escenario/casa"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2615, -0.798934, -5.732 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2615, -0.798934, -6.40223 )
 shape = SubResource( 96 )
 
 [node name="floor3" type="CollisionShape" parent="escenario/casa"]
-transform = Transform( 0.999759, 0, 0.021937, 0, 1, 0, -0.021937, 0, 0.999759, -39.4717, -0.798932, -19.2995 )
+transform = Transform( 0.999759, 0, 0.021937, 0, 1, 0, -0.021937, 0, 0.999759, -42.1908, -0.798932, -20.9959 )
 shape = SubResource( 96 )
 
 [node name="Cylinder010" type="MeshInstance" parent="escenario/casa"]
@@ -247,6 +247,7 @@ mesh = SubResource( 84 )
 
 [node name="Plane002" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7423, -3.89072, 19.17 )
+visible = false
 mesh = SubResource( 86 )
 material/0 = SubResource( 95 )
 
@@ -275,11 +276,12 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4.51863, 18.1173, -46.8
 mesh = SubResource( 93 )
 
 [node name="Cube076" type="MeshInstance" parent="escenario/casa"]
-transform = Transform( 2.03915, 0, 1.80218, 0, 1.74117, 0, -1.80218, 0, 2.03915, 5.32505, 0.195586, -14.1333 )
+transform = Transform( 2.03915, 6.83707e-10, 1.80218, -0.00468664, 1.74116, 0.00530289, -1.80217, -0.00452798, 2.03914, 4.0441, 0.195586, -16.3024 )
 mesh = SubResource( 97 )
 
 [node name="no floor" type="StaticBody" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.0489674, -13.209 )
+visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="escenario/no floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.37832, -0.274076, 23.7284 )
@@ -292,21 +294,23 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.541, 6.564, 0, 22.489 )
 shape = SubResource( 83 )
 
 [node name="Puerta16" type="Area" parent="."]
-transform = Transform( -0.765517, 0, -0.643416, 0, 1, 0, 0.643416, 0, -0.765517, -4.42547, 0.97169, 9.10081 )
+transform = Transform( -0.745278, 0, -0.666754, 0, 1, 0, 0.666754, 0, -0.745278, -3.3633, 0.97169, 10.9704 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta16"]
 mesh = SubResource( 7 )
+material/0 = SubResource( 99 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta16"]
 shape = SubResource( 18 )
 
 [node name="Puerta14" type="Area" parent="."]
-transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 6.23284, 0.97169, 7.59896 )
+transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, 7.19012, 0.97169, 10.114 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta14"]
 mesh = SubResource( 7 )
+material/0 = SubResource( 100 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta14"]
 shape = SubResource( 18 )
@@ -318,16 +322,16 @@ margin_right = 569.0
 margin_bottom = 141.0
 
 [node name="playerspawn16" type="Position3D" parent="."]
-transform = Transform( -0.668092, 0.0068958, -0.744046, 0, 0.999957, 0.00926757, 0.744078, 0.0061916, -0.668063, -3.03536, 0.590081, 10.0665 )
+transform = Transform( -0.668092, 0.0068958, -0.744046, 0, 0.999957, 0.00926757, 0.744078, 0.0061916, -0.668063, -1.03536, 0.590081, 12.0665 )
 
 [node name="compaspawn16" type="Position3D" parent="."]
-transform = Transform( -0.711732, 0, -0.702451, 0, 1, 0, 0.702451, 0, -0.711732, -4.10896, 0.547394, 9.03432 )
+transform = Transform( -0.711732, 0, -0.702451, 0, 1, 0, 0.702451, 0, -0.711732, -2.10896, 0.547394, 11.0343 )
 
 [node name="playerspawn14" type="Position3D" parent="."]
-transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 4.06489, 0.584818, 7.91249 )
+transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, -0.993009, -0.00109394, 0.118035, 4.36216, 0.584818, 9.99493 )
 
 [node name="compaspawn14" type="Position3D" parent="."]
-transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 5.53699, 0.542131, 8.13862 )
+transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 5.83426, 0.542131, 10.2211 )
 
 [node name="ball" parent="." instance=ExtResource( 6 )]
 visible = false
