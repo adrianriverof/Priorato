@@ -193,7 +193,7 @@ transform = Transform( -0.652918, -0.28285, 0.702633, 0.000129519, 0.927615, 0.3
 fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
+transform = Transform( 1.679, 0, 0, 0, 1.679, 0, 0, 0, 1, 0, 0.003, -24.144 )
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]
@@ -203,6 +203,7 @@ modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
 texture = ExtResource( 7 )
 
 [node name="escenario" type="Spatial" parent="."]
+visible = false
 
 [node name="casa" type="StaticBody" parent="escenario"]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.976977, 1.49298, -6.70632 )
