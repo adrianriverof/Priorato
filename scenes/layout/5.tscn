@@ -299,7 +299,7 @@ material/0 = SubResource( 8 )
 shape = SubResource( 17 )
 
 [node name="Puerta4" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.069, 1.702, -13.9521 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.069, 1.702, -14.7007 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta4"]
@@ -316,9 +316,9 @@ margin_bottom = 141.0
 text = "ROOM 2"
 
 [node name="playerspawn4" type="Position3D" parent="."]
-transform = Transform( 0.999953, -9.00942e-05, 0.00972115, 0, 0.999957, 0.00926757, -0.00972098, -0.00926713, 0.999909, -0.652809, 0.688907, -15.3614 )
+transform = Transform( 0.999953, -9.00942e-05, 0.00972115, 0, 0.999957, 0.00926757, -0.00972098, -0.00926713, 0.999909, -0.652809, 0.688907, -16.4177 )
 
 [node name="compaspawn4" type="Position3D" parent="."]
-transform = Transform( 0.998721, 0, -0.0505754, 0, 1, 0, 0.0505754, 0, 0.998721, -0.741743, 0.688907, -13.873 )
+transform = Transform( 0.998721, 0, -0.0505754, 0, 1, 0, 0.0505754, 0, 0.998721, -0.741743, 0.688907, -14.9293 )
 
 [connection signal="body_entered" from="Puerta4" to="." method="_on_Puerta4_body_entered"]

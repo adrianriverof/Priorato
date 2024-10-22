@@ -111,11 +111,11 @@ transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999
 transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, 2.50999e-08, -8.37421e-08, 0, 0.957898, 0.28711, 8.74228e-08, 0.28711, -0.957898, -0.946164, 5.30598, -19.3329 )
-fov = 32.6
+transform = Transform( -1, -2.50999e-08, 8.37421e-08, 0, 0.957898, 0.28711, -8.74228e-08, 0.28711, -0.957898, -0.946164, 6.16412, -30.3041 )
+fov = 22.2
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
+transform = Transform( 1.316, 0, 0, 0, 1.316, 0, 0, 0, 1, 0, 0, -35.676 )
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]
@@ -180,7 +180,7 @@ mesh = SubResource( 7 )
 shape = SubResource( 18 )
 
 [node name="Puerta5" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.069, 1.70188, -10.8395 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.069, 1.70188, -18.6666 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta5"]
@@ -203,10 +203,10 @@ transform = Transform( 0.997163, -0.000697612, 0.0752715, 0, 0.999957, 0.0092675
 transform = Transform( 0.999888, 0, 0.0150267, 0, 1, 0, -0.0150267, 0, 0.999888, -0.71896, 0.688907, -3.0029 )
 
 [node name="playerspawn5" type="Position3D" parent="."]
-transform = Transform( -0.999992, -3.83342e-05, 0.00413608, 0, 0.999957, 0.00926757, -0.00413685, 0.00926749, -0.999948, -0.746533, 0.688907, -9.68969 )
+transform = Transform( -0.999992, -3.83342e-05, 0.00413608, 0, 0.999957, 0.00926757, -0.00413685, 0.00926749, -0.999948, -0.746533, 0.688907, -16.0646 )
 
 [node name="compaspawn5" type="Position3D" parent="."]
-transform = Transform( -0.997924, 0, 0.0644104, 0, 1, 0, -0.0644104, 0, -0.997924, -0.648019, 0.688907, -10.3803 )
+transform = Transform( -0.997924, 0, 0.0644104, 0, 1, 0, -0.0644104, 0, -0.997924, -0.648019, 0.688907, -16.7552 )
 
 [connection signal="body_entered" from="Puerta3" to="." method="_on_Puerta3_body_entered"]
 [connection signal="body_entered" from="Puerta5" to="." method="_on_Puerta5_body_entered"]
