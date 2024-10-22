@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -490,16 +490,19 @@ size = Vector3( 39.078, 0.338, 31.356 )
 data = PoolVector3Array( -19.539, 0.169, 15.678, 19.539, 0.169, 15.678, -19.539, -0.169, 15.678, 19.539, 0.169, 15.678, 19.539, -0.169, 15.678, -19.539, -0.169, 15.678, 19.539, 0.169, -15.678, -19.539, 0.169, -15.678, 19.539, -0.169, -15.678, -19.539, 0.169, -15.678, -19.539, -0.169, -15.678, 19.539, -0.169, -15.678, 19.539, 0.169, 15.678, 19.539, 0.169, -15.678, 19.539, -0.169, 15.678, 19.539, 0.169, -15.678, 19.539, -0.169, -15.678, 19.539, -0.169, 15.678, -19.539, 0.169, -15.678, -19.539, 0.169, 15.678, -19.539, -0.169, -15.678, -19.539, 0.169, 15.678, -19.539, -0.169, 15.678, -19.539, -0.169, -15.678, 19.539, 0.169, 15.678, -19.539, 0.169, 15.678, 19.539, 0.169, -15.678, -19.539, 0.169, 15.678, -19.539, 0.169, -15.678, 19.539, 0.169, -15.678, -19.539, -0.169, 15.678, 19.539, -0.169, 15.678, -19.539, -0.169, -15.678, 19.539, -0.169, 15.678, 19.539, -0.169, -15.678, -19.539, -0.169, -15.678 )
 
 [sub_resource type="CubeMesh" id=7]
-size = Vector3( 3.678, 2, 2 )
+size = Vector3( 3.678, 0.592, 2 )
 
 [sub_resource type="SpatialMaterial" id=51]
 albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="BoxShape" id=18]
-extents = Vector3( 1.621, 1, 1 )
+extents = Vector3( 2.74514, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=52]
 albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=83]
+albedo_color = Color( 1, 0, 0, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 3 )
@@ -508,17 +511,17 @@ script = ExtResource( 3 )
 visible = false
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -1.36881, 0.537034, -8.97394 )
+transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -4.00782, 0.537034, -8.97394 )
 
 [node name="compa" parent="." instance=ExtResource( 1 )]
 transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.0116567, -0.137696, 0.990406, 0.000138296, 0.990473, 0.137704, -0.999932, -0.0014682, 0.0115647, 14.3681, 7.6724, -9.70195 )
+transform = Transform( 0.0116567, -0.137696, 0.990406, 0.000138296, 0.990473, 0.137704, -0.999932, -0.0014682, 0.0115647, 11.8031, 7.18587, -9.70195 )
 fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
+transform = Transform( 1.696, 0, 0, 0, 1.696, 0, 0, 0, 1, 0, 0.003, -24.144 )
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]
@@ -695,9 +698,11 @@ material/0 = SubResource( 8 )
 shape = SubResource( 17 )
 
 [node name="Puerta9a" type="Area" parent="."]
-transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -5.61844, 1.702, -16.6198 )
+transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -8.06433, 1.702, -16.6198 )
+visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta9a"]
+transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, 0.881255, 0, 0.010828 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 51 )
 
@@ -705,10 +710,11 @@ material/0 = SubResource( 51 )
 shape = SubResource( 18 )
 
 [node name="Puerta9b" type="Area" parent="."]
-transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -5.59557, 1.702, -16.6198 )
+transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -7.9001, 1.702, -15.7351 )
+visible = false
 
 [node name="MeshInstance2" type="MeshInstance" parent="Puerta9b"]
-transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.158144, 0, 12.87 )
+transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0.754992, 0, 12.8812 )
 mesh = SubResource( 7 )
 material/0 = SubResource( 52 )
 
@@ -717,11 +723,13 @@ transform = Transform( 1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, -0.159799
 shape = SubResource( 18 )
 
 [node name="Puerta11" type="Area" parent="."]
-transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, -0.0323033, 0.97169, -9.38853 )
+transform = Transform( -0.0076271, 0, -0.999971, 0, 1, 0, 0.999971, 0, -0.0076271, -1.77834, 0.97169, -9.88379 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00045681, -0.763, 0.0598722 )
 mesh = SubResource( 7 )
+material/0 = SubResource( 83 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta11"]
 shape = SubResource( 18 )
@@ -733,22 +741,22 @@ margin_right = 569.0
 margin_bottom = 141.0
 
 [node name="playerspawn11" type="Position3D" parent="."]
-transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, -1.44232, 0.731594, -9.8036 )
+transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, -3.72891, 0.731594, -9.8036 )
 
 [node name="compaspawn11" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 0.0467772, 0.688907, -9.7788 )
+transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, -2.23981, 0.688907, -9.7788 )
 
 [node name="playerspawn91" type="Position3D" parent="."]
-transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -2.43069, 0.740236, -3.19226 )
+transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -3.86297, 0.740236, -3.19226 )
 
 [node name="compaspawn91" type="Position3D" parent="."]
-transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -3.29372, 0.740236, -3.03991 )
+transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -4.726, 0.740236, -3.03991 )
 
 [node name="playerspawn92" type="Position3D" parent="."]
-transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -2.91096, 0.740236, -16.2991 )
+transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757, 0.984808, -0.0016093, 0.173641, -4.34324, 0.740236, -16.2991 )
 
 [node name="compaspawn92" type="Position3D" parent="."]
-transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -4.18729, 0.740236, -16.5934 )
+transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -5.61957, 0.740236, -16.5934 )
 
 [connection signal="body_entered" from="Puerta9a" to="." method="_on_Puerta9a_body_entered"]
 [connection signal="body_entered" from="Puerta9b" to="." method="_on_Puerta9b_body_entered"]

@@ -2,28 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/2.png-9e7eebc5cbffa3ae3598549f683f0dbd.s3tc.stex"
-path.etc="res://.import/2.png-9e7eebc5cbffa3ae3598549f683f0dbd.etc.stex"
+path="res://.import/2.png-9e7eebc5cbffa3ae3598549f683f0dbd.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/Renders Buenos/2.png"
-dest_files=[ "res://.import/2.png-9e7eebc5cbffa3ae3598549f683f0dbd.s3tc.stex", "res://.import/2.png-9e7eebc5cbffa3ae3598549f683f0dbd.etc.stex" ]
+dest_files=[ "res://.import/2.png-9e7eebc5cbffa3ae3598549f683f0dbd.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=true
+flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
