@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/main_menu.png" type="Texture" id=1]
 [ext_resource path="res://scenes/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/menu_theme.tres" type="Theme" id=4]
+[ext_resource path="res://fonts/Pixelart_Serif_Font_v02_by_ReffPixels/PixelSerif_16px_v02.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
 
 [node name="main menu" type="Node2D"]
 script = ExtResource( 2 )
@@ -19,13 +24,15 @@ margin_left = 154.0
 margin_top = 122.0
 margin_right = 325.0
 margin_bottom = 176.0
-text = "START"
+theme = ExtResource( 4 )
+text = "Start"
 
 [node name="CloseButton" type="Button" parent="."]
 margin_left = 154.0
 margin_top = 213.0
 margin_right = 325.0
 margin_bottom = 267.0
+theme = ExtResource( 4 )
 text = "Close"
 
 [node name="LanguageButton" type="Button" parent="."]
@@ -33,6 +40,8 @@ margin_left = 30.0
 margin_top = 542.0
 margin_right = 116.0
 margin_bottom = 578.0
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "English"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]

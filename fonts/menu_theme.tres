@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=4 format=2]
+
+[ext_resource path="res://fonts/Pixelart_Serif_Font_v02_by_ReffPixels/PixelSerif_16px_v02.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 160
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+font_data = ExtResource( 1 )
+
+[resource]
+default_font = SubResource( 2 )
+/fonts/font = SubResource( 1 )
