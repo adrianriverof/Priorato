@@ -277,15 +277,31 @@ mesh = SubResource( 28 )
 
 [node name="Cube091" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.570149, 0.101072, 1.0749, 13.1057 )
+visible = false
 mesh = SubResource( 29 )
 
 [node name="Cube092" type="MeshInstance" parent="escenario/casa"]
-transform = Transform( 0, 0, 9.42373, 0, 9.18055, 0, -0.22269, 0, 0, 1.34441, 0.0317707, 14.2802 )
+transform = Transform( 0, 0, 9.42373, 0, 9.18055, 0, -0.22269, 0, 0, -15.1825, 0.0317707, 14.2802 )
 mesh = SubResource( 30 )
 
 [node name="Cube109" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( -0.1, -4.11838e-09, -5.836e-09, 4.11838e-09, 0.0335121, -0.0942175, 5.836e-09, -0.0942175, -0.0335121, 0.0950924, 3.09548, 10.9497 )
 mesh = SubResource( 31 )
+
+[node name="CSGBox" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69418, 0, 10.1968 )
+use_collision = true
+depth = 22.6248
+
+[node name="CSGBox2" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33286, 0, 10.1968 )
+use_collision = true
+depth = 22.6248
+
+[node name="CSGBox3" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 0.00537555, 0, -0.999986, 0, 1, 0, 0.999986, 0, 0.00537555, 0.340432, 0.497619, 17.0289 )
+use_collision = true
+depth = 3.22121
 
 [node name="floor" type="StaticBody" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.0489674, -13.209 )

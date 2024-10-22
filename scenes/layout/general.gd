@@ -80,7 +80,9 @@ func entrar_en_cobertizo():
 		progress_manager.consiguen_dagas()
 		start_dialogue("cobertizo 1")
 	
-	
+
+func salir_de_iglesia():
+	start_dialogue("salir_de_iglesia")
 
 func entrar_en_bodega():
 	if progress_manager.tienen_llave():
@@ -126,6 +128,9 @@ func _select_timeline_string_for(event, custom_language = language):
 			string += "Cobertizo 2"
 		"ending":
 			string += "Final"
+		"salir_de_iglesia":
+			string += "1a Conv Fuera"
+	
 	
 	if custom_language == "English": string += " ENG"
 	

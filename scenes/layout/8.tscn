@@ -193,6 +193,30 @@ mesh = SubResource( 31 )
 transform = Transform( -0.085126, 0.0511993, 0.0114977, 6.51449e-05, 0.0220141, -0.0975468, -0.0524744, -0.0830302, -0.0187731, 3.81292, 4.15586, -0.926732 )
 mesh = SubResource( 32 )
 
+[node name="CSGBox" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94505, 0, -4.76837e-07 )
+use_collision = true
+depth = 38.2345
+
+[node name="CSGBox2" type="CSGBox" parent="escenario/casa/CSGBox"]
+transform = Transform( 0.0306258, 0, 0.999531, 0, 1, 0, -0.999531, 0, 0.0306258, -0.117183, 0.0666804, 5.24131 )
+operation = 2
+width = 4.77094
+height = 3.11485
+depth = 3.58704
+
+[node name="CSGBox2" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 0.0306258, 0, 0.999531, 0, 1, 0, -0.999531, 0, 0.0306258, -3.94505, 0, 12.8075 )
+use_collision = true
+depth = 38.2345
+
+[node name="CSGBox" type="CSGBox" parent="escenario/casa/CSGBox2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0760536, 0.0666804, 2.88974 )
+operation = 2
+width = 4.77094
+height = 3.11485
+depth = 3.58704
+
 [node name="floor" type="StaticBody" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.0489674, -13.209 )
 
@@ -237,7 +261,7 @@ margin_bottom = 141.0
 transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 0.705708, 0.731594, -11.6562 )
 
 [node name="compaspawn6" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 2.19481, 0.688907, -11.6314 )
+transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 0.733922, 0.688907, -10.6029 )
 
 [node name="playerspawn9" type="Position3D" parent="."]
 transform = Transform( -0.997369, 0.000671804, -0.0724871, 0, 0.999957, 0.00926757, 0.0724894, 0.00924319, -0.997325, -0.547026, 0.740236, -17.1305 )

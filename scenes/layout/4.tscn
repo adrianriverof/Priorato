@@ -108,7 +108,7 @@ visible = false
 transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999966, -1.36881, 0.537034, -8.97394 )
 
 [node name="compa" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
+transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -1.70351, 0.64144, -9.25404 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, -2.50999e-08, 8.37421e-08, 0, 0.957898, 0.28711, -8.74228e-08, 0.28711, -0.957898, -0.946164, 6.16412, -30.3041 )
@@ -149,6 +149,16 @@ mesh = SubResource( 22 )
 [node name="Cube108" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( -0.1, -4.11838e-09, -5.836e-09, 4.11838e-09, 0.0335121, -0.0942175, 5.836e-09, -0.0942175, -0.0335121, 0.0647752, 3.09548, 10.8955 )
 mesh = SubResource( 23 )
+
+[node name="CSGBox" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77539, 0, 4.76837e-07 )
+use_collision = true
+depth = 27.7374
+
+[node name="CSGBox2" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73981, 0, 1.43051e-06 )
+use_collision = true
+depth = 27.7374
 
 [node name="floor" type="StaticBody" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.0489674, -13.209 )

@@ -11,7 +11,8 @@ var exhausted_dialogues = {
 	"bodega": false,
 	"cobertizo 1": false, 
 	"cobertizo 2": false,
-	"ending" : false
+	"ending" : false,
+	"salir_de_iglesia": false
 }
 
 var story_events_happened = {

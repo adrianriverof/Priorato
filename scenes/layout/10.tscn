@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -489,6 +489,9 @@ size = Vector3( 39.078, 0.338, 31.356 )
 [sub_resource type="ConcavePolygonShape" id=17]
 data = PoolVector3Array( -19.539, 0.169, 15.678, 19.539, 0.169, 15.678, -19.539, -0.169, 15.678, 19.539, 0.169, 15.678, 19.539, -0.169, 15.678, -19.539, -0.169, 15.678, 19.539, 0.169, -15.678, -19.539, 0.169, -15.678, 19.539, -0.169, -15.678, -19.539, 0.169, -15.678, -19.539, -0.169, -15.678, 19.539, -0.169, -15.678, 19.539, 0.169, 15.678, 19.539, 0.169, -15.678, 19.539, -0.169, 15.678, 19.539, 0.169, -15.678, 19.539, -0.169, -15.678, 19.539, -0.169, 15.678, -19.539, 0.169, -15.678, -19.539, 0.169, 15.678, -19.539, -0.169, -15.678, -19.539, 0.169, 15.678, -19.539, -0.169, 15.678, -19.539, -0.169, -15.678, 19.539, 0.169, 15.678, -19.539, 0.169, 15.678, 19.539, 0.169, -15.678, -19.539, 0.169, 15.678, -19.539, 0.169, -15.678, 19.539, 0.169, -15.678, -19.539, -0.169, 15.678, 19.539, -0.169, 15.678, -19.539, -0.169, -15.678, 19.539, -0.169, 15.678, 19.539, -0.169, -15.678, -19.539, -0.169, -15.678 )
 
+[sub_resource type="BoxShape" id=84]
+extents = Vector3( 1, 2.17784, 1 )
+
 [sub_resource type="CubeMesh" id=7]
 size = Vector3( 3.678, 0.592, 2 )
 
@@ -496,7 +499,7 @@ size = Vector3( 3.678, 0.592, 2 )
 albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="BoxShape" id=18]
-extents = Vector3( 2.74514, 1, 1 )
+extents = Vector3( 3.02668, 0.49937, 1.39317 )
 
 [sub_resource type="SpatialMaterial" id=52]
 albedo_color = Color( 0, 0, 0, 1 )
@@ -686,6 +689,44 @@ transform = Transform( -0.1, 0, 1.50996e-08, 0, 0.1, 0, -1.50996e-08, 0, -0.1, -
 mesh = SubResource( 82 )
 skeleton = NodePath("../../..")
 
+[node name="CSGBox" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95055, 0, 2.80856 )
+use_collision = true
+depth = 27.5362
+
+[node name="CSGBox" type="CSGBox" parent="escenario/casa/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 0, 0.326443 )
+operation = 2
+width = 2.55262
+depth = 4.12017
+
+[node name="CSGBox2" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.93754, 0, 2.80856 )
+use_collision = true
+depth = 27.5362
+
+[node name="CSGBox" type="CSGBox" parent="escenario/casa/CSGBox2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53674e-07, 0.657505, 7.70457 )
+operation = 2
+width = 3.20079
+depth = 2.61924
+
+[node name="CSGBox2" type="CSGBox" parent="escenario/casa/CSGBox2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, 0.657505, -7.38109 )
+operation = 2
+width = 3.20079
+depth = 2.61924
+
+[node name="CSGBox3" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 0.0179235, 0, -0.999839, 0, 1, 0, 0.999839, 0, 0.0179235, 3.17396, 0, 12.1232 )
+use_collision = true
+depth = 27.5362
+
+[node name="CSGBox4" type="CSGBox" parent="escenario/casa"]
+transform = Transform( 0.0179235, 0, -0.999839, 0, 1, 0, 0.999839, 0, 0.0179235, 3.17396, 0, -6.05048 )
+use_collision = true
+depth = 27.5362
+
 [node name="floor" type="StaticBody" parent="escenario"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.224, 0.0489674, -13.209 )
 
@@ -696,6 +737,14 @@ material/0 = SubResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="escenario/floor"]
 shape = SubResource( 17 )
+
+[node name="floor" type="CollisionShape" parent="escenario/floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93093, 2.62008, 10.1813 )
+shape = SubResource( 84 )
+
+[node name="floor3" type="CollisionShape" parent="escenario/floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.71532, 2.62008, -2.90932 )
+shape = SubResource( 84 )
 
 [node name="Puerta9a" type="Area" parent="."]
 transform = Transform( 0.999924, 0, 0.0122868, 0, 1, 0, -0.0122868, 0, 0.999924, -8.06433, 1.702, -16.6198 )
