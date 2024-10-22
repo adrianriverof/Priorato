@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -51,6 +51,9 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 194
 }
+
+[sub_resource type="CylinderShape" id=51]
+radius = 2.09775
 
 [sub_resource type="ArrayMesh" id=28]
 resource_name = "complete_scenes_Cube053"
@@ -449,7 +452,7 @@ transform = Transform( 0.0116567, -0.137696, 0.990406, 0.000138296, 0.990473, 0.
 fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.678, 0, 0, 0, 1.678, 0, 0, 0, 1, 0, 0.003, -24.144 )
+transform = Transform( 1.678, -2.32831e-10, 0, 0, 1.678, 8.00537e-09, 0, -2.76486e-10, 1, 0, 0.00300002, -24.144 )
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]
@@ -475,6 +478,10 @@ mesh = SubResource( 26 )
 [node name="Cylinder007" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 1.39712, 0, 0, 0, 0.374805, 0, 0, 0, 1.39712, -4.49627, 0.143345, 3.44386 )
 mesh = SubResource( 27 )
+
+[node name="CollisionShape" type="CollisionShape" parent="escenario/casa"]
+transform = Transform( 1.39712, 0, 0, 0, 0.374805, 0, 0, 0, 1.39712, -4.49627, 0.143345, 3.44386 )
+shape = SubResource( 51 )
 
 [node name="Cube046" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 0.269625, 0, 0, 0, 0.581139, 0, 0, 0, 0.269625, 4.31435, 0.536973, 3.47046 )
