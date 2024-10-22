@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/manos explicativo.png-c52e8be277221b82e1cf7dcb7bbac447.stex"
+path="res://.import/Ventana Llaves Outline.png-22f5b59bb52a327003ac0de793e4e38d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Resources Minijuegos /Manos final/manos explicativo.png"
-dest_files=[ "res://.import/manos explicativo.png-c52e8be277221b82e1cf7dcb7bbac447.stex" ]
+source_file="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Ventana Llaves Outline.png"
+dest_files=[ "res://.import/Ventana Llaves Outline.png-22f5b59bb52a327003ac0de793e4e38d.stex" ]
 
 [params]
 

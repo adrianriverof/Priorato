@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ventana borde manos.png-022a29df17f6c1b32252a00cb0a73993.stex"
+path="res://.import/ventana dagas fondo.png-912f6c97334372c29f6766ecb76dc1f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Resources Minijuegos /Manos final/ventana borde manos.png"
-dest_files=[ "res://.import/ventana borde manos.png-022a29df17f6c1b32252a00cb0a73993.stex" ]
+source_file="res://assets/Resources Minijuegos/Dagas/ventana dagas fondo.png"
+dest_files=[ "res://.import/ventana dagas fondo.png-912f6c97334372c29f6766ecb76dc1f3.stex" ]
 
 [params]
 

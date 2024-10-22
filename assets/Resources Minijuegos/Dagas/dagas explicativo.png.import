@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ventana dagas borde.png-b96c4fe5450395e8c17319eac3bae0c8.stex"
+path="res://.import/dagas explicativo.png-b2e75f3b85487524e4bf78e751ab9d7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Resources Minijuegos /Dagas/ventana dagas borde.png"
-dest_files=[ "res://.import/ventana dagas borde.png-b96c4fe5450395e8c17319eac3bae0c8.stex" ]
+source_file="res://assets/Resources Minijuegos/Dagas/dagas explicativo.png"
+dest_files=[ "res://.import/dagas explicativo.png-b2e75f3b85487524e4bf78e751ab9d7a.stex" ]
 
 [params]
 

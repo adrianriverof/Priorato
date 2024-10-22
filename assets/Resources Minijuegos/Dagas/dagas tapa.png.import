@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dagas daga.png-5c57941e304895398fcf0eab22690a56.stex"
+path="res://.import/dagas tapa.png-e300e3db60661d2ff9348cbed240ed5f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Resources Minijuegos /Dagas/dagas daga.png"
-dest_files=[ "res://.import/dagas daga.png-5c57941e304895398fcf0eab22690a56.stex" ]
+source_file="res://assets/Resources Minijuegos/Dagas/dagas tapa.png"
+dest_files=[ "res://.import/dagas tapa.png-e300e3db60661d2ff9348cbed240ed5f.stex" ]
 
 [params]
 

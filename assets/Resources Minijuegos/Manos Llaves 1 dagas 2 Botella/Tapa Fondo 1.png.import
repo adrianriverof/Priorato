@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LLave 1 B.png-de59fad2060d84eb7627385807460452.stex"
+path="res://.import/Tapa Fondo 1.png-2de2c71e487f693bc2b893733e8eba63.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Resources Minijuegos /Manos Llaves (1 dagas 2 Botella/LLave 1 B.png"
-dest_files=[ "res://.import/LLave 1 B.png-de59fad2060d84eb7627385807460452.stex" ]
+source_file="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Tapa Fondo 1.png"
+dest_files=[ "res://.import/Tapa Fondo 1.png-2de2c71e487f693bc2b893733e8eba63.stex" ]
 
 [params]
 

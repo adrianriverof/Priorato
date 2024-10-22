@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Manos 2.png-234c7d67c22a0112cdf277d0f87423cd.stex"
+path="res://.import/Mano 1 .png-904e5390db0d97e3735d74523aaa0e36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Resources Minijuegos /Manos final/Manos 2.png"
-dest_files=[ "res://.import/Manos 2.png-234c7d67c22a0112cdf277d0f87423cd.stex" ]
+source_file="res://assets/Resources Minijuegos/Manos final/Mano 1 .png"
+dest_files=[ "res://.import/Mano 1 .png-904e5390db0d97e3735d74523aaa0e36.stex" ]
 
 [params]
 
