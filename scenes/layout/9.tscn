@@ -433,7 +433,7 @@ extents = Vector3( 1.638, 1.925, 1 )
 size = Vector3( 3.678, 2, 2 )
 
 [sub_resource type="BoxShape" id=18]
-extents = Vector3( 1.621, 1, 1 )
+extents = Vector3( 1.621, 1, 2.47827 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 3 )
@@ -607,11 +607,11 @@ transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.159174
 mesh = SubResource( 7 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Puerta10b"]
-transform = Transform( 1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.163314, 0, 13.2908 )
+transform = Transform( 1, 0, 2.79397e-09, 0, 1, 0, -2.79397e-09, 0, 1, -0.163314, 0, 13.2908 )
 shape = SubResource( 18 )
 
 [node name="Puerta8" type="Area" parent="."]
-transform = Transform( -0.998654, 0, -0.0518653, 0, 1, 0, 0.0518653, 0, -0.998654, -1.64059, 0.97169, -1.05702 )
+transform = Transform( -0.998654, 0, -0.0518653, 0, 1, 0, 0.0518653, 0, -0.998654, -1.64059, 0.97169, -0.281269 )
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta8"]
