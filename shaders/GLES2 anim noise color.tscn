@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://shaders/color_palettes/2x_monas2.png" type="Texture" id=1]
+[ext_resource path="res://shaders/color_palettes/NEW_gradient_2x_monas.png" type="Texture" id=1]
 [ext_resource path="res://shaders/GLES2_animated_noise_then_color.shader" type="Shader" id=2]
 
 [sub_resource type="ShaderMaterial" id=22]
