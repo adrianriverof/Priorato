@@ -8,9 +8,9 @@
 script = ExtResource( 2 )
 
 [node name="MainMenu" type="Sprite" parent="."]
-position = Vector2( 512.447, 298 )
 scale = Vector2( 0.86, 0.86 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 3 )]
 
