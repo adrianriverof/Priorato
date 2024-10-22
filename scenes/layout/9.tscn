@@ -449,7 +449,7 @@ transform = Transform( 0.0116567, -0.137696, 0.990406, 0.000138296, 0.990473, 0.
 fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
+transform = Transform( 1.678, 0, 0, 0, 1.678, 0, 0, 0, 1, 0, 0.003, -24.144 )
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]
