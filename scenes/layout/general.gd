@@ -77,12 +77,14 @@ func entrar_en_cobertizo():
 		progress_manager.talked_with_compa()
 		start_dialogue("cobertizo 2")
 	elif progress_manager.tienen_llave():
+		progress_manager.consiguen_dagas()
 		start_dialogue("cobertizo 1")
 	
 	
 
 func entrar_en_bodega():
 	if progress_manager.tienen_llave():
+		progress_manager.consiguen_botella()
 		start_dialogue("bodega")
 
 func trigger_ending_si_toca():
@@ -151,8 +153,6 @@ func _on_dialogic_started(_timeline = null):
 func _on_dialogic_ended(_timeline = null):
 	
 	player.aware_of_dialogue_ended()
-
-
 
 
 

@@ -57,3 +57,9 @@ func ritual_happened():
 
 func talked_with_compa():
 	story_events_happened["talked with compa"] = true
+
+func consiguen_botella():
+	story_events_happened["obtain bottle"] = true
+
+func consiguen_dagas():
+	story_events_happened["obtain daggers"] = true
