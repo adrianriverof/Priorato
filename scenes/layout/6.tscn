@@ -1,12 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/layout/6.gd" type="Script" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Renders guarros/3b.png" type="Texture" id=5]
+[ext_resource path="res://assets/Renders Buenos/6.png" type="Texture" id=5]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=7]
 
 [sub_resource type="ArrayMesh" id=19]
 resource_name = "complete_scenes_Cube025"
@@ -116,16 +115,10 @@ fov = 32.6
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
 transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
-visible = false
 texture = ExtResource( 5 )
 
-[node name="Sprite3D2" type="Sprite3D" parent="Camera"]
-transform = Transform( 2.618, 2.56923e-09, -3.14039e-08, -2.56923e-09, 2.618, -1.96275e-09, 8.22155e-08, 5.13847e-09, 1, 2.86102e-06, 0.00299966, -24.144 )
-visible = false
-modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
-texture = ExtResource( 7 )
-
 [node name="escenario" type="Spatial" parent="."]
+visible = false
 
 [node name="casa" type="StaticBody" parent="escenario"]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.976977, 0.277332, -6.70632 )

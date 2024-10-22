@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Llave 1 A.png-db4005f75b97ab460acb1d114996787f.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/Resources Minijuegos /Manos Llaves (1 dagas 2 Botella/Llave 1 A.png"
+dest_files=[ "res://.import/Llave 1 A.png-db4005f75b97ab460acb1d114996787f.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

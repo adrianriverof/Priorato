@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/layout/15.gd" type="Script" id=2]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Renders guarros/3b.png" type="Texture" id=5]
+[ext_resource path="res://assets/Renders Buenos/15.png" type="Texture" id=5]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=8]
@@ -204,7 +204,6 @@ fov = 41.1
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
 transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
-visible = false
 texture = ExtResource( 5 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Camera"]

@@ -6,7 +6,7 @@
 [ext_resource path="res://elements/floor_cube.tres" type="Shape" id=4]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
-[ext_resource path="res://assets/Renders guarros/2a.png" type="Texture" id=7]
+[ext_resource path="res://assets/Renders Buenos/2.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=8]
 
 [sub_resource type="ArrayMesh" id=3]
@@ -109,6 +109,7 @@ modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
 texture = ExtResource( 8 )
 
 [node name="escenario" type="Spatial" parent="."]
+visible = false
 
 [node name="casa" type="StaticBody" parent="escenario"]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.976977, 0.277332, -6.70632 )

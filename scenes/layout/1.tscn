@@ -6,7 +6,7 @@
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/layout/1.gd" type="Script" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
-[ext_resource path="res://assets/Renders guarros/1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Renders Buenos/1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/1 b .png" type="Texture" id=8]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=9]
 
