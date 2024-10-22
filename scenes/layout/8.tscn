@@ -148,11 +148,11 @@ transform = Transform( -0.999966, 0, 0.00827287, 0, 1, 0, -0.00827287, 0, -0.999
 transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.886374, 0.117015, -0.447939, 0.000135084, 0.967467, 0.252998, 0.462971, -0.224311, 0.857521, -4.592, 4.418, -5.629 )
-fov = 44.1
+transform = Transform( 0.862691, 0.127836, -0.489309, 0.000135084, 0.967467, 0.252998, 0.505732, -0.218325, 0.834607, -4.47414, 5.00006, -5.35193 )
+fov = 34.9
 
 [node name="Sprite3D" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.307, 0, 0, 0, 1.307, 0, 0, 0, 1, 0, 0.003, -24.144 )
+transform = Transform( 1.421, 0, 0, 0, 1.421, 0, 0, 0, 1, 0, 0.003, -24.144 )
 texture = ExtResource( 5 )
 
 [node name="escenario" type="Spatial" parent="."]
