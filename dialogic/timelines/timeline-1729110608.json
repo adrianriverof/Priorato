@@ -130,10 +130,6 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "No.... not like that...."
-		},
-		{
-			"emit_signal": "end",
-			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {

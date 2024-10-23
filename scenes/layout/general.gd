@@ -34,7 +34,7 @@ var room_scenes = [
 
 var bottleminigamescene = preload("res://scenes/minijuegos/botella.tscn")
 var daggersminigamescene = preload("res://scenes/minijuegos/dagas.tscn")
-var ritualminigamescene
+var ritualminigamescene = preload("res://scenes/minijuegos/ritual.tscn")
 var handsminigamescene = preload("res://scenes/minijuegos/manos.tscn")
 
 var player
@@ -178,8 +178,6 @@ func dialog_listener(string):
 		"start minigame daggers":
 			print("empezaríamos minijuego dagas")
 			start_minigame(string)
-		"start ritual":
-			start_ritual()
 		"start minigame ritual":
 			print("empezaríamos minijuego ritual")
 			start_minigame(string)

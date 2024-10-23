@@ -9,7 +9,8 @@ var current_dialog
 
 
 func _ready():
-	pass
+	$video.visible = true
+	$video.z_index = 3
 	
 func start_dialog():
 	var dialog
@@ -33,21 +34,37 @@ func dialog_listener(string):
 
 
 func _on_lock_body_entered(body):
+	print("algo entra en lock")
 	end_ritual()
 
 
 func _tres():
 	print("tres")
-	$compa/AnimationPlayer.play("kill")
+	$box/Collisiongate.disabled = true
+	#$compa/AnimationPlayer.play("kill")
 	#$OpenWindow.start() # ya lo inicia la animación
 
 func end_ritual():
+	$compa/AnimationPlayer.play("compa_se_pira")
 	print("se acabó el ritual")
+	get_tree().get_root().get_node("general").resume_game()
+	queue_free()
 
 
 
 func _on_VideoPlayer_finished():
 	#$video.visible = false
+	print("video termina")
+	$Blackout.play("blackout")
+	$video/AudioStreamPlayer.play()
+	
+	
+#	$video.z_index = -3
+#	Input.warp_mouse_position(player.position)
+#	start_dialog()
+
+
+func iniciar_minijuego():
 	$video.z_index = -3
 	Input.warp_mouse_position(player.position)
 	start_dialog()

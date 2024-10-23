@@ -103,7 +103,7 @@
 			"text": "Come on. As always. Follow me."
 		},
 		{
-			"emit_signal": "ritual",
+			"emit_signal": "start minigame ritual",
 			"event_id": "dialogic_040"
 		}
 	],

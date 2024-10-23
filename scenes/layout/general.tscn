@@ -9,7 +9,7 @@ process_priority = 1
 transform = Transform( 0.999664, -0.0259152, 0, 0.0259152, 0.999664, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
 test_room_mode = true
-starting_test_room = 15
+starting_test_room = 9
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 2 )]
 
