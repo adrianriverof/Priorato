@@ -33,6 +33,7 @@ var room_scenes = [
 ]
 
 var bottleminigamescene = preload("res://scenes/minijuegos/botella.tscn")
+var daggersminigamescene = preload("res://scenes/minijuegos/dagas.tscn")
 
 var player
 
@@ -191,14 +192,14 @@ func start_minigame(string):
 			get_tree().get_root().add_child(minigameinstance)
 			
 		"start minigame daggers":
-			
-			add_child(bottleminigamescene)
+			var minigameinstance = daggersminigamescene.instance()
+			get_tree().get_root().add_child(minigameinstance)
 		"start minigame ritual":
-			
-			add_child(bottleminigamescene)
+			var minigameinstance = bottleminigamescene.instance()
+			get_tree().get_root().add_child(minigameinstance)
 		"start minigame hands":
-			
-			add_child(bottleminigamescene)
+			var minigameinstance = bottleminigamescene.instance()
+			get_tree().get_root().add_child(minigameinstance)
 	
 
 
@@ -206,3 +207,5 @@ func pause_player():
 	player.aware_of_minigame_started()
 func resume_game():
 	player.aware_of_minigame_ended()
+
+

@@ -95,8 +95,8 @@
 			"text": "Thank you"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"emit_signal": "start minigame daggers",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {

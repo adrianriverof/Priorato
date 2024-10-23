@@ -63,6 +63,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Creo que tienes razón."
+		},
+		{
+			"emit_signal": "start minigame hands",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
