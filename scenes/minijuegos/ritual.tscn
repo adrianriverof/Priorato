@@ -290,7 +290,6 @@ one_shot = true
 wait_time = 5.0
 one_shot = true
 
-[connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="lock" to="." method="_on_lock_body_entered"]
 [connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]
 [connection signal="timeout" from="WinTimer" to="." method="_on_WinTimer_timeout"]

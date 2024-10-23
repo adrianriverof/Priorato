@@ -80,14 +80,11 @@ func reset():
 
 func _tres():
 	print("tres")
-	$compa/AnimationPlayer.play("open")
+	$compa/AnimationPlayer.play("kill")
 	#$OpenWindow.start() # ya lo inicia la animación
 
 
 
-
-func _on_VideoPlayer_finished():
-	videoplayer.play()
 
 
 func _on_ResetTimer_timeout():
