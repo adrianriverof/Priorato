@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sonido minijueg dagas.ogg-c15b14589738a6252ab073fd38444668.oggstr"
+
+[deps]
+
+source_file="res://soundes/sonido minijueg dagas.ogg"
+dest_files=[ "res://.import/sonido minijueg dagas.ogg-c15b14589738a6252ab073fd38444668.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

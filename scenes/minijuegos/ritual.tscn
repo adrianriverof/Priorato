@@ -10,7 +10,7 @@
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/dagas daga.png" type="Texture" id=9]
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/ventana dagas fondo.png" type="Texture" id=10]
-[ext_resource path="res://soundes/MONASTERIO RITUAL.ogg" type="AudioStream" id=11]
+[ext_resource path="res://soundes/sonido minijueg dagas.ogg" type="AudioStream" id=11]
 
 [sub_resource type="CapsuleShape2D" id=11]
 height = 60.0
