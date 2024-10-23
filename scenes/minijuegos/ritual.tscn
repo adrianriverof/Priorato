@@ -33,24 +33,12 @@ tracks/0/keys = {
 "values": [ Vector2( 663, 496 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../box/Collisiongate:disabled")
+tracks/1/path = NodePath("AnimationPlayer:playback_speed")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer:playback_speed")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -90,24 +78,12 @@ tracks/0/keys = {
 "values": [ Vector2( 963, 431 ), Vector2( 959, 428 ), Vector2( 963, 434 ), Vector2( 965, 431 ), Vector2( 963, 431 ), Vector2( 958, 433 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../box/Collisiongate:disabled")
+tracks/1/path = NodePath("AnimationPlayer:playback_speed")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AnimationPlayer:playback_speed")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -259,7 +235,6 @@ position = Vector2( 8, 104 )
 [node name="Collisiongate" type="CollisionShape2D" parent="box"]
 position = Vector2( 339, 313 )
 shape = SubResource( 1 )
-disabled = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="box"]
 position = Vector2( 529, 314.938 )

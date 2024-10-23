@@ -56,6 +56,7 @@ func _input(event):
 				#print(is_dialog_active)
 				#print(Dialogic.load())
 			elif collision.get("collider").name == "padre":
+				collision.get("collider").look(translation)
 				talk_to_padre()
 
 

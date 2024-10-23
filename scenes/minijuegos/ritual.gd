@@ -11,6 +11,7 @@ var current_dialog
 func _ready():
 	$video.visible = true
 	$video.z_index = 3
+	print($box/Collisiongate.disabled)
 	
 func start_dialog():
 	var dialog
@@ -35,7 +36,8 @@ func dialog_listener(string):
 
 func _on_lock_body_entered(body):
 	print("algo entra en lock")
-	end_ritual()
+	if body.name == "player":
+		end_ritual()
 
 
 func _tres():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=6]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=8]
-[ext_resource path="res://characters/padre.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/Renders Buenos/9_sup.png" type="Texture" id=10]
 
 [sub_resource type="ArrayMesh" id=25]
@@ -698,9 +697,6 @@ transform = Transform( 0.999967, 7.5051e-05, -0.00809726, 0, 0.999957, 0.0092675
 
 [node name="compaspawn8" type="Position3D" parent="."]
 transform = Transform( 0.997661, 0, -0.0683633, 0, 1, 0, 0.0683633, 0, 0.997661, -1.45729, 0.740236, -1.69318 )
-
-[node name="padre" parent="." instance=ExtResource( 9 )]
-transform = Transform( -0.574348, 0, -0.818611, 0, 1, 0, 0.818611, 0, -0.574348, -3.83043, 0.772758, -10.3243 )
 
 [connection signal="body_entered" from="Puerta10a" to="." method="_on_Puerta10a_body_entered"]
 [connection signal="body_entered" from="Puerta10b" to="." method="_on_Puerta10b_body_entered"]
