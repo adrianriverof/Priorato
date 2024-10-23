@@ -9,9 +9,8 @@ var current_dialog
 
 
 func _ready():
-	Input.warp_mouse_position(player.position)
-	start_dialog()
-
+	pass
+	
 func start_dialog():
 	var dialog
 	if Language.language == "English":
@@ -45,3 +44,10 @@ func _tres():
 func end_ritual():
 	print("se acabó el ritual")
 
+
+
+func _on_VideoPlayer_finished():
+	#$video.visible = false
+	$video.z_index = -3
+	Input.warp_mouse_position(player.position)
+	start_dialog()

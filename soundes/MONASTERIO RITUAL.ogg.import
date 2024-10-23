@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MONASTERIO RITUAL.ogg-2d446c24575a89d096f4a773578c7e30.oggstr"
+
+[deps]
+
+source_file="res://soundes/MONASTERIO RITUAL.ogg"
+dest_files=[ "res://.import/MONASTERIO RITUAL.ogg-2d446c24575a89d096f4a773578c7e30.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
