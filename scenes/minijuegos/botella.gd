@@ -63,6 +63,7 @@ func _on_EndTimer_timeout():
 func _end():
 	print("cerramos minijuego")
 	get_tree().get_root().get_node("general").resume_game()
+	get_tree().get_root().get_node("general").abrir_armario_en_5()
 	queue_free()
 
 func reset():

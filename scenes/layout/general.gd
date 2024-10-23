@@ -69,6 +69,7 @@ func change_room_from_to(from, to):
 	get_tree().get_root().get_node("general").get_node("RoomManager").add_child(roomtoinstance, true)
 
 
+
 func toggle_shader():
 	$"GLES2 anim noise color".visible = !$"GLES2 anim noise color".visible
 
@@ -212,3 +213,10 @@ func resume_game():
 
 func start_ritual():
 	pass
+
+
+func tienen_botella():
+	return progress_manager.tienen_botella()
+	
+func abrir_armario_en_5():
+	get_node("RoomManager").get_child(0).abrir_armario()
