@@ -68,3 +68,10 @@ func consiguen_botella():
 
 func consiguen_dagas():
 	story_events_happened["obtain daggers"] = true
+
+func esta_compa():
+	return !(story_events_happened["ritual happened"] and !story_events_happened["talked with compa"])
+
+
+
+

@@ -15,6 +15,9 @@ func _ready():
 		player = get_parent().get_node(target_to_follow)
 	
 	speed = player.speed
+	
+	if !get_parent().get_parent().get_parent().esta_compa():
+		queue_free()
 	#print(speed)
 	#print(player)
 	#print(player.translation)

@@ -220,3 +220,6 @@ func tienen_botella():
 	
 func abrir_armario_en_5():
 	get_node("RoomManager").get_child(0).abrir_armario()
+
+func esta_compa():
+	return progress_manager.esta_compa()
