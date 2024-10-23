@@ -205,7 +205,7 @@ rotation = 1.5708
 shape = SubResource( 11 )
 
 [node name="compa" type="KinematicBody2D" parent="."]
-position = Vector2( 663, 496 )
+position = Vector2( 955, 399 )
 
 [node name="Llave2B" type="Sprite" parent="compa"]
 position = Vector2( -397, 27 )

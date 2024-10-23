@@ -9,6 +9,7 @@ var current_dialog
 
 
 func _ready():
+	
 	$video.visible = true
 	$video.z_index = 3
 	print($box/Collisiongate.disabled)
@@ -49,6 +50,8 @@ func _tres():
 func end_ritual():
 	$compa/AnimationPlayer.play("compa_se_pira")
 	print("se acabó el ritual")
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().get_root().get_node("general").resume_game()
 	queue_free()
 
@@ -69,4 +72,5 @@ func _on_VideoPlayer_finished():
 func iniciar_minijuego():
 	$video.z_index = -3
 	Input.warp_mouse_position(player.position)
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()

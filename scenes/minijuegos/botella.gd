@@ -10,6 +10,7 @@ var current_dialog
 
 func _ready():
 	Input.warp_mouse_position(player.position)
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()
 
 func start_dialog():
@@ -61,6 +62,8 @@ func _on_EndTimer_timeout():
 	_end()
 
 func _end():
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	print("cerramos minijuego")
 	get_tree().get_root().get_node("general").resume_game()
 	get_tree().get_root().get_node("general").abrir_armario_en_5()

@@ -10,6 +10,7 @@ var current_dialog
 
 func _ready():
 	Input.warp_mouse_position(player.position)
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()
 
 func start_dialog():
@@ -62,6 +63,8 @@ func _on_EndTimer_timeout():
 
 func _end():
 	print("cerramos minijuego")
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().get_root().get_node("general").resume_game()
 	queue_free()
 
