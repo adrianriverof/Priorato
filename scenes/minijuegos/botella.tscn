@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Fondo 2 L.png" type="Texture" id=1]
 [ext_resource path="res://scenes/minijuegos/player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/video/botella.ogv" type="VideoStream" id=7]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Ventana Llaves Fondo.png" type="Texture" id=9]
+[ext_resource path="res://fonts/Pixelart_Serif_Font_v02_by_ReffPixels/PixelSerif_16px_v02.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="CapsuleShape2D" id=4]
 height = 114.0
@@ -104,6 +105,10 @@ extents = Vector2( 149.5, 24 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 28, 296.375 )
 
+[sub_resource type="DynamicFont" id=11]
+size = 41
+font_data = ExtResource( 10 )
+
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 21, 22.5 )
 
@@ -188,18 +193,33 @@ wait_time = 1.5
 one_shot = true
 
 [node name="video" type="Node2D" parent="."]
+visible = false
 position = Vector2( 390, 120 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="video"]
-visible = false
 margin_right = 192.0
 margin_bottom = 234.0
 stream = ExtResource( 7 )
 autoplay = true
 expand = false
 
+[node name="VentanaLlavesOutline2" type="Sprite" parent="video"]
+position = Vector2( 286, 345 )
+scale = Vector2( 0.48125, 1.16111 )
+texture = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="video"]
+visible = false
+margin_left = 112.0
+margin_top = 50.0
+margin_right = 452.0
+margin_bottom = 148.0
+custom_fonts/normal_font = SubResource( 11 )
+text = "You got the bottle"
+
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [node name="lock" type="Area2D" parent="."]
 position = Vector2( 438, 204 )
@@ -212,6 +232,15 @@ shape = SubResource( 10 )
 wait_time = 3.0
 one_shot = true
 
+[node name="WinTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="lock" to="." method="_on_lock_body_entered"]
 [connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_WinTimer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_EndTimer_timeout"]

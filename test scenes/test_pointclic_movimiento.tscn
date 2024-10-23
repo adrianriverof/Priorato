@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://test scenes/KinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://shaders/ColorReductor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/FONDO BRBRBRBRBRBR.glb" type="PackedScene" id=3]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 30, 30 )
@@ -60,3 +61,6 @@ shape = SubResource( 6 )
 [node name="MeshInstance" type="MeshInstance" parent="Area"]
 mesh = SubResource( 7 )
 material/0 = SubResource( 8 )
+
+[node name="FONDO BRBRBRBRBRBR" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 0.86068, 0.509147, 0, -0.509147, 0.86068, -145.893, -12.9364, -42.327 )

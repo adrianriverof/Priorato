@@ -24,9 +24,13 @@ func start_dialog():
 	add_child(dialog)
 
 func dialog_listener(string):
+	print("recibimos señal de dialogic: ", string)
 	match string:
 		"tres":
 			_tres()
+		"end":
+			print("recibimos señal end")
+			_end()
 
 
 func _on_lock_body_entered(body):
@@ -40,12 +44,26 @@ func _on_lock_body_entered(body):
 func _win():
 	
 	already_won = true
-	videoplayer.visible = true
+	$WinTimer.start()
 	
+	#get_tree().get_root().get_node("general").resume_game()
+	#queue_free()
+
+
+func _on_WinTimer_timeout():
+	$video.visible = true
+	dialogue_got_bottle()
+	#$EndTimer.start()
+
+
+
+func _on_EndTimer_timeout():
+	_end()
+
+func _end():
+	print("cerramos minijuego")
 	get_tree().get_root().get_node("general").resume_game()
 	queue_free()
-	
-
 
 func reset():
 	if !already_won: 
@@ -56,8 +74,6 @@ func reset():
 			current_dialog.queue_free()
 		$compa/AnimationPlayer.play("idle")
 		start_dialog()
-		
-	
 		
 
 
@@ -76,3 +92,11 @@ func _on_VideoPlayer_finished():
 
 func _on_ResetTimer_timeout():
 	reset()
+
+
+func dialogue_got_bottle():
+	var bottledialog = Dialogic.start("got the bottle")
+	bottledialog.connect("dialogic_signal", self, "dialog_listener")
+	add_child(bottledialog)
+	
+
