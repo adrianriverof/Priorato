@@ -10,7 +10,9 @@ var altitude = self.translation.y
 
 # Para detectar cuando hay un clic
 var moving = false
-export var is_dialog_active = false
+export var is_dialog_active = false 
+export var is_minigame_active = false
+
 
 onready var camera = get_parent().get_node("Camera")
 onready var ball = get_parent().get_node("ball")
@@ -40,7 +42,7 @@ func _input(event):
 		var space_state = get_world().direct_space_state
 		var collision = space_state.intersect_ray(ray_origin, ray_origin + ray_direction * 1000, [self])
 		#print("¿Considera el jugador que hay diálogo?", is_dialog_active)
-		if collision and !is_dialog_active:
+		if collision and !(is_dialog_active or is_minigame_active):
 			print("colisión con: ", collision.get("collider").name)
 			if collision.get("collider").name == "floor":
 				destination = collision.position
@@ -122,6 +124,13 @@ func aware_of_dialogue_started():
 func aware_of_dialogue_ended():
 	print("----- se avisa de que ha terminado un diálogo")
 	is_dialog_active = false
+
+
+func aware_of_minigame_started():
+	is_minigame_active = true
+
+func aware_of_minigame_ended():
+	is_minigame_active = false
 
 
 

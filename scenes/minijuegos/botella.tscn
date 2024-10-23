@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Fondo 2 L.png" type="Texture" id=1]
 [ext_resource path="res://scenes/minijuegos/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://scenes/minijuegos/botella.gd" type="Script" id=4]
 [ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Ventana Llaves Outline.png" type="Texture" id=5]
 [ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Llave 2 B.png" type="Texture" id=6]
+[ext_resource path="res://assets/video/botella.ogv" type="VideoStream" id=7]
+[ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Ventana Llaves Fondo.png" type="Texture" id=9]
 
 [sub_resource type="CapsuleShape2D" id=4]
@@ -56,10 +58,38 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0.5, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 663, 468 ), Vector2( 657, 316 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../OpenWindow")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -1 ],
+"method": "start"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../ResetTimer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -1 ],
+"method": "start"
+} ]
 }
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -75,8 +105,11 @@ extents = Vector2( 149.5, 24 )
 extents = Vector2( 28, 296.375 )
 
 [sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 21, 22.5 )
 
 [node name="minijuego botella" type="Node2D"]
+pause_mode = 2
+z_index = -5
 script = ExtResource( 4 )
 
 [node name="VentanaLlavesFondo" type="Sprite" parent="."]
@@ -150,13 +183,35 @@ shape = SubResource( 6 )
 position = Vector2( 857, 426 )
 shape = SubResource( 6 )
 
+[node name="OpenWindow" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="video" type="Node2D" parent="."]
+position = Vector2( 390, 120 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="video"]
+visible = false
+margin_right = 192.0
+margin_bottom = 234.0
+stream = ExtResource( 7 )
+autoplay = true
+expand = false
+
+[node name="GLES2 anim noise color" parent="." instance=ExtResource( 8 )]
+
 [node name="lock" type="Area2D" parent="."]
 position = Vector2( 438, 204 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lock"]
+position = Vector2( 1, -6.5 )
 shape = SubResource( 10 )
 
-[node name="OpenWindow" type="Timer" parent="."]
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
 
+[connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="lock" to="." method="_on_lock_body_entered"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]

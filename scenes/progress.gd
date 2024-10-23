@@ -49,6 +49,10 @@ func we_can_start_ritual():
 
 func tienen_llave():
 	return story_events_happened["talked with padre"]
+func tienen_dagas():
+	return story_events_happened["obtain daggers"]
+func tienen_botella():
+	return story_events_happened["obtain bottle"]
 
 func ending_momento():
 	return story_events_happened["talked with compa"]

@@ -23,3 +23,4 @@ func _on_Puerta4_body_entered(body):
 		get_parent().get_parent().change_room_from_to(current_room,4)
 
 
+

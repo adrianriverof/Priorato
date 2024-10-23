@@ -51,6 +51,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "At the same time"
+		},
+		{
+			"emit_signal": "start minigame bottle",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {

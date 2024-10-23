@@ -13,7 +13,6 @@ export var skip_dialogue = false
 
 var start_room = 1
 
-
 var room_scenes = [
 	preload("res://scenes/layout/1.tscn"),
 	preload("res://scenes/layout/2.tscn"),
@@ -33,9 +32,11 @@ var room_scenes = [
 	preload("res://scenes/layout/16.tscn")#  16
 ]
 
+var bottleminigamescene = preload("res://scenes/minijuegos/botella.tscn")
+
 var player
 
-onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
+var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 
 func _ready():
 	print("general aparece")
@@ -88,10 +89,15 @@ func entrar_en_bodega():
 	if progress_manager.tienen_llave():
 		progress_manager.consiguen_botella()
 		start_dialogue("bodega")
+		
+		
 
 func trigger_ending_si_toca():
 	if progress_manager.ending_momento():
 		start_dialogue("ending")
+
+
+
 
 func start_dialogue(event=null):
 	if progress_manager.is_dialogue_exhausted(event): 
@@ -145,6 +151,7 @@ func _add_dialogue_scene(timeline = ""):
 	dialogue.timeline = timeline
 	dialogue.connect("timeline_start", self, "_on_dialogic_started")
 	dialogue.connect("timeline_end", self, "_on_dialogic_ended")
+	dialogue.connect("dialogic_signal", self, "dialog_listener")
 	
 	add_child(dialogue)
 	
@@ -160,4 +167,42 @@ func _on_dialogic_ended(_timeline = null):
 	player.aware_of_dialogue_ended()
 
 
+func dialog_listener(string):
+	match string:
+		"start minigame bottle":
+			print("empezaríamos minijuego botella")
+			start_minigame(string)
+		"start minigame daggers":
+			print("empezaríamos minijuego dagas")
+			start_minigame(string)
+		"start minigame ritual":
+			print("empezaríamos minijuego ritual")
+			start_minigame(string)
+		"start minigame hands":
+			print("empezaríamos minijuego manos")
+			start_minigame(string)
+			
 
+func start_minigame(string):
+	pause_player()
+	match string:
+		"start minigame bottle":
+			var minigameinstance = bottleminigamescene.instance()
+			get_tree().get_root().add_child(minigameinstance)
+			
+		"start minigame daggers":
+			
+			add_child(bottleminigamescene)
+		"start minigame ritual":
+			
+			add_child(bottleminigamescene)
+		"start minigame hands":
+			
+			add_child(bottleminigamescene)
+	
+
+
+func pause_player():
+	player.aware_of_minigame_started()
+func resume_game():
+	player.aware_of_minigame_ended()
