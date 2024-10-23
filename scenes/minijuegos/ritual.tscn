@@ -1,0 +1,299 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/Resources Minijuegos/Dagas/ventana dagas borde.png" type="Texture" id=1]
+[ext_resource path="res://scenes/minijuegos/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Resources Minijuegos/Dagas/Dagas Fondo.png" type="Texture" id=3]
+[ext_resource path="res://scenes/minijuegos/ritual.gd" type="Script" id=4]
+[ext_resource path="res://assets/Resources Minijuegos/Manos Llaves 1 dagas 2 Botella/Ventana Llaves Outline.png" type="Texture" id=5]
+[ext_resource path="res://assets/Resources Minijuegos/Dagas/dagas tapa.png" type="Texture" id=6]
+[ext_resource path="res://assets/video/cinematica.ogv" type="VideoStream" id=7]
+[ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Resources Minijuegos/Dagas/dagas daga.png" type="Texture" id=9]
+[ext_resource path="res://assets/Resources Minijuegos/Dagas/ventana dagas fondo.png" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=11]
+height = 60.0
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 28.0
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 663, 496 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../box/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "idle"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 963, 431 ), Vector2( 959, 428 ), Vector2( 963, 434 ), Vector2( 965, 431 ), Vector2( 963, 431 ), Vector2( 958, 433 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../box/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "kill"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 963, 281 ), Vector2( 959, 278 ), Vector2( 963, 284 ), Vector2( 965, 281 ), Vector2( 963, 281 ), Vector2( 958, 283 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../box/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "open"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 663, 468 ), Vector2( 657, 316 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../OpenWindow")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -1 ],
+"method": "start"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../ResetTimer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -1 ],
+"method": "start"
+} ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27, 244.875 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.125, 262.062 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 149.5, 24 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 28, 296.375 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 21, 118 )
+
+[node name="ritual" type="Node2D"]
+pause_mode = 2
+z_index = -5
+script = ExtResource( 4 )
+
+[node name="VentanaLlavesFondo" type="Sprite" parent="."]
+position = Vector2( 543, 411 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="Fondo2L" type="Sprite" parent="."]
+position = Vector2( 543, 411 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="VentanaLlavesOutline" type="Sprite" parent="."]
+position = Vector2( 544, 411 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 65, 433 )
+
+[node name="Llave2A" parent="player" index="0"]
+position = Vector2( 390, 25 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" parent="player" index="1"]
+disabled = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="player"]
+position = Vector2( 133, -2 )
+rotation = 1.5708
+shape = SubResource( 11 )
+
+[node name="compa" type="KinematicBody2D" parent="."]
+position = Vector2( 663, 496 )
+
+[node name="Llave2B" type="Sprite" parent="compa"]
+position = Vector2( -397, 27 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="compa"]
+position = Vector2( -25, 1 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="compa"]
+autoplay = "idle"
+playback_speed = 3.0
+anims/RESET = SubResource( 7 )
+anims/idle = SubResource( 8 )
+anims/kill = SubResource( 12 )
+anims/open = SubResource( 9 )
+
+[node name="TapaFondo2" type="Sprite" parent="."]
+position = Vector2( 544, 411 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="box" type="StaticBody2D" parent="."]
+position = Vector2( 8, 104 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box"]
+position = Vector2( 339, 313 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="box"]
+position = Vector2( 525.875, 314.938 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="box"]
+position = Vector2( 500, 666 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="box"]
+position = Vector2( 28, 336 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="box"]
+position = Vector2( 1057, 331 )
+shape = SubResource( 6 )
+
+[node name="OpenWindow" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="video" type="Node2D" parent="."]
+visible = false
+position = Vector2( 390, 120 )
+scale = Vector2( 0.56, 0.56 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="video"]
+margin_left = -703.571
+margin_top = -217.857
+margin_right = 1216.43
+margin_bottom = 870.143
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="VentanaLlavesOutline2" type="Sprite" parent="video"]
+visible = false
+position = Vector2( 286, 345 )
+scale = Vector2( 0.48125, 1.16111 )
+texture = ExtResource( 5 )
+
+[node name="GLES2 anim noise color" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="lock" type="Area2D" parent="."]
+position = Vector2( 484, 410 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lock"]
+position = Vector2( 1, 1 )
+shape = SubResource( 10 )
+
+[node name="ResetTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="WinTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="body_entered" from="lock" to="." method="_on_lock_body_entered"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_WinTimer_timeout"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_EndTimer_timeout"]
+
+[editable path="player"]

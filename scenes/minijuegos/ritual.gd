@@ -15,7 +15,7 @@ func _ready():
 func start_dialog():
 	var dialog
 	if Language.language == "English":
-		dialog = Dialogic.start("minijuego botella ENG")
+		dialog = Dialogic.start("Ritual ENG")
 	else:
 		dialog = Dialogic.start("minijuego botella")
 		
@@ -28,34 +28,42 @@ func dialog_listener(string):
 	match string:
 		"tres":
 			_tres()
-		
+		"end":
+			print("recibimos señal end")
+			_end()
 
 
 func _on_lock_body_entered(body):
 	print("abierto")
-	if !$OpenWindow.is_stopped() and body.name == "player":
+	if !$OpenWindow.is_stopped():
 		_win()
-	
+	else:
+		print("bad")
+		reset()
 
 func _win():
 	
 	already_won = true
-	player.speed = 0
-	$Blackout.play("end")
+	$WinTimer.start()
 	
+	#get_tree().get_root().get_node("general").resume_game()
+	#queue_free()
 
 
 func _on_WinTimer_timeout():
-	print("end_game")
+	$video.visible = true
+	dialogue_got_bottle()
 	#$EndTimer.start()
 
 
 
 func _on_EndTimer_timeout():
-	pass
+	_end()
 
 func _end():
-	get_tree().change_scene("res://scenes/main_menu.tscn")
+	print("cerramos minijuego")
+	get_tree().get_root().get_node("general").resume_game()
+	queue_free()
 
 func reset():
 	if !already_won: 
@@ -86,4 +94,9 @@ func _on_ResetTimer_timeout():
 	reset()
 
 
+func dialogue_got_bottle():
+	var bottledialog = Dialogic.start("got the bottle")
+	bottledialog.connect("dialogic_signal", self, "dialog_listener")
+	add_child(bottledialog)
+	
 

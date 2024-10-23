@@ -101,6 +101,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Come on. As always. Follow me."
+		},
+		{
+			"emit_signal": "ritual",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
