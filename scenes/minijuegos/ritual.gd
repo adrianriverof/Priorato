@@ -30,52 +30,11 @@ func dialog_listener(string):
 			_tres()
 		"end":
 			print("recibimos señal end")
-			_end()
+			end_ritual()
 
 
 func _on_lock_body_entered(body):
-	print("abierto")
-	if !$OpenWindow.is_stopped():
-		_win()
-	else:
-		print("bad")
-		reset()
-
-func _win():
-	
-	already_won = true
-	$WinTimer.start()
-	
-	#get_tree().get_root().get_node("general").resume_game()
-	#queue_free()
-
-
-func _on_WinTimer_timeout():
-	$video.visible = true
-	dialogue_got_bottle()
-	#$EndTimer.start()
-
-
-
-func _on_EndTimer_timeout():
-	_end()
-
-func _end():
-	print("cerramos minijuego")
-	get_tree().get_root().get_node("general").resume_game()
-	queue_free()
-
-func reset():
-	if !already_won: 
-		
-		print("reiniciando minijuego")
-		print(current_dialog)
-		if is_instance_valid(current_dialog):
-			current_dialog.queue_free()
-		$compa/AnimationPlayer.play("idle")
-		start_dialog()
-		
-
+	end_ritual()
 
 
 func _tres():
@@ -83,17 +42,6 @@ func _tres():
 	$compa/AnimationPlayer.play("kill")
 	#$OpenWindow.start() # ya lo inicia la animación
 
-
-
-
-
-func _on_ResetTimer_timeout():
-	reset()
-
-
-func dialogue_got_bottle():
-	var bottledialog = Dialogic.start("got the bottle")
-	bottledialog.connect("dialogic_signal", self, "dialog_listener")
-	add_child(bottledialog)
-	
+func end_ritual():
+	print("se acabó el ritual")
 

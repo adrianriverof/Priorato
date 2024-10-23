@@ -49,7 +49,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": ""
+			"text": "..."
 		},
 		{
 			"character": "character-1728748674.json",
@@ -99,6 +99,41 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Three"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 5
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1729017401.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1729017401.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No.... not like that...."
+		},
+		{
+			"emit_signal": "end",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
