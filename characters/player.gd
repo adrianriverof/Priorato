@@ -15,7 +15,7 @@ export var is_minigame_active = false
 
 
 onready var camera = get_parent().get_node("Camera")
-onready var ball = get_parent().get_node("ball")
+#onready var ball = get_parent().get_node("ball")
 onready var dialoguescene = preload("res://addons/dialogic/Dialog.tscn")
 
 onready var general = get_tree().get_root().get_node("general")
@@ -68,7 +68,7 @@ func _physics_process(delta):
 		var direction = (destination - global_transform.origin).normalized()
 		var distance_to_target = global_transform.origin.distance_to(destination)
 		
-		if ball: ball.translation = destination
+		#if ball: ball.translation = destination
 		
 		if distance_to_target > 0.5:
 			direction.y *= 0
