@@ -8,9 +8,9 @@ var already_won = false
 var current_dialog
 
 
-func _input(event):
-	if $video/VideoPlayer.is_playing() and Input.is_action_pressed("left_mouse"):
-		$SkipButton.visible= true
+#func _input(event):
+#	if $video/VideoPlayer.is_playing() and Input.is_action_pressed("left_mouse"):
+#		$SkipButton.visible= true
 
 func _ready():
 	
