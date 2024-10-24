@@ -8,6 +8,10 @@ var already_won = false
 var current_dialog
 
 
+func _input(event):
+	if $video/VideoPlayer.is_playing() and Input.is_action_pressed("left_mouse"):
+		$SkipButton.visible= true
+
 func _ready():
 	
 	$video.visible = true
@@ -76,3 +80,8 @@ func iniciar_minijuego():
 	Input.warp_mouse_position(player.position)
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()
+
+
+func _on_SkipButton_pressed():
+	$video/VideoPlayer.emit_signal("finished")
+	$video/VideoPlayer.stop()

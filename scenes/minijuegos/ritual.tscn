@@ -59,7 +59,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 2.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 985, 433 ), Vector2( 1377, 433 ) ]
+"values": [ Vector2( 1434, 571 ), Vector2( 1843, 592 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -76,7 +76,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 963, 431 ), Vector2( 959, 428 ), Vector2( 963, 434 ), Vector2( 965, 431 ), Vector2( 963, 431 ), Vector2( 958, 433 ) ]
+"values": [ Vector2( 1434, 569 ), Vector2( 1430, 566 ), Vector2( 1434, 572 ), Vector2( 1436, 569 ), Vector2( 1434, 569 ), Vector2( 1429, 571 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer:playback_speed")
@@ -253,8 +253,16 @@ position = Vector2( -18, 404 )
 scale = Vector2( 1.802, 1.809 )
 shape = SubResource( 13 )
 
-[node name="video" type="Node2D" parent="."]
+[node name="SkipButton" type="Button" parent="."]
 visible = false
+margin_left = 1691.0
+margin_top = 958.0
+margin_right = 1843.0
+margin_bottom = 1035.0
+disabled = true
+text = "Skip"
+
+[node name="video" type="Node2D" parent="."]
 
 [node name="VideoPlayer" type="VideoPlayer" parent="video"]
 margin_right = 1920.0
@@ -286,6 +294,7 @@ margin_right = 1295.0
 margin_bottom = 748.0
 color = Color( 0, 0, 0, 0 )
 
+[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
 [connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="lock" to="." method="_on_lock_body_entered"]
 
