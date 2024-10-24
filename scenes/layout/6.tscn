@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -92,11 +92,17 @@ data = PoolVector3Array( -19.539, 0.169, 15.678, 19.539, 0.169, 15.678, -19.539,
 [sub_resource type="BoxShape" id=24]
 extents = Vector3( 1.638, 1.925, 1 )
 
+[sub_resource type="BoxShape" id=27]
+extents = Vector3( 1.26062, 7.46472, 5.86137 )
+
 [sub_resource type="CubeMesh" id=7]
-size = Vector3( 3.678, 2, 2 )
+size = Vector3( 11.449, 1.781, 2 )
 
 [sub_resource type="BoxShape" id=18]
 extents = Vector3( 7.36605, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=26]
+albedo_color = Color( 0.709804, 1, 0, 1 )
 
 [node name="room" type="Spatial"]
 script = ExtResource( 3 )
@@ -169,6 +175,10 @@ shape = SubResource( 17 )
 transform = Transform( 0.0667267, 0, 0.997771, 0, 1, 0, -0.997771, 0, 0.0667267, -18.1489, 1.65303, 5.56174 )
 shape = SubResource( 24 )
 
+[node name="CollisionShape3" type="CollisionShape" parent="escenario/floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0251, 0, 2.28538 )
+shape = SubResource( 27 )
+
 [node name="Puerta8" type="Area" parent="."]
 transform = Transform( 0.0667267, 0, 0.997771, 0, 1, 0, -0.997771, 0, 0.0667267, -18.1208, 1.702, -7.64726 )
 visible = false
@@ -184,9 +194,12 @@ transform = Transform( 0.0667267, 0, 0.997771, 0, 1, 0, -0.997771, 0, 0.0667267,
 visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Puerta3"]
+transform = Transform( 0.971288, 0, 0.237906, 0, 1, 0, -0.237906, 0, 0.971288, 0, 0, 0 )
 mesh = SubResource( 7 )
+material/0 = SubResource( 26 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta3"]
+transform = Transform( 0.931362, 0, 0.364097, 0, 1, 0, -0.364097, 0, 0.931362, -0.0712671, 0, -0.697628 )
 shape = SubResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -197,10 +210,10 @@ margin_bottom = 141.0
 text = "ROOM 2"
 
 [node name="playerspawn3" type="Position3D" parent="."]
-transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 9.32381, 0.197529, -8.24271 )
+transform = Transform( -0.017452, -0.00926616, 0.999804, 0, 0.999957, 0.00926757, -0.999848, 0.000161742, -0.0174518, 5.9571, 0.197529, -8.24271 )
 
 [node name="compaspawn3" type="Position3D" parent="."]
-transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 10.8129, 0.197529, -8.16528 )
+transform = Transform( 0.0428521, 0, 0.999082, 0, 1, 0, -0.999082, 0, 0.0428521, 7.44619, 0.197529, -8.16528 )
 
 [node name="playerspawn8" type="Position3D" parent="."]
 transform = Transform( -0.0785116, 0.00923896, -0.99687, 0, 0.999957, 0.00926757, 0.996913, 0.000727607, -0.0785076, -16.0013, 0.688907, -7.06715 )
