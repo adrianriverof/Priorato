@@ -261,15 +261,10 @@ position = Vector2( 530, 528 )
 shape = SubResource( 13 )
 
 [node name="video" type="Node2D" parent="."]
-visible = false
-position = Vector2( 390, 120 )
-scale = Vector2( 0.56, 0.56 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="video"]
-margin_left = -703.571
-margin_top = -217.857
-margin_right = 1216.43
-margin_bottom = 870.143
+margin_right = 1920.0
+margin_bottom = 1080.0
 stream = ExtResource( 7 )
 autoplay = true
 
@@ -297,8 +292,10 @@ anims/RESET = SubResource( 14 )
 anims/blackout = SubResource( 15 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1268.0
-margin_bottom = 729.0
+margin_left = 27.0
+margin_top = 19.0
+margin_right = 1295.0
+margin_bottom = 748.0
 color = Color( 0, 0, 0, 0 )
 
 [connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]

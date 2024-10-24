@@ -51,8 +51,10 @@ func end_ritual():
 	$compa/AnimationPlayer.play("compa_se_pira")
 	print("se acabó el ritual")
 	
+	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().get_root().get_node("general").resume_game()
+	get_tree().get_root().get_node("general").change_room_from_to(8,10)
 	queue_free()
 
 

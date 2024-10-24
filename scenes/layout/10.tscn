@@ -664,11 +664,11 @@ visible = false
 frame = 0
 
 [node name="aueaoeua" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657254, -0.0481987, -23.7754 )
+transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657, -0.048, -24.134 )
 texture = ExtResource( 10 )
 
 [node name="FondoPostRitualCaminable" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 1.696, -9.31323e-10, 0, 6.98492e-10, 1.696, 2.29065e-08, 3.72529e-09, -3.76749e-08, 1, 0.0256071, -0.299487, -21.9663 )
+transform = Transform( 1.696, -9.31323e-10, 0, 6.98492e-10, 1.696, 2.29065e-08, 3.72529e-09, -3.76749e-08, 1, 0.071, 0.094, -24.142 )
 texture = ExtResource( 6 )
 
 [node name="FondoNormal2" type="Sprite3D" parent="Camera/PostRitual"]
@@ -928,6 +928,7 @@ material/0 = SubResource( 83 )
 shape = SubResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 467.0
 margin_top = 101.0
 margin_right = 569.0
@@ -951,7 +952,8 @@ transform = Transform( 0.173648, 0.00912678, -0.984764, 0, 0.999957, 0.00926757,
 [node name="compaspawn92" type="Position3D" parent="."]
 transform = Transform( 0.113966, 0, -0.993485, 0, 1, 0, 0.993485, 0, 0.113966, -5.61957, 0.740236, -16.5934 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="glitch" type="ColorRect" parent="."]
+visible = false
 material = SubResource( 88 )
 margin_right = 1113.0
 margin_bottom = 625.0

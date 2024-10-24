@@ -33,19 +33,20 @@ func _on_Puerta11_body_entered(body):
 		general.change_room_from_to(current_room,11)
 
 func _on_Puerta9a_body_entered(body):
-	if body.name == $player.name:
+	if body.name == $player.name and !general.ritual_happened():
 		general.change_room_from_to(102,9)
 
 func _on_Puerta9b_body_entered(body):
-	if body.name == $player.name:
+	if body.name == $player.name and !general.ritual_happened():
 		general.change_room_from_to(101,9)
 
 
 func change_after_ritual():
 	if general.ritual_happened():
 		$Camera/PostRitual.visible = true
-		$puerta9a.monitoring = false
-		$puerta9b.monitoring = false
+#		$puerta9a.monitoring = false
+#		$puerta9b.monitoring = false
+		
 		
 	else:
 		$Camera/PostRitual.visible = false
