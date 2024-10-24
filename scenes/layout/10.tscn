@@ -655,21 +655,24 @@ fov = 41.1
 transform = Transform( 1.696, 0, 0, 0, 1.696, 0, 0, 0, 1, 0, 0.003, -24.144 )
 texture = ExtResource( 5 )
 
-[node name="FondoLoco" parent="Camera" instance=ExtResource( 9 )]
-transform = Transform( 1.696, -2.32831e-10, 0, 2.32831e-10, 1.696, 8.00537e-09, 0, -7.88168e-09, 1, 0, 0.003, -24.143 )
+[node name="PostRitual" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 8.00537e-09, 0, 8.00537e-09, 1, 0, 0, 0 )
+
+[node name="FondoLoco" parent="Camera/PostRitual" instance=ExtResource( 9 )]
+transform = Transform( 1.696, -4.65661e-10, 0, 2.32831e-10, 1.696, 8.00173e-09, 0, -3.76822e-08, 1, 0, 0.00299978, -24.143 )
 visible = false
 frame = 0
 
-[node name="aueaoeua" type="Sprite3D" parent="Camera"]
-transform = Transform( 0.887259, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657254, -0.0481987, -23.7754 )
+[node name="aueaoeua" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657254, -0.0481987, -23.7754 )
 texture = ExtResource( 10 )
 
-[node name="FondoPostRitualCaminable" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.696, -6.98492e-10, 9.31323e-10, 4.65661e-10, 1.696, 2.29102e-08, 1.86265e-09, -7.87259e-09, 1, 0.0256071, -0.299487, -21.9663 )
+[node name="FondoPostRitualCaminable" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 1.696, -9.31323e-10, 0, 6.98492e-10, 1.696, 2.29065e-08, 3.72529e-09, -3.76749e-08, 1, 0.0256071, -0.299487, -21.9663 )
 texture = ExtResource( 6 )
 
-[node name="FondoNormal2" type="Sprite3D" parent="Camera"]
-transform = Transform( 1.696, -2.32831e-10, 0, 2.32831e-10, 1.696, 8.00537e-09, 0, -7.88168e-09, 1, 0, 0.003, -24.14 )
+[node name="FondoNormal2" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 1.696, -4.65661e-10, 0, 2.32831e-10, 1.696, 8.00173e-09, 0, -3.76822e-08, 1, -9.53674e-07, 0.00299978, -24.14 )
 visible = false
 material_override = SubResource( 86 )
 texture = ExtResource( 5 )

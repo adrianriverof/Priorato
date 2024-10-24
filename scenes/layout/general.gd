@@ -223,3 +223,9 @@ func abrir_armario_en_5():
 
 func esta_compa():
 	return progress_manager.esta_compa()
+
+func ritual_happened():
+	return progress_manager.ritual_happened()
+
+
+
