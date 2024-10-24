@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/layout/5.gd" type="Script" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Renders Buenos/4.png" type="Texture" id=5]
+[ext_resource path="res://soundes/AMBIENCE INSIDE.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/Renders Buenos/4 bis.png" type="Texture" id=7]
 
 [sub_resource type="ArrayMesh" id=19]
@@ -336,5 +337,9 @@ transform = Transform( 0.999953, -9.00942e-05, 0.00972115, 0, 0.999957, 0.009267
 
 [node name="compaspawn4" type="Position3D" parent="."]
 transform = Transform( 0.998721, 0, -0.0505754, 0, 1, 0, 0.0505754, 0, 0.998721, -0.741743, 0.688907, -14.9293 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 
 [connection signal="body_entered" from="Puerta4" to="." method="_on_Puerta4_body_entered"]

@@ -55,11 +55,8 @@ func end_ritual():
 	$compa/AnimationPlayer.play("compa_se_pira")
 	print("se acabó el ritual")
 	
+	$endritualtimer.start()
 	
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().get_root().get_node("general").resume_game()
-	get_tree().get_root().get_node("general").change_room_from_to(8,10)
-	queue_free()
 
 
 
@@ -85,3 +82,17 @@ func iniciar_minijuego():
 func _on_SkipButton_pressed():
 	$video/VideoPlayer.emit_signal("finished")
 	$video/VideoPlayer.stop()
+
+
+func _on_endritualtimer_timeout():
+	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().get_root().get_node("general").resume_game()
+	get_tree().get_root().get_node("general").change_room_from_to(8,10)
+	queue_free()
+
+
+
+
+
+

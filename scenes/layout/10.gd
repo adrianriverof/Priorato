@@ -43,6 +43,7 @@ func _on_Puerta9b_body_entered(body):
 
 func change_after_ritual():
 	if general.ritual_happened():
+		audio_set_ritual()
 		$Camera/PostRitual.visible = true
 #		$puerta9a.monitoring = false
 #		$puerta9b.monitoring = false
@@ -51,7 +52,14 @@ func change_after_ritual():
 	else:
 		$Camera/PostRitual.visible = false
 
-
+func audio_set_ritual():
+	print($AudioStreamPlayer)
+	$AudioStreamPlayer.stop()
+	$AudioStreamPlayer.autoplay = false
+	$AudioStreamPlayer.playing = false
+	$SonidoPostirrtoruto.playing = true
+	
+	$AudioStreamPlayer.playing = false
 
 
 

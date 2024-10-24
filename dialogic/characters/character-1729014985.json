@@ -8,12 +8,12 @@
 	"name": "Player",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
-	"offset_y": -300,
+	"offset_x": 450,
+	"offset_y": -290,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://assets/player_retrato.png"
+			"path": "res://assets/Dialogs/dialugs final Player.png"
 		}
 	],
 	"scale": 70,

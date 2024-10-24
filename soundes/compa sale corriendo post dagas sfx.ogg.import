@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/compa sale corriendo post dagas sfx.ogg-8fb99cc9a61a179475dc4619160683f6.oggstr"
+
+[deps]
+
+source_file="res://soundes/compa sale corriendo post dagas sfx.ogg"
+dest_files=[ "res://.import/compa sale corriendo post dagas sfx.ogg-8fb99cc9a61a179475dc4619160683f6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

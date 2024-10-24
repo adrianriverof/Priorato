@@ -27,6 +27,8 @@ func _on_ContinueButton_pressed():
 
 
 func _on_ExitButton_pressed():
+	get_tree().paused = false
+	get_tree().change_scene("res://scenes/main_menu.tscn")
 	$ConfirmExit.visible = !$ConfirmExit.visible
 	
 

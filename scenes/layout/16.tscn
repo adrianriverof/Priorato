@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/layout/16.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=8]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=9]
+[ext_resource path="res://soundes/AMBIENCE INSIDE.ogg" type="AudioStream" id=10]
 
 [sub_resource type="ArrayMesh" id=84]
 resource_name = "complete_scenes_Cube104"
@@ -322,5 +323,9 @@ transform = Transform( 0.999889, 0, -0.0148698, 0, 1, 0, 0.0148698, 0, 0.999889,
 
 [node name="ball" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 
 [connection signal="body_entered" from="Puerta15" to="." method="_on_Puerta15_body_entered"]

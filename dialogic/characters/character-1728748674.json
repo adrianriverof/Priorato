@@ -9,11 +9,11 @@
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 600,
-	"offset_y": -300,
+	"offset_y": -290,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://assets/compa_retrato.png"
+			"path": "res://assets/Dialogs/dialugs final compa.png"
 		}
 	],
 	"scale": 70,

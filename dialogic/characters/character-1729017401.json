@@ -8,14 +8,14 @@
 	"name": "Padre",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
-	"offset_y": 0,
+	"offset_x": 550,
+	"offset_y": -290,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://assets/Dialogs/dialugs final Padre.png"
 		}
 	],
-	"scale": 100,
+	"scale": 70,
 	"theme": ""
 }

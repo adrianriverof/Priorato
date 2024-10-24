@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/layout/2.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://assets/Renders Buenos/2.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=8]
+[ext_resource path="res://soundes/AMBIENCE INSIDE.ogg" type="AudioStream" id=9]
 
 [sub_resource type="ArrayMesh" id=3]
 resource_name = "complete_scenes_Plane001"
@@ -226,6 +227,10 @@ transform = Transform( -0.997577, 0.000644698, -0.069562, 0, 0.999957, 0.0092675
 
 [node name="compaspawn3" type="Position3D" parent="."]
 transform = Transform( -0.999957, 0, -0.00930253, 0, 1, 0, 0.00930253, 0, -0.999957, -0.244829, 0.830771, -14.7094 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
 
 [connection signal="body_entered" from="Puerta1" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Puerta3" to="." method="_on_Puerta3_body_entered"]

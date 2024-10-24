@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=8]
 [ext_resource path="res://assets/fondoloco pngs/FondoLoco.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/fondoloco pngs/wave 2k.png" type="Texture" id=10]
+[ext_resource path="res://soundes/AMBIENCE INSIDE.ogg" type="AudioStream" id=11]
+[ext_resource path="res://soundes/AMBIENCE INSIDE POST RITUAL.ogg" type="AudioStream" id=12]
+[ext_resource path="res://scenes/layout/aueaoeua.gd" type="Script" id=13]
 
 [sub_resource type="Shader" id=85]
 code = "/*
@@ -663,9 +666,14 @@ transform = Transform( 1.696, -4.65661e-10, 0, 2.32831e-10, 1.696, 8.00173e-09, 
 visible = false
 frame = 0
 
+[node name="aueaoeua2" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657, -0.0479999, -24.134 )
+texture = ExtResource( 10 )
+
 [node name="aueaoeua" type="Sprite3D" parent="Camera/PostRitual"]
 transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657, -0.048, -24.134 )
 texture = ExtResource( 10 )
+script = ExtResource( 13 )
 
 [node name="FondoPostRitualCaminable" type="Sprite3D" parent="Camera/PostRitual"]
 transform = Transform( 1.696, -9.31323e-10, 0, 6.98492e-10, 1.696, 2.29065e-08, 3.72529e-09, -3.76749e-08, 1, 0.071, 0.094, -24.142 )
@@ -957,6 +965,13 @@ visible = false
 material = SubResource( 88 )
 margin_right = 1113.0
 margin_bottom = 625.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
+
+[node name="SonidoPostirrtoruto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
 
 [connection signal="body_entered" from="Puerta9a" to="." method="_on_Puerta9a_body_entered"]
 [connection signal="body_entered" from="Puerta9b" to="." method="_on_Puerta9b_body_entered"]

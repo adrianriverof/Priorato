@@ -1,15 +1,17 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/layout/11.gd" type="Script" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Renders Buenos/11.png" type="Texture" id=5]
-[ext_resource path="res://elements/ball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/fondoloco pngs/wave 2k.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=8]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=9]
 [ext_resource path="res://assets/FONDOS FINAL PNG /B2.png" type="Texture" id=10]
+[ext_resource path="res://soundes/AMBIENCE INSIDE.ogg" type="AudioStream" id=11]
+[ext_resource path="res://soundes/AMBIENCE INSIDE POST RITUAL.ogg" type="AudioStream" id=12]
+[ext_resource path="res://scenes/layout/aueaoeua.gd" type="Script" id=13]
 
 [sub_resource type="ArrayMesh" id=53]
 resource_name = "complete_scenes_Cube052"
@@ -523,6 +525,11 @@ transform = Transform( 2.725, 1.86265e-09, 9.31323e-10, -7.45058e-09, 2.725, -1.
 [node name="Sprite3D2" type="Sprite3D" parent="Camera/PostRitual"]
 transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 7.15256e-07, 0, 0 )
 texture = ExtResource( 7 )
+script = ExtResource( 13 )
+
+[node name="Sprite3D3" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 0, 0, -0.007 )
+texture = ExtResource( 7 )
 
 [node name="aeauau" type="Sprite3D" parent="Camera/PostRitual"]
 transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 0, 0, 0.01 )
@@ -747,7 +754,12 @@ transform = Transform( 0.11804, -0.00920278, 0.992966, 0, 0.999957, 0.00926757, 
 [node name="compaspawn12" type="Position3D" parent="."]
 transform = Transform( 0.177686, 0, 0.984088, 0, 1, 0, -0.984088, 0, 0.177686, 18.6445, 0.542131, -9.40379 )
 
-[node name="ball" parent="." instance=ExtResource( 6 )]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
+
+[node name="SonidoPostirrtoruto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
 
 [connection signal="body_entered" from="Puerta10" to="." method="_on_Puerta10_body_entered"]
 [connection signal="body_entered" from="Puerta12" to="." method="_on_Puerta12_body_entered"]
