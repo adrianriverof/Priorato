@@ -203,6 +203,7 @@ transform = Transform( 0.931362, 0, 0.364097, 0, 1, 0, -0.364097, 0, 0.931362, -
 shape = SubResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 467.0
 margin_top = 101.0
 margin_right = 569.0
