@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Renders Buenos/11.png" type="Texture" id=5]
 [ext_resource path="res://elements/ball.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Renders guarros/2b.png" type="Texture" id=7]
+[ext_resource path="res://assets/fondoloco pngs/wave 2k.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=8]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=9]
+[ext_resource path="res://assets/FONDOS FINAL PNG /B2.png" type="Texture" id=10]
 
 [sub_resource type="ArrayMesh" id=53]
 resource_name = "complete_scenes_Cube052"
@@ -512,15 +513,20 @@ transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561,
 transform = Transform( 0.0115405, -0.96971, 0.243988, 3.40694e-05, 0.244004, 0.969774, -0.999933, -0.0111834, 0.00284897, 17.188, 26.742, -9.691 )
 fov = 41.1
 
-[node name="Sprite3D" type="Sprite3D" parent="Camera"]
+[node name="PreRitual" type="Sprite3D" parent="Camera"]
 transform = Transform( 2.725, 7.76696e-09, 1.06885e-09, -7.76696e-09, 2.725, -1.30283e-07, -2.91261e-09, 3.5502e-07, 1, -0.034, -0.059, -39.25 )
 texture = ExtResource( 5 )
 
-[node name="Sprite3D2" type="Sprite3D" parent="Camera"]
-transform = Transform( 2.618, 2.56923e-09, -3.14039e-08, -2.56923e-09, 2.618, -1.96275e-09, 8.22155e-08, 5.13847e-09, 1, 2.86102e-06, 0.00299966, -24.144 )
-visible = false
-modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
+[node name="PostRitual" type="Spatial" parent="Camera"]
+transform = Transform( 2.725, 1.86265e-09, 9.31323e-10, -7.45058e-09, 2.725, -1.51387e-07, -3.72529e-09, 3.20622e-07, 1, -0.034, -0.059, -39.24 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 7.15256e-07, 0, 0 )
 texture = ExtResource( 7 )
+
+[node name="aeauau" type="Sprite3D" parent="Camera/PostRitual"]
+transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 0, 0, 0.01 )
+texture = ExtResource( 10 )
 
 [node name="escenario" type="Spatial" parent="."]
 visible = false
