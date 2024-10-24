@@ -13,7 +13,7 @@ var current_dialog
 #		$SkipButton.visible= true
 
 func _ready():
-	
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	$video.visible = true
 	$video.z_index = 3
 	print($box/Collisiongate.disabled)

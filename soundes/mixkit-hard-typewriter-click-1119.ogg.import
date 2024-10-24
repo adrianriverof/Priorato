@@ -11,5 +11,5 @@ dest_files=[ "res://.import/mixkit-hard-typewriter-click-1119.ogg-98396155a27091
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

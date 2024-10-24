@@ -10,6 +10,7 @@ var current_dialog
 
 func _ready():
 	Input.warp_mouse_position(player.position)
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()
 
 func start_dialog():
