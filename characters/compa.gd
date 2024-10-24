@@ -16,7 +16,7 @@ func _ready():
 	
 	speed = player.speed
 	
-	if !get_parent().get_parent().get_parent().esta_compa():
+	if !get_parent().get_parent().get_parent().esta_compa() and !get_parent().current_room == 16:
 		queue_free()
 	#print(speed)
 	#print(player)
