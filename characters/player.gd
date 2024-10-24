@@ -2,7 +2,7 @@ extends KinematicBody
 
 
 # Velocidad del personaje
-export var speed = 120.0 * 10
+export var speed = 120.0 * 2
 
 # Donde el personaje tiene que ir
 var destination = Vector3()
