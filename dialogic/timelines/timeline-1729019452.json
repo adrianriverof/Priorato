@@ -1,6 +1,11 @@
 {
 	"events": [
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 5
+		},
+		{
 			"animation": "[Default]",
 			"animation_length": 0,
 			"change_mirror_portrait": false,
@@ -63,6 +68,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Me neither.\nI've been thinking about it all night."
+		},
+		{
+			"emit_signal": "compa mira",
+			"event_id": "dialogic_040"
 		},
 		{
 			"character": "character-1728748674.json",

@@ -108,10 +108,10 @@ script = ExtResource( 5 )
 visible = false
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.999439, 0, 0.0334867, 0, 1, 0, -0.0334867, 0, -0.999439, 0, 0.537034, -10.0725 )
+transform = Transform( -0.688608, 0, -0.725134, 0, 1, 0, 0.725134, 0, -0.688608, -1.73657, 0.537034, -11.194 )
 
 [node name="compa" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.989561, 0, -0.144114, 0, 1, 0, 0.144114, 0, -0.989561, -2.9509, 0.64144, -9.25404 )
+transform = Transform( 0.219863, 0, -0.975531, 0, 1, 0, 0.975531, 0, 0.219863, 0.819364, 0.64144, -9.66471 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.924386, 0.381458, 0, -0.381458, 0.924386, -1.428, 3.353, -4.951 )
@@ -128,6 +128,7 @@ modulate = Color( 0.811765, 0.815686, 0.682353, 1 )
 texture = ExtResource( 8 )
 
 [node name="escenario" type="Spatial" parent="."]
+visible = false
 
 [node name="casa" type="StaticBody" parent="escenario"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.42339, 0.243784, -8.90271 )
@@ -149,7 +150,7 @@ transform = Transform( 0.583998, 0, 0, 0, 0.371184, 0, 0, 0, 1, 1.42561, 0.26415
 mesh = SubResource( 6 )
 
 [node name="Cube004" type="MeshInstance" parent="escenario/casa"]
-transform = Transform( 0.583998, 0, 0, 0, 0.371184, 0, 0, 0, 1, -1.25604, 0.264154, 2.63004 )
+transform = Transform( 0.583998, 0, 0, 0, 0.371184, 0, 0, 0, 1, -1.25604, 0.264154, 2.63524 )
 mesh = SubResource( 6 )
 
 [node name="Plane" type="MeshInstance" parent="escenario/casa"]
