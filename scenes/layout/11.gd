@@ -4,7 +4,7 @@ extends Spatial
 var from = 0
 var current_room = 11
 
-var _force_ritual = true
+var _force_ritual = false
 
 onready var general = get_parent().get_parent()
 
@@ -45,4 +45,4 @@ func change_after_ritual():
 func audio_set_ritual():
 	print($AudioStreamPlayer)
 	$AudioStreamPlayer.queue_free()
-	$SonidoPostirrtoruto.playing = true
+	#$SonidoPostirrtoruto.playing = true

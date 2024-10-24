@@ -9,6 +9,10 @@ var already_won = false
 var current_dialog
 
 
+func _input(event):
+	if Input.is_action_just_pressed("ui_accept") and $video/VideoPlayer.is_playing() and false:
+		$video/VideoPlayer.stop()
+		$video/VideoPlayer.emit_signal("finished")
 #func _input(event):
 #	if $video/VideoPlayer.is_playing() and Input.is_action_pressed("left_mouse"):
 #		$SkipButton.visible= true
@@ -43,6 +47,8 @@ func dialog_listener(string):
 func _on_lock_body_entered(body):
 	print("algo entra en lock")
 	if body.name == "player" and !already_won:
+		player.speed=0
+		already_won = true
 		end_ritual()
 
 
@@ -56,7 +62,8 @@ func end_ritual():
 	$compa/AnimationPlayer.play("compa_se_pira")
 	print("se acabó el ritual")
 	
-	$endritualtimer.start()
+	
+	#$FondoBlank/Endanimation.play("fade")
 	
 
 
@@ -64,8 +71,8 @@ func end_ritual():
 func _on_VideoPlayer_finished():
 	#$video.visible = false
 	print("video termina")
-	$Blackout.play("blackout")
-	$AnimacionGeneral.play("general")
+	$video.z_index = -3
+	$AnimGeneral.play("blackout")
 	$video/AudioStreamPlayer.play()
 	
 	
@@ -75,26 +82,23 @@ func _on_VideoPlayer_finished():
 
 
 func iniciar_minijuego():
-	$video.z_index = -3
 	Input.warp_mouse_position(player.position)
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()
 
 
-func _on_SkipButton_pressed():
-	$video/VideoPlayer.emit_signal("finished")
-	$video/VideoPlayer.stop()
 
-
-func _on_endritualtimer_timeout():
+func end():
 	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().get_root().get_node("general").resume_game()
+	#get_tree().get_root().get_node("general").resume_game()
 	get_tree().get_root().get_node("general").change_room_from_to(8,10)
+	get_tree().get_root().get_node("general").post_ritual_sound()
 	queue_free()
 
 
-
+func emit_sound_zas():
+	$video/zas.play()
 
 
 

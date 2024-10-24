@@ -46,16 +46,36 @@
 			"wait_time": 0
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "..."
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1.5
+		},
+		{
 			"character": "character-1728748674.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Ok, as usual."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2.5
 		},
 		{
 			"character": "character-1729014985.json",
@@ -66,7 +86,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 2.5
 		},
 		{
 			"character": "character-1729014985.json",
@@ -77,7 +97,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 0.5
+			"wait_seconds": 2.6
 		},
 		{
 			"character": "character-1728748674.json",
@@ -88,7 +108,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 0.5
+			"wait_seconds": 2.8
 		},
 		{
 			"emit_signal": "tres",
@@ -103,7 +123,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 5
+			"wait_seconds": 4
 		},
 		{
 			"animation": "[Default]",

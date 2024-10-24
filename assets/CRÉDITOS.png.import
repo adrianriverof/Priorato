@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BFA.png-97f6bad04835378943a9f09e55ee6a3a.stex"
+path="res://.import/CRÉDITOS.png-ec20fee35df7a0cd5c7f23f6004fa449.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FONDOS FINAL PNG /BFA.png"
-dest_files=[ "res://.import/BFA.png-97f6bad04835378943a9f09e55ee6a3a.stex" ]
+source_file="res://assets/CRÉDITOS.png"
+dest_files=[ "res://.import/CRÉDITOS.png-ec20fee35df7a0cd5c7f23f6004fa449.stex" ]
 
 [params]
 

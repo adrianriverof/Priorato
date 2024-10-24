@@ -11,5 +11,5 @@ dest_files=[ "res://.import/sonido minijueg dagas.ogg-c15b14589738a6252ab073fd38
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

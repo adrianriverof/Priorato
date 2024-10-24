@@ -9,6 +9,7 @@ var current_dialog
 
 
 func _ready():
+	$credits.modulate = "00ffffff"
 	Input.warp_mouse_position(player.position)
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	start_dialog()

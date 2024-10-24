@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fondoloco pngs/wave 2k.png" type="Texture" id=1]
+[ext_resource path="res://scenes/layout/aueaoeua.gd" type="Script" id=2]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 0.646, 0, 0, 0, 0.562, -2.26137e-08, 0, 1.27089e-08, 1, 0, 0, -0.007 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 9.31323e-10, -9.31323e-10, 1.39698e-09, 0.5, -7.18892e-08, 6.98492e-10, 7.09042e-08, 0.5, 7.15256e-07, 0, 0 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+rotation_speed = 0.001

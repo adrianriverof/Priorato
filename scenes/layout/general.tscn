@@ -1,15 +1,75 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/layout/general.gd" type="Script" id=1]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=2]
+[ext_resource path="res://soundes/AMBIENCE INSIDE POST RITUAL.ogg" type="AudioStream" id=3]
 [ext_resource path="res://scenes/PauseMenu.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeToRitual/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "fadeout"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeToRitual/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3.8, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_to_ritual"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("FadeToRitual/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="general" type="Spatial"]
 process_priority = 1
 transform = Transform( 0.999664, -0.0259152, 0, 0.0259152, 0.999664, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 1 )
-test_room_mode = true
-starting_test_room = 10
+starting_test_room = 8
 
 [node name="GLES2 anim noise color" parent="." instance=ExtResource( 2 )]
 visible = false
@@ -19,3 +79,18 @@ visible = false
 [node name="RoomManager" type="Spatial" parent="."]
 
 [node name="Spatial" type="Spatial" parent="RoomManager"]
+
+[node name="SoundPostRitual" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="FadeToRitual" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 3 )
+anims/fadeout = SubResource( 1 )
+anims/idle = SubResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="FadeToRitual"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1965.0
+margin_bottom = 1099.0
+color = Color( 0, 0, 0, 1 )

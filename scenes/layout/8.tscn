@@ -258,6 +258,7 @@ visible = false
 mesh = SubResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Puerta6"]
+transform = Transform( 1, 0, -5.21541e-08, 0, 1, 0, 5.21541e-08, 0, 1, -0.0331907, 0, -0.496243 )
 shape = SubResource( 18 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

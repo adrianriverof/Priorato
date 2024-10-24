@@ -87,7 +87,10 @@ func entrar_en_cobertizo():
 		start_dialogue("cobertizo 1")
 	
 
+
 func salir_de_iglesia():
+	if ritual_happened():
+		$SoundPostRitual.stop()
 	start_dialogue("salir_de_iglesia")
 
 func entrar_en_bodega():
@@ -199,7 +202,9 @@ func start_minigame(string):
 			var minigameinstance = daggersminigamescene.instance()
 			get_tree().get_root().add_child(minigameinstance)
 		"start minigame ritual":
-			change_room_from_to(8,17)
+			$FadeToRitual.play("fadeout")
+			#change_to_ritual()
+			
 			#var minigameinstance = ritualminigamescene.instance()
 			#get_tree().get_root().add_child(minigameinstance)
 		"start minigame hands":
@@ -207,14 +212,17 @@ func start_minigame(string):
 			get_tree().get_root().add_child(minigameinstance)
 	
 
+func change_to_ritual():
+	change_room_from_to(8,17)
+
 
 func pause_player():
 	player.aware_of_minigame_started()
 func resume_game():
 	player.aware_of_minigame_ended()
 
-func start_ritual():
-	pass
+func post_ritual_sound():
+	$SoundPostRitual.play()
 
 
 func tienen_botella():
@@ -229,5 +237,6 @@ func esta_compa():
 func ritual_happened():
 	return progress_manager.ritual_happened()
 
-
+func is_compa_back():
+	return progress_manager.is_compa_back()
 

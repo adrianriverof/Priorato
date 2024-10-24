@@ -72,6 +72,7 @@ func consiguen_dagas():
 func esta_compa():
 	return !(story_events_happened["ritual happened"] and !story_events_happened["talked with compa"])
 
-
+func is_compa_back():
+	return story_events_happened["talked with compa"]
 
 

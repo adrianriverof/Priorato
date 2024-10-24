@@ -5,13 +5,13 @@
 [ext_resource path="res://scenes/layout/11.gd" type="Script" id=3]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Renders Buenos/11.png" type="Texture" id=5]
+[ext_resource path="res://elements/FondoRaro.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/fondoloco pngs/wave 2k.png" type="Texture" id=7]
 [ext_resource path="res://assets/Renders guarros/Material_002.material" type="Material" id=8]
 [ext_resource path="res://assets/Renders guarros/Material_001.material" type="Material" id=9]
 [ext_resource path="res://assets/FONDOS FINAL PNG /B2.png" type="Texture" id=10]
 [ext_resource path="res://soundes/AMBIENCE INSIDE.ogg" type="AudioStream" id=11]
 [ext_resource path="res://soundes/AMBIENCE INSIDE POST RITUAL.ogg" type="AudioStream" id=12]
-[ext_resource path="res://scenes/layout/aueaoeua.gd" type="Script" id=13]
 
 [sub_resource type="ArrayMesh" id=53]
 resource_name = "complete_scenes_Cube052"
@@ -522,14 +522,7 @@ texture = ExtResource( 5 )
 [node name="PostRitual" type="Spatial" parent="Camera"]
 transform = Transform( 2.725, 1.86265e-09, 9.31323e-10, -7.45058e-09, 2.725, -1.51387e-07, -3.72529e-09, 3.20622e-07, 1, -0.034, -0.059, -39.24 )
 
-[node name="Spatial" type="Spatial" parent="Camera/PostRitual"]
-transform = Transform( 0.646, 0, 0, 0, 0.562, -2.26137e-08, 0, 1.27089e-08, 1, 0, 0, -0.007 )
-
-[node name="Sprite3D2" type="Sprite3D" parent="Camera/PostRitual/Spatial"]
-transform = Transform( 0.5, 9.31323e-10, -9.31323e-10, 1.39698e-09, 0.5, -7.18892e-08, 6.98492e-10, 7.09042e-08, 0.5, 7.15256e-07, 0, 0 )
-texture = ExtResource( 7 )
-script = ExtResource( 13 )
-rotation_speed = 0.001
+[node name="Spatial" parent="Camera/PostRitual" instance=ExtResource( 6 )]
 
 [node name="Sprite3D3" type="Sprite3D" parent="Camera/PostRitual"]
 transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 0, 0, -0.082 )

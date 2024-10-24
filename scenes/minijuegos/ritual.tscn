@@ -1,15 +1,21 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/ventana dagas borde.png" type="Texture" id=1]
 [ext_resource path="res://scenes/minijuegos/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/Dagas Fondo.png" type="Texture" id=3]
 [ext_resource path="res://scenes/minijuegos/ritual.gd" type="Script" id=4]
+[ext_resource path="res://soundes/minijoeg sfx momento dagas ritual.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/dagas tapa.png" type="Texture" id=6]
 [ext_resource path="res://assets/video/cinematica.webm" type="VideoStream" id=7]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/dagas daga.png" type="Texture" id=9]
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/ventana dagas fondo.png" type="Texture" id=10]
 [ext_resource path="res://soundes/sonido minijueg dagas.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/fondoloco pngs/wave 2k.png" type="Texture" id=12]
+[ext_resource path="res://assets/FONDO NUEVO DAGAS/dagas FONDO B.png" type="Texture" id=13]
+[ext_resource path="res://scenes/minijuegos/olas.gd" type="Script" id=14]
+[ext_resource path="res://assets/FONDO NUEVO DAGAS/FONDO BLANK.png" type="Texture" id=15]
+[ext_resource path="res://soundes/compa sale corriendo post dagas sfx.ogg" type="AudioStream" id=16]
 
 [sub_resource type="CapsuleShape2D" id=11]
 radius = 21.0
@@ -56,10 +62,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2.5 ),
+"times": PoolRealArray( 0, 4.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1434, 571 ), Vector2( 1843, 592 ) ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../FondoBlank/Endanimation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "fade" ),
+"times": PoolRealArray( 5.1 )
 }
 
 [sub_resource type="Animation" id=8]
@@ -125,7 +141,7 @@ extents = Vector2( 25.5, 270 )
 [sub_resource type="Animation" id=14]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("Wave2k:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -134,32 +150,94 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ) ]
+"values": [ true ]
 }
-
-[sub_resource type="Animation" id=15]
-resource_name = "blackout"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 5.3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("DagasFondoB:z_index")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 2.5 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DagasFondoB:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Wave2k:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "blackout"
+length = 15.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "emit_sound_zas"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DagasFondoB:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Wave2k:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, -1 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -168,8 +246,113 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-resource_name = "general"
+resource_name = "pantallanegro"
 length = 36.0
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 16 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Endanimation:reset_on_save")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "fade"
+length = 13.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 11.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "end"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 5.1, 12.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="ritual" type="Node2D"]
 pause_mode = 2
@@ -257,23 +440,18 @@ position = Vector2( -18, 404 )
 scale = Vector2( 1.802, 1.809 )
 shape = SubResource( 13 )
 
-[node name="SkipButton" type="Button" parent="."]
-visible = false
-margin_left = 1691.0
-margin_top = 958.0
-margin_right = 1843.0
-margin_bottom = 1035.0
-disabled = true
-text = "Skip"
-
 [node name="video" type="Node2D" parent="."]
 visible = false
+z_index = -5
 
 [node name="VideoPlayer" type="VideoPlayer" parent="video"]
 margin_right = 1920.0
 margin_bottom = 1080.0
 stream = ExtResource( 7 )
 autoplay = true
+
+[node name="zas" type="AudioStreamPlayer" parent="video"]
+stream = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="video"]
 stream = ExtResource( 11 )
@@ -288,28 +466,40 @@ position = Vector2( 484, 410 )
 position = Vector2( 372, 125 )
 shape = SubResource( 10 )
 
-[node name="Blackout" type="AnimationPlayer" parent="."]
+[node name="AnimGeneral" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 14 )
 anims/blackout = SubResource( 15 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -150.0
-margin_top = -51.0
-margin_right = 2280.0
-margin_bottom = 1324.0
-color = Color( 0, 0, 0, 0 )
-
-[node name="endritualtimer" type="Timer" parent="."]
-wait_time = 6.0
-one_shot = true
-
 [node name="AnimacionGeneral" type="AnimationPlayer" parent="."]
-autoplay = "general"
-anims/general = SubResource( 16 )
+autoplay = "pantallanegro"
+anims/pantallanegro = SubResource( 16 )
 
-[connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
+[node name="Wave2k" type="Sprite" parent="."]
+position = Vector2( 939, 656 )
+scale = Vector2( 2.60637, 1.65047 )
+texture = ExtResource( 12 )
+script = ExtResource( 14 )
+
+[node name="DagasFondoB" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 13 )
+
+[node name="FondoBlank" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1006, 566 )
+scale = Vector2( 1.12865, 1.17685 )
+z_index = 20
+texture = ExtResource( 15 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="FondoBlank"]
+position = Vector2( 655.653, -8.49731 )
+stream = ExtResource( 16 )
+
+[node name="Endanimation" type="AnimationPlayer" parent="FondoBlank"]
+anims/RESET = SubResource( 17 )
+anims/fade = SubResource( 18 )
+
 [connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="body_entered" from="lock" to="." method="_on_lock_body_entered"]
-[connection signal="timeout" from="endritualtimer" to="." method="_on_endritualtimer_timeout"]
 
 [editable path="player"]

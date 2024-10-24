@@ -11,5 +11,5 @@ dest_files=[ "res://.import/compa sale corriendo post dagas sfx.ogg-8fb99cc9a61a
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

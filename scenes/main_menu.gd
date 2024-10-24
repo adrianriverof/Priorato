@@ -9,6 +9,9 @@ var language = "English"
 var config = ConfigFile.new()
 
 
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func _on_StartButton_pressed():
 	Language.language = language
 	get_tree().change_scene("res://scenes/layout/general.tscn")
