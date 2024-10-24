@@ -29,7 +29,8 @@ var room_scenes = [
 	preload("res://scenes/layout/default.tscn"),
 	preload("res://scenes/layout/14.tscn"),
 	preload("res://scenes/layout/15.tscn"),
-	preload("res://scenes/layout/16.tscn")#  16
+	preload("res://scenes/layout/16.tscn"),#  16
+	preload("res://scenes/minijuegos/ritual.tscn")  # 17 = ritual
 ]
 
 var bottleminigamescene = preload("res://scenes/minijuegos/botella.tscn")
@@ -198,8 +199,9 @@ func start_minigame(string):
 			var minigameinstance = daggersminigamescene.instance()
 			get_tree().get_root().add_child(minigameinstance)
 		"start minigame ritual":
-			var minigameinstance = ritualminigamescene.instance()
-			get_tree().get_root().add_child(minigameinstance)
+			change_room_from_to(8,17)
+			#var minigameinstance = ritualminigamescene.instance()
+			#get_tree().get_root().add_child(minigameinstance)
 		"start minigame hands":
 			var minigameinstance = handsminigamescene.instance()
 			get_tree().get_root().add_child(minigameinstance)

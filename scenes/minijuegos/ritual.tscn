@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://assets/Resources Minijuegos/Dagas/ventana dagas borde.png" type="Texture" id=1]
 [ext_resource path="res://scenes/minijuegos/player.tscn" type="PackedScene" id=2]
@@ -167,6 +167,10 @@ tracks/1/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=16]
+resource_name = "general"
+length = 36.0
+
 [node name="ritual" type="Node2D"]
 pause_mode = 2
 z_index = -5
@@ -298,6 +302,10 @@ color = Color( 0, 0, 0, 0 )
 [node name="endritualtimer" type="Timer" parent="."]
 wait_time = 6.0
 one_shot = true
+
+[node name="AnimacionGeneral" type="AnimationPlayer" parent="."]
+autoplay = "general"
+anims/general = SubResource( 16 )
 
 [connection signal="pressed" from="SkipButton" to="." method="_on_SkipButton_pressed"]
 [connection signal="finished" from="video/VideoPlayer" to="." method="_on_VideoPlayer_finished"]

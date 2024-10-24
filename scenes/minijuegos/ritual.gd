@@ -3,6 +3,7 @@ extends Node2D
 onready var player = $player
 onready var videoplayer = $video/VideoPlayer
 
+var from = 0
 
 var already_won = false
 var current_dialog
@@ -41,7 +42,7 @@ func dialog_listener(string):
 
 func _on_lock_body_entered(body):
 	print("algo entra en lock")
-	if body.name == "player":
+	if body.name == "player" and !already_won:
 		end_ritual()
 
 
@@ -64,6 +65,7 @@ func _on_VideoPlayer_finished():
 	#$video.visible = false
 	print("video termina")
 	$Blackout.play("blackout")
+	$AnimacionGeneral.play("general")
 	$video/AudioStreamPlayer.play()
 	
 	
