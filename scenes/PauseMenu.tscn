@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/PauseMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/pause transparencias.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="PauseMenu" type="CanvasLayer"]
 pause_mode = 2
@@ -12,13 +16,6 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="ContinueButton" type="Button" parent="."]
-margin_left = 805.0
-margin_top = 518.0
-margin_right = 1108.0
-margin_bottom = 631.0
-flat = true
-
 [node name="OptionsButton" type="Button" parent="."]
 margin_left = -295.0
 margin_top = 389.0
@@ -26,11 +23,20 @@ margin_right = -178.0
 margin_bottom = 428.0
 text = "Options"
 
+[node name="ContinueButton" type="Button" parent="."]
+margin_left = 805.0
+margin_top = 518.0
+margin_right = 1108.0
+margin_bottom = 631.0
+custom_styles/focus = SubResource( 1 )
+flat = true
+
 [node name="ExitButton" type="Button" parent="."]
 margin_left = 825.0
 margin_top = 721.0
 margin_right = 1110.0
 margin_bottom = 820.0
+custom_styles/focus = SubResource( 2 )
 flat = true
 
 [node name="ConfirmExit" type="Button" parent="."]
@@ -52,8 +58,8 @@ margin_right = 719.0
 margin_bottom = 276.0
 text = "Noise Effect"
 
-[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="ConfirmExit" to="." method="_on_ConfirmExit_pressed"]
 [connection signal="pressed" from="OptionsMenu/ShadersToggle" to="." method="_on_ShadersToggle_pressed"]

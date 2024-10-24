@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/MENU FINAL.png" type="Texture" id=1]
 [ext_resource path="res://scenes/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://shaders/GLES2 anim noise color.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fonts/menu_theme.tres" type="Theme" id=4]
 [ext_resource path="res://fonts/Pixelart_Serif_Font_v02_by_ReffPixels/PixelSerif_16px_v02.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 5 )
@@ -25,6 +29,7 @@ margin_top = 516.0
 margin_right = 499.0
 margin_bottom = 632.0
 theme = ExtResource( 4 )
+custom_styles/focus = SubResource( 3 )
 flat = true
 
 [node name="CloseButton" type="Button" parent="."]
@@ -33,6 +38,7 @@ margin_top = 707.0
 margin_right = 501.0
 margin_bottom = 816.0
 theme = ExtResource( 4 )
+custom_styles/focus = SubResource( 2 )
 flat = true
 
 [node name="LanguageButton" type="Button" parent="."]

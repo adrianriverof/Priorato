@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://characters/compa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -77,6 +77,9 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 24
 }
+
+[sub_resource type="BoxShape" id=33]
+extents = Vector3( 6.07349, 1.23316, 0.876237 )
 
 [sub_resource type="ArrayMesh" id=30]
 resource_name = "complete_scenes_Cube049"
@@ -182,6 +185,10 @@ mesh = SubResource( 28 )
 [node name="Cube040" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 1.44218, 0, 0, 0, 0.190207, 0, 0, 0, 0.0982034, -0.954769, 0.18242, 10.8495 )
 mesh = SubResource( 29 )
+
+[node name="CollisionShape" type="CollisionShape" parent="escenario/casa"]
+transform = Transform( 4.21972e-08, 0, -0.707954, 0, 0.707954, 0, 0.707954, 0, 4.21972e-08, 1.30507, 0.107057, 13.9712 )
+shape = SubResource( 33 )
 
 [node name="Cube042" type="MeshInstance" parent="escenario/casa"]
 transform = Transform( 4.21973e-08, 0, -0.707954, 0, 0.707954, 0, 0.707954, 0, 4.21973e-08, 1.73812, 0.107057, 8.93979 )
