@@ -516,19 +516,23 @@ transform = Transform( 0.0115405, -0.96971, 0.243988, 3.40694e-05, 0.244004, 0.9
 fov = 41.1
 
 [node name="PreRitual" type="Sprite3D" parent="Camera"]
-transform = Transform( 2.725, 7.76696e-09, 1.06885e-09, -7.76696e-09, 2.725, -1.30283e-07, -2.91261e-09, 3.5502e-07, 1, -0.034, -0.059, -39.25 )
+transform = Transform( 2.725, 7.76696e-09, 1.06885e-09, -7.76696e-09, 2.725, -1.30283e-07, -2.91261e-09, 3.5502e-07, 1, -0.034, -0.059, -39.451 )
 texture = ExtResource( 5 )
 
 [node name="PostRitual" type="Spatial" parent="Camera"]
 transform = Transform( 2.725, 1.86265e-09, 9.31323e-10, -7.45058e-09, 2.725, -1.51387e-07, -3.72529e-09, 3.20622e-07, 1, -0.034, -0.059, -39.24 )
 
-[node name="Sprite3D2" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 7.15256e-07, 0, 0 )
+[node name="Spatial" type="Spatial" parent="Camera/PostRitual"]
+transform = Transform( 0.646, 0, 0, 0, 0.562, -2.26137e-08, 0, 1.27089e-08, 1, 0, 0, -0.007 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Camera/PostRitual/Spatial"]
+transform = Transform( 0.5, 9.31323e-10, -9.31323e-10, 1.39698e-09, 0.5, -7.18892e-08, 6.98492e-10, 7.09042e-08, 0.5, 7.15256e-07, 0, 0 )
 texture = ExtResource( 7 )
 script = ExtResource( 13 )
+rotation_speed = 0.001
 
 [node name="Sprite3D3" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 0, 0, -0.007 )
+transform = Transform( 1, 1.86265e-09, 0, 0, 1, 5.27871e-09, 1.86265e-09, 1.41823e-07, 1, 0, 0, -0.082 )
 texture = ExtResource( 7 )
 
 [node name="aeauau" type="Sprite3D" parent="Camera/PostRitual"]

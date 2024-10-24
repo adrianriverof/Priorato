@@ -667,13 +667,17 @@ visible = false
 frame = 0
 
 [node name="aueaoeua2" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657, -0.0479999, -24.134 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 1, 0.657, -0.048, -24.156 )
 texture = ExtResource( 10 )
 
 [node name="aueaoeua" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 0.88726, -2.84178, -0.123409, 2.83499, 0.927037, -0.10719, 0.419015, -0.254757, 0.98655, 0.657, -0.048, -24.134 )
+transform = Transform( 0.295754, -0.947259, -0.123409, 0.944998, 0.309013, -0.10719, 0.139672, -0.0849189, 0.98655, 0.657, -0.048, -24.152 )
 texture = ExtResource( 10 )
 script = ExtResource( 13 )
+rotation_speed = 0.001
+oscillation_speed = 5.0
+oscillation_magnitude = 0.058
+scale_magnitude = 0.013
 
 [node name="FondoPostRitualCaminable" type="Sprite3D" parent="Camera/PostRitual"]
 transform = Transform( 1.696, -9.31323e-10, 0, 6.98492e-10, 1.696, 2.29065e-08, 3.72529e-09, -3.76749e-08, 1, 0.071, 0.094, -24.142 )

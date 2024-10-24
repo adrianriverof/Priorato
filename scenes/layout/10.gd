@@ -4,6 +4,9 @@ extends Spatial
 var from = 0
 var current_room = 10
 
+
+var _force_ritual = true
+
 onready var general = get_parent().get_parent()
 
 func _ready():
@@ -42,9 +45,10 @@ func _on_Puerta9b_body_entered(body):
 
 
 func change_after_ritual():
-	if general.ritual_happened():
+	if general.ritual_happened() or _force_ritual:
 		audio_set_ritual()
 		$Camera/PostRitual.visible = true
+		$Camera/FondoNormal.visible=false
 #		$puerta9a.monitoring = false
 #		$puerta9b.monitoring = false
 		
@@ -54,12 +58,9 @@ func change_after_ritual():
 
 func audio_set_ritual():
 	print($AudioStreamPlayer)
-	$AudioStreamPlayer.stop()
-	$AudioStreamPlayer.autoplay = false
-	$AudioStreamPlayer.playing = false
+	$AudioStreamPlayer.queue_free()
 	$SonidoPostirrtoruto.playing = true
 	
-	$AudioStreamPlayer.playing = false
 
 
 

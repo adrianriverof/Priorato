@@ -530,13 +530,17 @@ transform = Transform( 3.896, -2.38419e-07, 1.49012e-07, 1.19209e-07, 3.839, 2.0
 transform = Transform( 1, -2.98023e-08, -7.45058e-09, 2.98023e-08, 1, 7.45058e-09, 1.19209e-07, 3.57628e-07, 1, 0, 0, 0 )
 texture = ExtResource( 7 )
 
-[node name="fondoraro" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 1, 0, -7.45058e-09, 5.96046e-08, 1, 7.45058e-09, 1.19209e-07, 0, 1, 0, 0, 0 )
+[node name="Spatial" type="Spatial" parent="Camera/PostRitual"]
+transform = Transform( 0.5, 1.70469e-08, 1.19209e-07, -1.49012e-08, 0.572, -2.38419e-07, -5.96046e-08, 1.36375e-07, 1, 0, 0, 0.507 )
+
+[node name="fondoraro" type="Sprite3D" parent="Camera/PostRitual/Spatial"]
+transform = Transform( 1, 0, -7.45058e-09, 2.98023e-08, 1, 7.45058e-09, 1.19209e-07, 2.38419e-07, 1, 0, 0, 0 )
 texture = ExtResource( 7 )
 script = ExtResource( 13 )
+rotation_speed = 0.001
 
 [node name="camino" type="Sprite3D" parent="Camera/PostRitual"]
-transform = Transform( 1, 0, -7.45058e-09, 5.96046e-08, 1, 7.45058e-09, 1.19209e-07, 0, 1, 0, 0, 0.155 )
+transform = Transform( 1, 0, -7.45058e-09, 5.96046e-08, 1, 7.45058e-09, 1.19209e-07, 0, 1, 0, 0, 0.58 )
 texture = ExtResource( 10 )
 
 [node name="escenario" type="Spatial" parent="."]
