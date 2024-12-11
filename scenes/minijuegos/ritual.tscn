@@ -449,6 +449,7 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 stream = ExtResource( 7 )
 autoplay = true
+buffering_msec = 1000
 
 [node name="zas" type="AudioStreamPlayer" parent="video"]
 stream = ExtResource( 5 )

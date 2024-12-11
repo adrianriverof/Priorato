@@ -31,6 +31,7 @@ func _ready():
 	$player/AnimationPlayer.play("Iddle")
 
 func _input(event):
+	
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		
 		
