@@ -10,6 +10,7 @@ var altitude = self.translation.y
 
 # Para detectar cuando hay un clic
 var moving = false
+var motion = Vector3.ZERO
 export var is_dialog_active = false 
 export var is_minigame_active = false
 
@@ -74,7 +75,17 @@ func _physics_process(delta):
 		
 		if distance_to_target > 0.5:
 			direction.y *= 0
-			var motion = direction * speed * delta
+			
+			#var motion = direction * speed * delta
+			
+			motion.x = lerp(motion.x, direction.x * speed * delta, 0.1)
+			motion.z = lerp(motion.z, direction.z * speed * delta, 0.1)
+			
+			
+			#velocity.x = lerp(velocity.x, cantidad_avance * speed * cos(rotation), move_weight)
+			#velocity.y = lerp(velocity.y, cantidad_avance * speed * sin(rotation), move_weight)
+			#move_and_slide(velocity)
+			
 			
 			self.look_at(Vector3(destination.x, self.translation.y, destination.z), Vector3.UP)
 			self.rotation.x= 0
@@ -82,7 +93,8 @@ func _physics_process(delta):
 			
 			motion = move_and_slide(motion)
 		else:
-			moving = false
+			#moving = false
+			motion *= 0
 			
 			$player/AnimationPlayer.play("Iddle")
 		self.translation.y = altitude # !!! recenter
