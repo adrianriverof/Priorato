@@ -66,9 +66,28 @@ func _input(event):
 
 func _physics_process(delta):
 	
+#if Input.is_action_pressed("ui_right")
+	
+	#var Xinput = int(Input.is_action_pressed("ui_right"))-int(Input.is_action_pressed("ui_left"))
+	#var Zinput = int(Input.is_action_pressed("ui_up"))-int(Input.is_action_pressed("ui_down"))
+	
+	#print("Xinput: ", Xinput)
+#
+	var direction = Vector3()
+#
+#	if Xinput != 0 or Zinput != 0:
+#		moving = true
+#		print("sudece")
+#		direction.x = Xinput
+#		direction.z = -Zinput
+#	else: 
+#		moving = false
+#		direction *= 0
+
 	
 	if moving:
-		var direction = (destination - global_transform.origin).normalized()
+		if direction == Vector3.ZERO:
+			direction = (destination - global_transform.origin).normalized()
 		var distance_to_target = global_transform.origin.distance_to(destination)
 		
 		#if ball: ball.translation = destination
@@ -77,6 +96,8 @@ func _physics_process(delta):
 			direction.y *= 0
 			
 			#var motion = direction * speed * delta
+			
+			
 			
 			motion.x = lerp(motion.x, direction.x * speed * delta, 0.1)
 			motion.z = lerp(motion.z, direction.z * speed * delta, 0.1)
