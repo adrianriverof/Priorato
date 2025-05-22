@@ -63,6 +63,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Just out of curiosity!"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {
